@@ -63,3 +63,9 @@ test_dma-hal\main.o: ../Core/Inc/main.h
 test_dma-hal\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 test_dma-hal\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
 test_dma-hal\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+test_dma-hal\main.o: ../Core/Src/../LIB/NokiaTFTLib/nokia1661_Hw.h
+test_dma-hal\main.o: ../Core/Inc/main.h
+test_dma-hal\main.o: ../Core/Src/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h
+test_dma-hal\main.o: ../Core/Inc/main.h
+test_dma-hal\main.o: ../Core/Src/../LIB/NokiaTFTLib/spfd54124b.h
+test_dma-hal\main.o: ../Core/Src/../LIB/NokiaTFTLib/lcd_font5x7.h

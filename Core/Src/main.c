@@ -1,5 +1,11 @@
 #include "main.h"
 #include "../LIB/littlefs/lfs.h"
+
+#include "../LIB/NokiaTFTLib/nokia1661_Hw.h"
+#include "../LIB/NokiaTFTLib/nokia1661_lcd_driver.h"
+#include "../LIB/NokiaTFTLib/spfd54124b.h"
+#include "../LIB/NokiaTFTLib/lcd_font5x7.h"
+
 #include "stdio.h"
 
 
@@ -94,18 +100,53 @@ const struct lfs_config cfg = {
 
 //------------------------------------------------------------------------------------------------------------
 
+#define LL_GPIO_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG(__INSTANCE__->__REG__, (__VALUE__))
+
+
+#define PIN_led_test 12
+#define PORT_led_test GPIOA	 
+
+#define SBI(port,bit) 		port->BSRR = (1<<bit)
+#define CBI(port,bit) 		port->BRR  = (1<<bit)
+
+#define led_test_set()	SBI(PORT_led_test,PIN_led_test)
+#define led_test_clr()	CBI(PORT_led_test,PIN_led_test)
+
+
+#define led_test_OUT()	PORT_led_test->MODER &=~(0x3<<(2*PIN_led_test));\
+					PORT_led_test->MODER |= (0x1<<(2*PIN_led_test));
+
+#define led_test_IN()	PORT_led_test->MODER &=~(0x3<<(2*PIN_led_test));\
+					PORT_led_test->MODER |= (0x0<<(2*PIN_led_test));
+					
+#define led_test_HS()	PORT_led_test->OSPEEDR &=~(0x3<<(2*PIN_led_test));\
+					PORT_led_test->OSPEEDR |= (0x3<<(2*PIN_led_test));
+					
+					
+
+unsigned char r,g,b;
+char kave[5];
 
 int main(void)
 {
 	
+
+	
 	hard_ini();
 	soft_ini();
 	
+	
 	tbr_g1[def_tbr_g1_led_blank].EN=1;
-	tbr_g1[def_tbr_g1_led_blank].C_set_time=800;
+	tbr_g1[def_tbr_g1_led_blank].C_set_time=300;
+	
+	
+	led_test_OUT();
+	led_test_HS();
 	
 	c.j=1;
-	
+
+
+	/*
 	int err = lfs_mount(&lfs, &cfg);
 	if (err)
 	{
@@ -121,6 +162,100 @@ int main(void)
 		
 	ReadBuf[0]='*';
 	printf("%s",ReadBuf);
+	*/
+	
+		nlcdInit();
+
+	nlcdSetBackgroundColor(LCD_VGA_RED);
+	nlcdClear();
+
+	nlcdSetBackgroundColor(LCD_VGA_BLUE);
+	nlcdClear();
+	
+	nlcdSetBackgroundColor(LCD_VGA_WHITE);
+	nlcdSetFont(font5x7latcyr);
+	nlcdClear();
+	/*
+	nlcdSetOrientation(LCD_ORIENTATION_180);
+	nlcdGotoCharXY(1,1);
+	nlcdStringP(LCD_VGA_BLUE, PSTR("Sisoog.Com"));
+
+
+	nlcdSetOrientation(LCD_ORIENTATION_270);
+	nlcdGotoCharXY(1,1);
+	nlcdStringP(LCD_VGA_PURPLE, PSTR("Sisoog.Com"));
+*/
+
+nlcdSetOrientation(LCD_ORIENTATION_90);
+	
+	programer.I=0;
+	programer.P=0;
+	
+	W25Q_ReadPage_start(programer.P*256);	
+	
+	_nlcdSetWindow(0, 0, nlcdGetWidth(), nlcdGetHeight());
+	
+	printf("/%d,%d,",nlcdGetWidth(),nlcdGetHeight());	
+	
+	#define all_pixel_for_full_image 20930
+	#define num_data_for_one_1pixel 3
+
+	while( programer.P < 245 ){ 
+			
+				 	if( programer.I > 255 ){ 	printf("%d/n",programer.P);
+			
+							set_CS_W25Q; 
+							
+								programer.I=0; 	
+								programer.P++;
+								W25Q_ReadPage_start(programer.P*256);
+								
+						}
+
+						r = SPI_w25q(0);programer.I++;	
+						
+						if( programer.I > 255 ){ 	printf("%d/n",programer.P);
+			
+							set_CS_W25Q; 
+							
+								programer.I=0; 	
+								programer.P++;
+								W25Q_ReadPage_start(programer.P*256);
+								
+						}
+											
+						g = SPI_w25q(0);programer.I++;
+						
+						if( programer.I > 255 ){ 	printf("%d/n",programer.P);
+			
+							set_CS_W25Q; 
+							
+								programer.I=0; 	
+								programer.P++;
+								W25Q_ReadPage_start(programer.P*256);
+								
+						}
+											
+						b = SPI_w25q(0);programer.I++;
+					
+						r = r /8;
+						g = g /4;
+						b = b /8;	
+	
+						_nlcdSendPixel( rgb_color_pack(r, g, b) );
+							
+
+			
+			//_nlcdSendPixel( LCD_VGA_BLUE );
+			//printf("/%d,%d,%d,",r,g,b);		
+				
+	 }
+
+	 _nlcdSendCmd(SPFD54124B_CMD_NOP);
+
+		
+			
+
 	
   while (1)
   {
@@ -141,16 +276,40 @@ int main(void)
 				W25Q_ReadPage(ram_read,0,50); */
 				
 							
-				if( c.j==128 )c.j=1;
+				if( c.j==128 ) c.j=1;
 				else c.j *= 2;
+			
+				
 			
 				soft_spi_send(c.j);
 			
-				//LL_GPIO_TogglePin(GPIOA,LL_GPIO_PIN_15);
+				//LL_GPIO_TogglePin(PORT_led_test,PIN_led_test);
 		
 				adc[9] = read_adc(9);
 				adc[8] = read_adc(8);
+				
+				
+				if( kave[1] < 20 ){
+					
+					kave[0] = 1- kave[0];
+					
+					if( kave[0] )led_test_set();
+					else led_test_clr();
+					
+					kave[1]++;
+					
+					if( kave[1] == 10 ) led_test_IN();
+				}
+				else{
+					
+					
+					kave[2] = PORT_led_test->IDR & (1<<PIN_led_test);
+					kave[3] = PORT_led_test->IDR;
+					
+				}
+				
 			
+				
 		}
 		
 		debuge_uart();

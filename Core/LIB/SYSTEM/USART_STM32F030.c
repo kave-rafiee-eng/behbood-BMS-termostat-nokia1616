@@ -36,7 +36,7 @@ This bit enables the receiver. It is set and cleared by software.
 0: Receiver is disabled
 1: Receiver is enabled and begins searching for a start bit*/
 	
-	USART1->BRR = 0XD0;
+	USART1->BRR = 1250;
 /*SET_BIT(USART1->CR1,USART_CR3_BRR0 );	
 Bits 15:4 BRR[15:4]
 BRR[15:4] = USARTDIV[15:4]

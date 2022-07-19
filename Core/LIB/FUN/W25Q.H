@@ -25,13 +25,13 @@
 #define W25Q_ManufactDeviceID	 0x90     
    
 		 
-#define pin_WP_W25Q GPIO_BSRR_BS_1
+#define pin_WP_W25Q GPIO_BSRR_BS_4
 #define port_WP_W25Q GPIOA	  
 	 
 #define pin_HOLD_W25Q GPIO_BSRR_BS_4
 #define port_HOLD_W25Q GPIOA	 
 	 
-#define pin_CS_W25Q GPIO_BSRR_BS_0
+#define pin_CS_W25Q GPIO_BSRR_BS_4
 #define port_CS_W25Q GPIOA
 
 //--------

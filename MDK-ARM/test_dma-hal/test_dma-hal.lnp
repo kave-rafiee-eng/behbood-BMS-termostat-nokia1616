@@ -16,6 +16,7 @@
 "test_dma-hal\lfs_util.o"
 "test_dma-hal\dac.o"
 "test_dma-hal\stdout_user.o"
+"test_dma-hal\nokia1661_lcd_driver.o"
 "test_dma-hal\stm32f0xx_hal_tim.o"
 "test_dma-hal\stm32f0xx_hal_tim_ex.o"
 "test_dma-hal\stm32f0xx_hal_uart.o"

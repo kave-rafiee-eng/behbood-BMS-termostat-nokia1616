@@ -30,19 +30,26 @@ Section Cross References
     main.o(i.hard_ini) refers to dac.o(i.dac_ini) for dac_ini
     main.o(i.main) refers to main.o(i.hard_ini) for hard_ini
     main.o(i.main) refers to main.o(i.soft_ini) for soft_ini
-    main.o(i.main) refers to lfs.o(i.lfs_mount) for lfs_mount
-    main.o(i.main) refers to lfs.o(i.lfs_format) for lfs_format
-    main.o(i.main) refers to lfs.o(i.lfs_file_open) for lfs_file_open
-    main.o(i.main) refers to lfs.o(i.lfs_file_read) for lfs_file_read
-    main.o(i.main) refers to lfs.o(i.lfs_file_close) for lfs_file_close
-    main.o(i.main) refers to lfs.o(i.lfs_unmount) for lfs_unmount
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i.nlcdInit) for nlcdInit
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i.nlcdSetBackgroundColor) for nlcdSetBackgroundColor
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i.nlcdClear) for nlcdClear
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i.nlcdSetFont) for nlcdSetFont
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i.nlcdSetOrientation) for nlcdSetOrientation
+    main.o(i.main) refers to w25q.o(i.W25Q_ReadPage_start) for W25Q_ReadPage_start
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i.nlcdGetHeight) for nlcdGetHeight
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i.nlcdGetWidth) for nlcdGetWidth
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i._nlcdSetWindow) for _nlcdSetWindow
     main.o(i.main) refers to printf8.o(i.__0printf$8) for __2printf
+    main.o(i.main) refers to spi_stm32f030.o(i.SPI_w25q) for SPI_w25q
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i._nlcdSendPixel) for _nlcdSendPixel
+    main.o(i.main) refers to nokia1661_lcd_driver.o(i._nlcdSendCmd) for _nlcdSendCmd
     main.o(i.main) refers to spi_stm32f030.o(i.soft_spi_send) for soft_spi_send
     main.o(i.main) refers to adc_stm32f030.o(i.read_adc) for read_adc
     main.o(i.main) refers to pc_com.o(i.debuge_uart) for debuge_uart
     main.o(i.main) refers to pc_com.o(i.program_manager) for program_manager
     main.o(i.main) refers to main.o(.bss) for .bss
     main.o(i.main) refers to main.o(.constdata) for .constdata
+    main.o(i.main) refers to main.o(.data) for .data
     main.o(i.soft_ini) refers to cpu_timer.o(i.ini_cpu_timer) for ini_cpu_timer
     main.o(i.soft_ini) refers to spi_stm32f030.o(i.soft_spi_ini) for soft_spi_ini
     main.o(i.user_provided_block_device_erase) refers to w25q.o(i.W25Q_EraseSector4KB) for W25Q_EraseSector4KB
@@ -65,11 +72,8 @@ Section Cross References
     usart_stm32f030.o(i.USART_ini) refers to stm32f0xx_ll_gpio_2.o(i.LL_GPIO_Init) for LL_GPIO_Init
     adc_stm32f030.o(i.adc_ini) refers to memseta.o(.text) for __aeabi_memclr4
     adc_stm32f030.o(i.adc_ini) refers to stm32f0xx_ll_gpio_2.o(i.LL_GPIO_Init) for LL_GPIO_Init
-    cortex_stm32f030.o(i.clock_ini) refers to memseta.o(.text) for __aeabi_memclr4
-    cortex_stm32f030.o(i.clock_ini) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
-    cortex_stm32f030.o(i.clock_ini) refers to main.o(i.Error_Handler) for Error_Handler
-    cortex_stm32f030.o(i.clock_ini) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
-    cortex_stm32f030.o(i.clock_ini) refers to stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig) for HAL_RCCEx_PeriphCLKConfig
+    cortex_stm32f030.o(i.clock_ini) refers to stm32f0xx_ll_utils_1.o(i.LL_Init1msTick) for LL_Init1msTick
+    cortex_stm32f030.o(i.clock_ini) refers to stm32f0xx_ll_utils_1.o(i.LL_SetSystemCoreClock) for LL_SetSystemCoreClock
     gpio_stm32f030.o(i.gpio_ini) refers to memseta.o(.text) for __aeabi_memclr4
     gpio_stm32f030.o(i.gpio_ini) refers to stm32f0xx_ll_gpio_2.o(i.LL_GPIO_Init) for LL_GPIO_Init
     cpu_timer.o(i.ini_cpu_timer) refers to main.o(.bss) for c
@@ -89,21 +93,24 @@ Section Cross References
     pc_com.o(i.debuge_uart) refers to lfs.o(i.lfs_file_write) for lfs_file_write
     pc_com.o(i.debuge_uart) refers to lfs.o(i.lfs_file_close) for lfs_file_close
     pc_com.o(i.debuge_uart) refers to lfs.o(i.lfs_unmount) for lfs_unmount
-    pc_com.o(i.debuge_uart) refers to pc_com.o(i.usart_send_str_int) for usart_send_str_int
+    pc_com.o(i.debuge_uart) refers to pc_com.o(i.clr_str_rx) for clr_str_rx
+    pc_com.o(i.debuge_uart) refers to printf8.o(i.__0printf$8) for __2printf
     pc_com.o(i.debuge_uart) refers to pc_com.o(i.usart_comp_str) for usart_comp_str
     pc_com.o(i.debuge_uart) refers to lfs.o(i.lfs_file_read) for lfs_file_read
-    pc_com.o(i.debuge_uart) refers to printf8.o(i.__0printf$8) for __2printf
     pc_com.o(i.debuge_uart) refers to dac.o(i.dac_start) for dac_start
     pc_com.o(i.debuge_uart) refers to w25q.o(i.W25Q_EraseSector4KB) for W25Q_EraseSector4KB
     pc_com.o(i.debuge_uart) refers to w25q.o(i.W25Q_WritePage_start) for W25Q_WritePage_start
-    pc_com.o(i.debuge_uart) refers to pc_com.o(i.clr_str_rx) for clr_str_rx
+    pc_com.o(i.debuge_uart) refers to pc_com.o(i.usart_send_str_int) for usart_send_str_int
     pc_com.o(i.debuge_uart) refers to pc_com.o(i.put_help) for put_help
     pc_com.o(i.debuge_uart) refers to pc_com.o(i.put_w25q) for put_w25q
     pc_com.o(i.debuge_uart) refers to main.o(.data) for tb_g2
     pc_com.o(i.debuge_uart) refers to pc_com.o(.data) for .data
     pc_com.o(i.debuge_uart) refers to main.o(.bss) for file
+    pc_com.o(i.debuge_uart) refers to main.o(.bss) for lfs
     pc_com.o(i.debuge_uart) refers to main.o(.data) for WriteBuf
     pc_com.o(i.debuge_uart) refers to main.o(.data) for programer
+    pc_com.o(i.debuge_uart) refers to main.o(.bss) for ReadBuf
+    pc_com.o(i.debuge_uart) refers to main.o(.bss) for c
     pc_com.o(i.ini_debuge) refers to pc_com.o(i.clr_str_tx) for clr_str_tx
     pc_com.o(i.ini_debuge) refers to pc_com.o(i.clr_str_rx) for clr_str_rx
     pc_com.o(i.ini_debuge) refers to pc_com.o(.data) for .data
@@ -124,6 +131,7 @@ Section Cross References
     pc_com.o(i.put_w25q) refers to w25q.o(i.W25Q_ReadPage_start) for W25Q_ReadPage_start
     pc_com.o(i.put_w25q) refers to pc_com.o(i.clr_str_tx) for clr_str_tx
     pc_com.o(i.put_w25q) refers to spi_stm32f030.o(i.SPI_w25q) for SPI_w25q
+    pc_com.o(i.put_w25q) refers to printf8.o(i.__0printf$8) for __2printf
     pc_com.o(i.put_w25q) refers to pc_com.o(.data) for .data
     pc_com.o(i.put_w25q) refers to main.o(.bss) for W25Q
     pc_com.o(i.put_w25q) refers to main.o(.data) for programer
@@ -604,6 +612,50 @@ Section Cross References
     dac.o(i.dac_start) refers to spi_stm32f030.o(i.spi_ini) for spi_ini
     dac.o(i.dac_start) refers to main.o(.data) for programer
     stdout_user.o(i.stdout_putchar) refers to stm32f0xx_ll_utils_1.o(i.LL_mDelay) for LL_mDelay
+    nokia1661_lcd_driver.o(i._nlcdCmd1616) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i._nlcdRead) refers to nokia1661_lcd_driver.o(i.__nlcdRead) for __nlcdRead
+    nokia1661_lcd_driver.o(i._nlcdRead) refers to nokia1661_lcd_driver.o(.data) for .data
+    nokia1661_lcd_driver.o(i._nlcdSenPixels) refers to nokia1661_lcd_driver.o(i._nlcdSendPixel) for _nlcdSendPixel
+    nokia1661_lcd_driver.o(i._nlcdSend) refers to nokia1661_lcd_driver.o(.data) for .data
+    nokia1661_lcd_driver.o(i._nlcdSendCmd) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i._nlcdSendData) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i._nlcdSendPixel) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i._nlcdSetWindow) refers to nokia1661_lcd_driver.o(i._nlcdCmd1616) for _nlcdCmd1616
+    nokia1661_lcd_driver.o(i._nlcdSetWindow) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i.nlcdChar) refers to nokia1661_lcd_driver.o(i._nlcdSetWindow) for _nlcdSetWindow
+    nokia1661_lcd_driver.o(i.nlcdChar) refers to nokia1661_lcd_driver.o(i.nlcdGetWidth) for nlcdGetWidth
+    nokia1661_lcd_driver.o(i.nlcdChar) refers to nokia1661_lcd_driver.o(i.nlcdGetHeight) for nlcdGetHeight
+    nokia1661_lcd_driver.o(i.nlcdChar) refers to nokia1661_lcd_driver.o(i._nlcdSendPixel) for _nlcdSendPixel
+    nokia1661_lcd_driver.o(i.nlcdChar) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdCharXY) refers to nokia1661_lcd_driver.o(i.nlcdGotoCharXY) for nlcdGotoCharXY
+    nokia1661_lcd_driver.o(i.nlcdCharXY) refers to nokia1661_lcd_driver.o(i.nlcdChar) for nlcdChar
+    nokia1661_lcd_driver.o(i.nlcdClear) refers to nokia1661_lcd_driver.o(i.nlcdGetHeight) for nlcdGetHeight
+    nokia1661_lcd_driver.o(i.nlcdClear) refers to nokia1661_lcd_driver.o(i.nlcdGetWidth) for nlcdGetWidth
+    nokia1661_lcd_driver.o(i.nlcdClear) refers to nokia1661_lcd_driver.o(i._nlcdSetWindow) for _nlcdSetWindow
+    nokia1661_lcd_driver.o(i.nlcdClear) refers to nokia1661_lcd_driver.o(i._nlcdSenPixels) for _nlcdSenPixels
+    nokia1661_lcd_driver.o(i.nlcdClear) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i.nlcdClear) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdFontFirstChar) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdFontLastChar) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdGetHeight) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdGetWidth) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdGotoCharXY) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdInit) refers to stm32f0xx_ll_utils_1.o(i.LL_mDelay) for LL_mDelay
+    nokia1661_lcd_driver.o(i.nlcdInit) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i.nlcdInit) refers to nokia1661_lcd_driver.o(.constdata) for .constdata
+    nokia1661_lcd_driver.o(i.nlcdPixel) refers to nokia1661_lcd_driver.o(i._nlcdCmd1616) for _nlcdCmd1616
+    nokia1661_lcd_driver.o(i.nlcdPixel) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i.nlcdSetBackgroundColor) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdSetFont) refers to memcpya.o(.text) for __aeabi_memcpy
+    nokia1661_lcd_driver.o(i.nlcdSetFont) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdSetOrientation) refers to nokia1661_lcd_driver.o(i._nlcdSend) for _nlcdSend
+    nokia1661_lcd_driver.o(i.nlcdSetOrientation) refers to nokia1661_lcd_driver.o(.bss) for .bss
+    nokia1661_lcd_driver.o(i.nlcdString) refers to nokia1661_lcd_driver.o(i.nlcdChar) for nlcdChar
+    nokia1661_lcd_driver.o(i.nlcdStringP) refers to nokia1661_lcd_driver.o(i.nlcdChar) for nlcdChar
+    nokia1661_lcd_driver.o(i.nlcdStringXY) refers to nokia1661_lcd_driver.o(i.nlcdGotoCharXY) for nlcdGotoCharXY
+    nokia1661_lcd_driver.o(i.nlcdStringXY) refers to nokia1661_lcd_driver.o(i.nlcdString) for nlcdString
+    nokia1661_lcd_driver.o(i.nlcdStringXYP) refers to nokia1661_lcd_driver.o(i.nlcdGotoCharXY) for nlcdGotoCharXY
+    nokia1661_lcd_driver.o(i.nlcdStringXYP) refers to nokia1661_lcd_driver.o(i.nlcdStringP) for nlcdStringP
     stm32f0xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f0xx_hal_uart.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
     stm32f0xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f0xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
     stm32f0xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f0xx_hal_uart.o(i.UART_AdvFeatureConfig) for UART_AdvFeatureConfig
@@ -1314,10 +1366,21 @@ Removing Unused input sections from the image.
     Removing startup_stm32f030x6.o(HEAP), (512 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(i.Error_Handler), (4 bytes).
+    Removing main.o(i.user_provided_block_device_erase), (12 bytes).
+    Removing main.o(i.user_provided_block_device_prog), (26 bytes).
+    Removing main.o(i.user_provided_block_device_read), (26 bytes).
+    Removing main.o(i.user_provided_block_device_sync), (4 bytes).
     Removing main.o(.bss), (20 bytes).
     Removing main.o(.bss), (20 bytes).
     Removing main.o(.bss), (256 bytes).
     Removing main.o(.bss), (256 bytes).
+    Removing main.o(.bss), (256 bytes).
+    Removing main.o(.bss), (256 bytes).
+    Removing main.o(.bss), (16 bytes).
+    Removing main.o(.constdata), (487 bytes).
+    Removing main.o(.constdata), (327 bytes).
+    Removing main.o(.constdata), (76 bytes).
     Removing main.o(.data), (100 bytes).
     Removing main.o(.data), (4 bytes).
     Removing main.o(.data), (2 bytes).
@@ -1351,6 +1414,8 @@ Removing Unused input sections from the image.
     Removing w25q.o(i.W25Q_EraseBlock32KB), (56 bytes).
     Removing w25q.o(i.W25Q_EraseBlock64KB), (56 bytes).
     Removing w25q.o(i.W25Q_EraseChip), (34 bytes).
+    Removing w25q.o(i.W25Q_ReadPage), (68 bytes).
+    Removing w25q.o(i.W25Q_WritePage), (74 bytes).
     Removing lfs.o(.rev16_text), (4 bytes).
     Removing lfs.o(.revsh_text), (4 bytes).
     Removing lfs.o(i.lfs_commitattr), (92 bytes).
@@ -1372,12 +1437,17 @@ Removing Unused input sections from the image.
     Removing lfs.o(i.lfs_file_sync), (168 bytes).
     Removing lfs.o(i.lfs_file_tell), (160 bytes).
     Removing lfs.o(i.lfs_file_truncate), (188 bytes).
+    Removing lfs.o(i.lfs_format), (192 bytes).
     Removing lfs.o(i.lfs_fs_size), (156 bytes).
     Removing lfs.o(i.lfs_fs_traverse), (184 bytes).
     Removing lfs.o(i.lfs_getattr), (200 bytes).
+    Removing lfs.o(i.lfs_init), (176 bytes).
     Removing lfs.o(i.lfs_mkdir), (160 bytes).
+    Removing lfs.o(i.lfs_mount), (188 bytes).
+    Removing lfs.o(i.lfs_rawformat), (240 bytes).
     Removing lfs.o(i.lfs_rawgetattr), (120 bytes).
     Removing lfs.o(i.lfs_rawmkdir), (376 bytes).
+    Removing lfs.o(i.lfs_rawmount), (760 bytes).
     Removing lfs.o(i.lfs_rawremove), (260 bytes).
     Removing lfs.o(i.lfs_rawrename), (580 bytes).
     Removing lfs.o(i.lfs_remove), (168 bytes).
@@ -1393,6 +1463,21 @@ Removing Unused input sections from the image.
     Removing dac.o(.revsh_text), (4 bytes).
     Removing stdout_user.o(.rev16_text), (4 bytes).
     Removing stdout_user.o(.revsh_text), (4 bytes).
+    Removing nokia1661_lcd_driver.o(.rev16_text), (4 bytes).
+    Removing nokia1661_lcd_driver.o(.revsh_text), (4 bytes).
+    Removing nokia1661_lcd_driver.o(i.__nlcdRead), (118 bytes).
+    Removing nokia1661_lcd_driver.o(i._nlcdRead), (252 bytes).
+    Removing nokia1661_lcd_driver.o(i._nlcdSendData), (12 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdChar), (148 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdCharXY), (20 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdFontFirstChar), (12 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdFontLastChar), (16 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdGotoCharXY), (32 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdPixel), (54 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdString), (24 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdStringP), (26 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdStringXY), (20 bytes).
+    Removing nokia1661_lcd_driver.o(i.nlcdStringXYP), (20 bytes).
     Removing stm32f0xx_hal_tim.o(.rev16_text), (4 bytes).
     Removing stm32f0xx_hal_tim.o(.revsh_text), (4 bytes).
     Removing stm32f0xx_hal_tim_ex.o(.rev16_text), (4 bytes).
@@ -1472,6 +1557,7 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_hal_rcc.o(.rev16_text), (4 bytes).
     Removing stm32f0xx_hal_rcc.o(.revsh_text), (4 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_CSSCallback), (2 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig), (264 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_DeInit), (188 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_DisableCSS), (20 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_EnableCSS), (20 bytes).
@@ -1479,12 +1565,15 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq), (12 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_GetOscConfig), (156 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq), (32 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq), (128 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_MCOConfig), (80 bytes).
     Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler), (24 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_OscConfig), (904 bytes).
     Removing stm32f0xx_hal_rcc_ex.o(.rev16_text), (4 bytes).
     Removing stm32f0xx_hal_rcc_ex.o(.revsh_text), (4 bytes).
     Removing stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKConfig), (44 bytes).
     Removing stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq), (156 bytes).
+    Removing stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig), (232 bytes).
     Removing stm32f0xx_hal.o(.rev16_text), (4 bytes).
     Removing stm32f0xx_hal.o(.revsh_text), (4 bytes).
     Removing stm32f0xx_hal.o(i.HAL_DBGMCU_DisableDBGStandbyMode), (16 bytes).
@@ -1496,6 +1585,7 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_hal.o(i.HAL_GetDEVID), (16 bytes).
     Removing stm32f0xx_hal.o(i.HAL_GetHalVersion), (8 bytes).
     Removing stm32f0xx_hal.o(i.HAL_GetREVID), (12 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_GetTick), (12 bytes).
     Removing stm32f0xx_hal.o(i.HAL_GetTickFreq), (12 bytes).
     Removing stm32f0xx_hal.o(i.HAL_GetTickPrio), (12 bytes).
     Removing stm32f0xx_hal.o(i.HAL_GetUIDw0), (12 bytes).
@@ -1689,6 +1779,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f0xx.o(.rev16_text), (4 bytes).
     Removing system_stm32f0xx.o(.revsh_text), (4 bytes).
     Removing system_stm32f0xx.o(i.SystemCoreClockUpdate), (108 bytes).
+    Removing system_stm32f0xx.o(.constdata), (16 bytes).
     Removing system_stm32f0xx.o(.constdata), (8 bytes).
     Removing stm32f0xx_ll_gpio_2.o(.rev16_text), (4 bytes).
     Removing stm32f0xx_ll_gpio_2.o(.revsh_text), (4 bytes).
@@ -1698,12 +1789,10 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_ll_gpio_2.o(i.LL_GPIO_StructInit), (24 bytes).
     Removing stm32f0xx_ll_utils_1.o(.rev16_text), (4 bytes).
     Removing stm32f0xx_ll_utils_1.o(.revsh_text), (4 bytes).
-    Removing stm32f0xx_ll_utils_1.o(i.LL_Init1msTick), (32 bytes).
     Removing stm32f0xx_ll_utils_1.o(i.LL_PLL_ConfigSystemClock_HSE), (104 bytes).
     Removing stm32f0xx_ll_utils_1.o(i.LL_PLL_ConfigSystemClock_HSI), (84 bytes).
     Removing stm32f0xx_ll_utils_1.o(i.LL_RCC_PLL_ConfigDomain_SYS), (44 bytes).
     Removing stm32f0xx_ll_utils_1.o(i.LL_SetFlashLatency), (68 bytes).
-    Removing stm32f0xx_ll_utils_1.o(i.LL_SetSystemCoreClock), (12 bytes).
     Removing stm32f0xx_ll_utils_1.o(i.UTILS_EnablePLLAndSwitchSystem), (152 bytes).
     Removing stm32f0xx_ll_utils_1.o(i.UTILS_GetPLLOutputFrequency), (24 bytes).
     Removing stm32f0xx_ll_utils_1.o(i.UTILS_PLL_IsBusy), (20 bytes).
@@ -1717,9 +1806,10 @@ Removing Unused input sections from the image.
     Removing dfixul.o(.text), (64 bytes).
     Removing cdrcmple.o(.text), (40 bytes).
     Removing depilogue.o(.text), (190 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.__ARM_common_ll_muluu), (48 bytes).
     Removing stm32f0xx_hal_dma.o(i.__ARM_common_switch8), (26 bytes).
 
-407 unused section(s) (total 33626 bytes) removed from the image.
+445 unused section(s) (total 39136 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1749,42 +1839,42 @@ Image Symbol Table
     ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c 0x00000000   Number         0  stm32f0xx_hal_tim_ex.o ABSOLUTE
     ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c 0x00000000   Number         0  stm32f0xx_hal_uart.o ABSOLUTE
     ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c 0x00000000   Number         0  stm32f0xx_hal_uart_ex.o ABSOLUTE
-    ../clib/../cmprslib/zerorunl2.c          0x00000000   Number         0  __dczerorl2.o ABSOLUTE
+    ../clib/../cmprslib/zerorunl.c           0x00000000   Number         0  __dczerorl.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/fputs.c           0x00000000   Number         0  fputs.o ABSOLUTE
     ../clib/microlib/stdio/fputs.c           0x00000000   Number         0  fputs_e.o ABSOLUTE
-    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stderr.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stderr.o ABSOLUTE
     ../clib/microlib/string/memcmp.c         0x00000000   Number         0  memcmp.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
@@ -1804,6 +1894,7 @@ Image Symbol Table
     ..\Core\LIB\FUN\CPU_TIMER.C              0x00000000   Number         0  cpu_timer.o ABSOLUTE
     ..\Core\LIB\FUN\PC_COM.C                 0x00000000   Number         0  pc_com.o ABSOLUTE
     ..\Core\LIB\FUN\W25Q.C                   0x00000000   Number         0  w25q.o ABSOLUTE
+    ..\Core\LIB\NokiaTFTLib\nokia1661_lcd_driver.c 0x00000000   Number         0  nokia1661_lcd_driver.o ABSOLUTE
     ..\Core\LIB\SYSTEM\ADC_STM32F030.c       0x00000000   Number         0  adc_stm32f030.o ABSOLUTE
     ..\Core\LIB\SYSTEM\CORTEX_STM32F030.c    0x00000000   Number         0  cortex_stm32f030.o ABSOLUTE
     ..\Core\LIB\SYSTEM\GPIO_STM32F030.c      0x00000000   Number         0  gpio_stm32f030.o ABSOLUTE
@@ -1844,6 +1935,7 @@ Image Symbol Table
     ..\\Core\\LIB\\CODE\\DAC.C               0x00000000   Number         0  dac.o ABSOLUTE
     ..\\Core\\LIB\\FUN\\PC_COM.C             0x00000000   Number         0  pc_com.o ABSOLUTE
     ..\\Core\\LIB\\FUN\\W25Q.C               0x00000000   Number         0  w25q.o ABSOLUTE
+    ..\\Core\\LIB\\NokiaTFTLib\\nokia1661_lcd_driver.c 0x00000000   Number         0  nokia1661_lcd_driver.o ABSOLUTE
     ..\\Core\\LIB\\SYSTEM\\ADC_STM32F030.c   0x00000000   Number         0  adc_stm32f030.o ABSOLUTE
     ..\\Core\\LIB\\SYSTEM\\CORTEX_STM32F030.c 0x00000000   Number         0  cortex_stm32f030.o ABSOLUTE
     ..\\Core\\LIB\\SYSTEM\\GPIO_STM32F030.c  0x00000000   Number         0  gpio_stm32f030.o ABSOLUTE
@@ -1889,312 +1981,302 @@ Image Symbol Table
     .text                                    0x0800026c   Section        0  strcspn.o(.text)
     .text                                    0x0800028e   Section        0  llshl.o(.text)
     .text                                    0x080002b0   Section       36  init.o(.text)
-    .text                                    0x080002d4   Section        0  __dczerorl2.o(.text)
-    i.DMA1_Channel2_3_IRQHandler             0x0800032a   Section        0  stm32f0xx_it.o(i.DMA1_Channel2_3_IRQHandler)
-    i.Error_Handler                          0x0800032c   Section        0  main.o(i.Error_Handler)
-    i.HAL_GetTick                            0x08000330   Section        0  stm32f0xx_hal.o(i.HAL_GetTick)
-    i.HAL_IncTick                            0x0800033c   Section        0  stm32f0xx_hal.o(i.HAL_IncTick)
-    i.HAL_Init                               0x0800034c   Section        0  stm32f0xx_hal.o(i.HAL_Init)
-    i.HAL_InitTick                           0x0800036c   Section        0  stm32f0xx_hal.o(i.HAL_InitTick)
-    i.HAL_MspInit                            0x080003b0   Section        0  stm32f0xx_hal.o(i.HAL_MspInit)
-    i.HAL_NVIC_SetPriority                   0x080003b2   Section        0  stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    i.HAL_RCCEx_PeriphCLKConfig              0x080003bc   Section        0  stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig)
-    i.HAL_RCC_ClockConfig                    0x080004a4   Section        0  stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    i.HAL_RCC_GetSysClockFreq                0x080005ac   Section        0  stm32f0xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    i.HAL_RCC_OscConfig                      0x0800062c   Section        0  stm32f0xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    i.HAL_SYSTICK_Config                     0x080009b4   Section        0  stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    i.HardFault_Handler                      0x080009e4   Section        0  stm32f0xx_it.o(i.HardFault_Handler)
-    i.LL_GPIO_Init                           0x080009e6   Section        0  stm32f0xx_ll_gpio_2.o(i.LL_GPIO_Init)
-    i.LL_mDelay                              0x08000a94   Section        0  stm32f0xx_ll_utils_1.o(i.LL_mDelay)
-    i.NMI_Handler                            0x08000ab4   Section        0  stm32f0xx_it.o(i.NMI_Handler)
-    i.PendSV_Handler                         0x08000ab6   Section        0  stm32f0xx_it.o(i.PendSV_Handler)
-    i.SPI_w25q                               0x08000ab8   Section        0  spi_stm32f030.o(i.SPI_w25q)
-    i.SVC_Handler                            0x08000ae4   Section        0  stm32f0xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x08000ae6   Section        0  stm32f0xx_it.o(i.SysTick_Handler)
-    i.SystemInit                             0x08000af2   Section        0  system_stm32f0xx.o(i.SystemInit)
-    i.TIM14_IRQHandler                       0x08000af4   Section        0  stm32f0xx_it.o(i.TIM14_IRQHandler)
-    i.USART1_IRQHandler                      0x08000b0c   Section        0  stm32f0xx_it.o(i.USART1_IRQHandler)
-    i.USART_ini                              0x08000b40   Section        0  usart_stm32f030.o(i.USART_ini)
-    i.W25Q_Enable_Write                      0x08000be0   Section        0  w25q.o(i.W25Q_Enable_Write)
-    i.W25Q_EraseSector4KB                    0x08000bf4   Section        0  w25q.o(i.W25Q_EraseSector4KB)
-    i.W25Q_ReadPage                          0x08000c38   Section        0  w25q.o(i.W25Q_ReadPage)
-    i.W25Q_ReadPage_start                    0x08000c7c   Section        0  w25q.o(i.W25Q_ReadPage_start)
-    i.W25Q_Read_Manufact_Device_ID           0x08000ca8   Section        0  w25q.o(i.W25Q_Read_Manufact_Device_ID)
-    i.W25Q_Read_StatusReg                    0x08000cec   Section        0  w25q.o(i.W25Q_Read_StatusReg)
-    i.W25Q_WaitBusy                          0x08000d20   Section        0  w25q.o(i.W25Q_WaitBusy)
-    i.W25Q_WritePage                         0x08000d3c   Section        0  w25q.o(i.W25Q_WritePage)
-    i.W25Q_WritePage_start                   0x08000d86   Section        0  w25q.o(i.W25Q_WritePage_start)
-    i.W25Q_ini                               0x08000db4   Section        0  w25q.o(i.W25Q_ini)
-    i.__0printf$8                            0x08000e10   Section        0  printf8.o(i.__0printf$8)
-    i.__ARM_clz                              0x08000e30   Section        0  lfs.o(i.__ARM_clz)
-    i.__ARM_common_ll_muluu                  0x08000e5e   Section        0  stm32f0xx_hal_rcc.o(i.__ARM_common_ll_muluu)
-    i.__NVIC_SetPriority                     0x08000e90   Section        0  stm32f0xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08000e91   Thumb Code    60  stm32f0xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x08000ed4   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08000ee2   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08000ee4   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x08000ef4   Section        0  printf8.o(i._printf_core)
-    _printf_core                             0x08000ef5   Thumb Code  1020  printf8.o(i._printf_core)
-    i._printf_post_padding                   0x0800131c   Section        0  printf8.o(i._printf_post_padding)
-    _printf_post_padding                     0x0800131d   Thumb Code    32  printf8.o(i._printf_post_padding)
-    i._printf_pre_padding                    0x0800133c   Section        0  printf8.o(i._printf_pre_padding)
-    _printf_pre_padding                      0x0800133d   Thumb Code    44  printf8.o(i._printf_pre_padding)
-    i.adc_calibre                            0x08001368   Section        0  adc_stm32f030.o(i.adc_calibre)
-    i.adc_ini                                0x08001380   Section        0  adc_stm32f030.o(i.adc_ini)
-    i.clock_ini                              0x080013f4   Section        0  cortex_stm32f030.o(i.clock_ini)
-    i.clr_str_rx                             0x08001460   Section        0  pc_com.o(i.clr_str_rx)
-    i.clr_str_tx                             0x08001488   Section        0  pc_com.o(i.clr_str_tx)
-    i.dac                                    0x080014b0   Section        0  dac.o(i.dac)
-    i.dac_ini                                0x08001520   Section        0  dac.o(i.dac_ini)
-    i.dac_start                              0x08001594   Section        0  dac.o(i.dac_start)
-    i.debuge_uart                            0x080015c4   Section        0  pc_com.o(i.debuge_uart)
-    i.dma_ini                                0x0800197c   Section        0  cortex_stm32f030.o(i.dma_ini)
-    i.fputc                                  0x0800198c   Section        0  retarget_io.o(i.fputc)
-    i.gpio_ini                               0x080019a4   Section        0  gpio_stm32f030.o(i.gpio_ini)
-    i.hard_ini                               0x08001a54   Section        0  main.o(i.hard_ini)
-    i.ini_cpu_timer                          0x08001a8c   Section        0  cpu_timer.o(i.ini_cpu_timer)
-    i.lfs_aligndown                          0x08001b38   Section        0  lfs.o(i.lfs_aligndown)
-    lfs_aligndown                            0x08001b39   Thumb Code    12  lfs.o(i.lfs_aligndown)
-    i.lfs_alignup                            0x08001b44   Section        0  lfs.o(i.lfs_alignup)
-    lfs_alignup                              0x08001b45   Thumb Code    16  lfs.o(i.lfs_alignup)
-    i.lfs_alloc                              0x08001b54   Section        0  lfs.o(i.lfs_alloc)
-    lfs_alloc                                0x08001b55   Thumb Code   208  lfs.o(i.lfs_alloc)
-    i.lfs_alloc_drop                         0x08001c70   Section        0  lfs.o(i.lfs_alloc_drop)
-    lfs_alloc_drop                           0x08001c71   Thumb Code    14  lfs.o(i.lfs_alloc_drop)
-    i.lfs_alloc_lookahead                    0x08001c7e   Section        0  lfs.o(i.lfs_alloc_lookahead)
-    lfs_alloc_lookahead                      0x08001c7f   Thumb Code    48  lfs.o(i.lfs_alloc_lookahead)
-    i.lfs_bd_cmp                             0x08001cae   Section        0  lfs.o(i.lfs_bd_cmp)
-    lfs_bd_cmp                               0x08001caf   Thumb Code    86  lfs.o(i.lfs_bd_cmp)
-    i.lfs_bd_erase                           0x08001d04   Section        0  lfs.o(i.lfs_bd_erase)
-    lfs_bd_erase                             0x08001d05   Thumb Code     6  lfs.o(i.lfs_bd_erase)
-    i.lfs_bd_flush                           0x08001d0a   Section        0  lfs.o(i.lfs_bd_flush)
-    lfs_bd_flush                             0x08001d0b   Thumb Code   114  lfs.o(i.lfs_bd_flush)
-    i.lfs_bd_prog                            0x08001d7c   Section        0  lfs.o(i.lfs_bd_prog)
-    lfs_bd_prog                              0x08001d7d   Thumb Code   152  lfs.o(i.lfs_bd_prog)
-    i.lfs_bd_read                            0x08001e14   Section        0  lfs.o(i.lfs_bd_read)
-    lfs_bd_read                              0x08001e15   Thumb Code   326  lfs.o(i.lfs_bd_read)
-    i.lfs_cache_zero                         0x08001f5a   Section        0  lfs.o(i.lfs_cache_zero)
-    lfs_cache_zero                           0x08001f5b   Thumb Code    24  lfs.o(i.lfs_cache_zero)
-    i.lfs_crc                                0x08001f74   Section        0  lfs_util.o(i.lfs_crc)
-    i.lfs_ctz                                0x08001fa4   Section        0  lfs.o(i.lfs_ctz)
-    lfs_ctz                                  0x08001fa5   Thumb Code    16  lfs.o(i.lfs_ctz)
-    i.lfs_ctz_extend                         0x08001fb4   Section        0  lfs.o(i.lfs_ctz_extend)
-    lfs_ctz_extend                           0x08001fb5   Thumb Code   318  lfs.o(i.lfs_ctz_extend)
-    i.lfs_ctz_find                           0x0800213c   Section        0  lfs.o(i.lfs_ctz_find)
-    lfs_ctz_find                             0x0800213d   Thumb Code   142  lfs.o(i.lfs_ctz_find)
-    i.lfs_ctz_fromle32                       0x080021ca   Section        0  lfs.o(i.lfs_ctz_fromle32)
-    lfs_ctz_fromle32                         0x080021cb   Thumb Code    22  lfs.o(i.lfs_ctz_fromle32)
-    i.lfs_ctz_index                          0x080021e0   Section        0  lfs.o(i.lfs_ctz_index)
-    lfs_ctz_index                            0x080021e1   Thumb Code    62  lfs.o(i.lfs_ctz_index)
-    i.lfs_ctz_traverse                       0x0800221e   Section        0  lfs.o(i.lfs_ctz_traverse)
-    lfs_ctz_traverse                         0x0800221f   Thumb Code   152  lfs.o(i.lfs_ctz_traverse)
-    i.lfs_deinit                             0x080022b6   Section        0  lfs.o(i.lfs_deinit)
-    lfs_deinit                               0x080022b7   Thumb Code     4  lfs.o(i.lfs_deinit)
-    i.lfs_dir_alloc                          0x080022ba   Section        0  lfs.o(i.lfs_dir_alloc)
-    lfs_dir_alloc                            0x080022bb   Thumb Code   142  lfs.o(i.lfs_dir_alloc)
-    i.lfs_dir_commit                         0x08002348   Section        0  lfs.o(i.lfs_dir_commit)
-    lfs_dir_commit                           0x08002349   Thumb Code   800  lfs.o(i.lfs_dir_commit)
-    i.lfs_dir_commit_commit                  0x08002680   Section        0  lfs.o(i.lfs_dir_commit_commit)
-    lfs_dir_commit_commit                    0x08002681   Thumb Code    16  lfs.o(i.lfs_dir_commit_commit)
-    i.lfs_dir_commit_size                    0x08002690   Section        0  lfs.o(i.lfs_dir_commit_size)
-    lfs_dir_commit_size                      0x08002691   Thumb Code    20  lfs.o(i.lfs_dir_commit_size)
-    i.lfs_dir_commitattr                     0x080026a4   Section        0  lfs.o(i.lfs_dir_commitattr)
-    lfs_dir_commitattr                       0x080026a5   Thumb Code   166  lfs.o(i.lfs_dir_commitattr)
-    i.lfs_dir_commitcrc                      0x0800274c   Section        0  lfs.o(i.lfs_dir_commitcrc)
-    lfs_dir_commitcrc                        0x0800274d   Thumb Code   426  lfs.o(i.lfs_dir_commitcrc)
-    i.lfs_dir_commitprog                     0x08002900   Section        0  lfs.o(i.lfs_dir_commitprog)
-    lfs_dir_commitprog                       0x08002901   Thumb Code    60  lfs.o(i.lfs_dir_commitprog)
-    i.lfs_dir_compact                        0x0800293c   Section        0  lfs.o(i.lfs_dir_compact)
-    lfs_dir_compact                          0x0800293d   Thumb Code   852  lfs.o(i.lfs_dir_compact)
-    i.lfs_dir_drop                           0x08002d90   Section        0  lfs.o(i.lfs_dir_drop)
-    lfs_dir_drop                             0x08002d91   Thumb Code    68  lfs.o(i.lfs_dir_drop)
-    i.lfs_dir_fetch                          0x08002dd8   Section        0  lfs.o(i.lfs_dir_fetch)
-    lfs_dir_fetch                            0x08002dd9   Thumb Code    22  lfs.o(i.lfs_dir_fetch)
-    i.lfs_dir_fetchmatch                     0x08002df0   Section        0  lfs.o(i.lfs_dir_fetchmatch)
-    lfs_dir_fetchmatch                       0x08002df1   Thumb Code  1020  lfs.o(i.lfs_dir_fetchmatch)
-    i.lfs_dir_find                           0x08003254   Section        0  lfs.o(i.lfs_dir_find)
-    lfs_dir_find                             0x08003255   Thumb Code   314  lfs.o(i.lfs_dir_find)
-    i.lfs_dir_find_match                     0x080033b0   Section        0  lfs.o(i.lfs_dir_find_match)
-    lfs_dir_find_match                       0x080033b1   Thumb Code    74  lfs.o(i.lfs_dir_find_match)
-    i.lfs_dir_get                            0x080033fa   Section        0  lfs.o(i.lfs_dir_get)
-    lfs_dir_get                              0x080033fb   Thumb Code    20  lfs.o(i.lfs_dir_get)
-    i.lfs_dir_getgstate                      0x08003410   Section        0  lfs.o(i.lfs_dir_getgstate)
-    lfs_dir_getgstate                        0x08003411   Thumb Code    70  lfs.o(i.lfs_dir_getgstate)
-    i.lfs_dir_getread                        0x0800345c   Section        0  lfs.o(i.lfs_dir_getread)
-    lfs_dir_getread                          0x0800345d   Thumb Code   226  lfs.o(i.lfs_dir_getread)
-    i.lfs_dir_getslice                       0x08003540   Section        0  lfs.o(i.lfs_dir_getslice)
-    lfs_dir_getslice                         0x08003541   Thumb Code   290  lfs.o(i.lfs_dir_getslice)
-    i.lfs_dir_split                          0x08003670   Section        0  lfs.o(i.lfs_dir_split)
-    lfs_dir_split                            0x08003671   Thumb Code   108  lfs.o(i.lfs_dir_split)
-    i.lfs_dir_traverse                       0x080036dc   Section        0  lfs.o(i.lfs_dir_traverse)
-    lfs_dir_traverse                         0x080036dd   Thumb Code   388  lfs.o(i.lfs_dir_traverse)
-    i.lfs_dir_traverse_filter                0x0800386c   Section        0  lfs.o(i.lfs_dir_traverse_filter)
-    lfs_dir_traverse_filter                  0x0800386d   Thumb Code   104  lfs.o(i.lfs_dir_traverse_filter)
-    i.lfs_file_close                         0x080038e4   Section        0  lfs.o(i.lfs_file_close)
-    i.lfs_file_flush                         0x08003990   Section        0  lfs.o(i.lfs_file_flush)
-    lfs_file_flush                           0x08003991   Thumb Code   224  lfs.o(i.lfs_file_flush)
-    i.lfs_file_open                          0x08003ac0   Section        0  lfs.o(i.lfs_file_open)
-    i.lfs_file_outline                       0x08003b88   Section        0  lfs.o(i.lfs_file_outline)
-    lfs_file_outline                         0x08003b89   Thumb Code    38  lfs.o(i.lfs_file_outline)
-    i.lfs_file_rawclose                      0x08003bae   Section        0  lfs.o(i.lfs_file_rawclose)
-    lfs_file_rawclose                        0x08003baf   Thumb Code    24  lfs.o(i.lfs_file_rawclose)
-    i.lfs_file_rawopencfg                    0x08003bc8   Section        0  lfs.o(i.lfs_file_rawopencfg)
-    lfs_file_rawopencfg                      0x08003bc9   Thumb Code   520  lfs.o(i.lfs_file_rawopencfg)
-    i.lfs_file_rawread                       0x08003df0   Section        0  lfs.o(i.lfs_file_rawread)
-    lfs_file_rawread                         0x08003df1   Thumb Code   240  lfs.o(i.lfs_file_rawread)
-    i.lfs_file_rawseek                       0x08003ee8   Section        0  lfs.o(i.lfs_file_rawseek)
-    lfs_file_rawseek                         0x08003ee9   Thumb Code    76  lfs.o(i.lfs_file_rawseek)
-    i.lfs_file_rawsize                       0x08003f34   Section        0  lfs.o(i.lfs_file_rawsize)
-    lfs_file_rawsize                         0x08003f35   Thumb Code    18  lfs.o(i.lfs_file_rawsize)
-    i.lfs_file_rawsync                       0x08003f48   Section        0  lfs.o(i.lfs_file_rawsync)
-    lfs_file_rawsync                         0x08003f49   Thumb Code   170  lfs.o(i.lfs_file_rawsync)
-    i.lfs_file_rawwrite                      0x08003ff8   Section        0  lfs.o(i.lfs_file_rawwrite)
-    lfs_file_rawwrite                        0x08003ff9   Thumb Code   426  lfs.o(i.lfs_file_rawwrite)
-    i.lfs_file_read                          0x080041a8   Section        0  lfs.o(i.lfs_file_read)
-    i.lfs_file_relocate                      0x08004268   Section        0  lfs.o(i.lfs_file_relocate)
-    lfs_file_relocate                        0x08004269   Thumb Code   238  lfs.o(i.lfs_file_relocate)
-    i.lfs_file_rewind                        0x080043a8   Section        0  lfs.o(i.lfs_file_rewind)
-    i.lfs_file_write                         0x08004460   Section        0  lfs.o(i.lfs_file_write)
-    i.lfs_format                             0x08004524   Section        0  lfs.o(i.lfs_format)
-    i.lfs_frombe32                           0x080045e4   Section        0  lfs.o(i.lfs_frombe32)
-    lfs_frombe32                             0x080045e5   Thumb Code    18  lfs.o(i.lfs_frombe32)
-    i.lfs_fromle32                           0x080045f6   Section        0  lfs.o(i.lfs_fromle32)
-    lfs_fromle32                             0x080045f7   Thumb Code    18  lfs.o(i.lfs_fromle32)
-    i.lfs_fs_demove                          0x08004608   Section        0  lfs.o(i.lfs_fs_demove)
-    lfs_fs_demove                            0x08004609   Thumb Code   104  lfs.o(i.lfs_fs_demove)
-    i.lfs_fs_deorphan                        0x080046cc   Section        0  lfs.o(i.lfs_fs_deorphan)
-    lfs_fs_deorphan                          0x080046cd   Thumb Code   270  lfs.o(i.lfs_fs_deorphan)
-    i.lfs_fs_forceconsistency                0x08004878   Section        0  lfs.o(i.lfs_fs_forceconsistency)
-    lfs_fs_forceconsistency                  0x08004879   Thumb Code    20  lfs.o(i.lfs_fs_forceconsistency)
-    i.lfs_fs_parent                          0x0800488c   Section        0  lfs.o(i.lfs_fs_parent)
-    lfs_fs_parent                            0x0800488d   Thumb Code   110  lfs.o(i.lfs_fs_parent)
-    i.lfs_fs_parent_match                    0x08004908   Section        0  lfs.o(i.lfs_fs_parent_match)
-    lfs_fs_parent_match                      0x08004909   Thumb Code    64  lfs.o(i.lfs_fs_parent_match)
-    i.lfs_fs_pred                            0x08004948   Section        0  lfs.o(i.lfs_fs_pred)
-    lfs_fs_pred                              0x08004949   Thumb Code    82  lfs.o(i.lfs_fs_pred)
-    i.lfs_fs_prepmove                        0x0800499c   Section        0  lfs.o(i.lfs_fs_prepmove)
-    lfs_fs_prepmove                          0x0800499d   Thumb Code    48  lfs.o(i.lfs_fs_prepmove)
-    i.lfs_fs_preporphans                     0x080049d8   Section        0  lfs.o(i.lfs_fs_preporphans)
-    lfs_fs_preporphans                       0x080049d9   Thumb Code    26  lfs.o(i.lfs_fs_preporphans)
-    i.lfs_fs_rawsize                         0x080049f4   Section        0  lfs.o(i.lfs_fs_rawsize)
-    lfs_fs_rawsize                           0x080049f5   Thumb Code    24  lfs.o(i.lfs_fs_rawsize)
-    i.lfs_fs_rawtraverse                     0x08004a10   Section        0  lfs.o(i.lfs_fs_rawtraverse)
-    lfs_fs_rawtraverse                       0x08004a11   Thumb Code   322  lfs.o(i.lfs_fs_rawtraverse)
-    i.lfs_fs_relocate                        0x08004b64   Section        0  lfs.o(i.lfs_fs_relocate)
-    lfs_fs_relocate                          0x08004b65   Thumb Code   436  lfs.o(i.lfs_fs_relocate)
-    i.lfs_fs_size_count                      0x08004d88   Section        0  lfs.o(i.lfs_fs_size_count)
-    lfs_fs_size_count                        0x08004d89   Thumb Code    10  lfs.o(i.lfs_fs_size_count)
-    i.lfs_gstate_hasmove                     0x08004d92   Section        0  lfs.o(i.lfs_gstate_hasmove)
-    lfs_gstate_hasmove                       0x08004d93   Thumb Code    12  lfs.o(i.lfs_gstate_hasmove)
-    i.lfs_gstate_hasmovehere                 0x08004d9e   Section        0  lfs.o(i.lfs_gstate_hasmovehere)
-    lfs_gstate_hasmovehere                   0x08004d9f   Thumb Code    36  lfs.o(i.lfs_gstate_hasmovehere)
-    i.lfs_gstate_iszero                      0x08004dc2   Section        0  lfs.o(i.lfs_gstate_iszero)
-    lfs_gstate_iszero                        0x08004dc3   Thumb Code    24  lfs.o(i.lfs_gstate_iszero)
-    i.lfs_gstate_tole32                      0x08004dda   Section        0  lfs.o(i.lfs_gstate_tole32)
-    lfs_gstate_tole32                        0x08004ddb   Thumb Code    30  lfs.o(i.lfs_gstate_tole32)
-    i.lfs_gstate_xor                         0x08004df8   Section        0  lfs.o(i.lfs_gstate_xor)
-    lfs_gstate_xor                           0x08004df9   Thumb Code    22  lfs.o(i.lfs_gstate_xor)
-    i.lfs_init                               0x08004e10   Section        0  lfs.o(i.lfs_init)
-    lfs_init                                 0x08004e11   Thumb Code   160  lfs.o(i.lfs_init)
-    i.lfs_min                                0x08004ec0   Section        0  lfs.o(i.lfs_min)
-    lfs_min                                  0x08004ec1   Thumb Code     8  lfs.o(i.lfs_min)
-    i.lfs_mlist_remove                       0x08004ec8   Section        0  lfs.o(i.lfs_mlist_remove)
-    lfs_mlist_remove                         0x08004ec9   Thumb Code    24  lfs.o(i.lfs_mlist_remove)
-    i.lfs_mount                              0x08004ee0   Section        0  lfs.o(i.lfs_mount)
-    i.lfs_pair_cmp                           0x08004f9c   Section        0  lfs.o(i.lfs_pair_cmp)
-    lfs_pair_cmp                             0x08004f9d   Thumb Code    32  lfs.o(i.lfs_pair_cmp)
-    i.lfs_pair_fromle32                      0x08004fbc   Section        0  lfs.o(i.lfs_pair_fromle32)
-    lfs_pair_fromle32                        0x08004fbd   Thumb Code    22  lfs.o(i.lfs_pair_fromle32)
-    i.lfs_pair_isnull                        0x08004fd2   Section        0  lfs.o(i.lfs_pair_isnull)
-    lfs_pair_isnull                          0x08004fd3   Thumb Code    20  lfs.o(i.lfs_pair_isnull)
-    i.lfs_pair_tole32                        0x08004fe6   Section        0  lfs.o(i.lfs_pair_tole32)
-    lfs_pair_tole32                          0x08004fe7   Thumb Code    22  lfs.o(i.lfs_pair_tole32)
-    i.lfs_popc                               0x08004ffc   Section        0  lfs.o(i.lfs_popc)
-    lfs_popc                                 0x08004ffd   Thumb Code    42  lfs.o(i.lfs_popc)
-    i.lfs_rawformat                          0x08005034   Section        0  lfs.o(i.lfs_rawformat)
-    lfs_rawformat                            0x08005035   Thumb Code   230  lfs.o(i.lfs_rawformat)
-    i.lfs_rawmount                           0x08005124   Section        0  lfs.o(i.lfs_rawmount)
-    lfs_rawmount                             0x08005125   Thumb Code   466  lfs.o(i.lfs_rawmount)
-    i.lfs_rawunmount                         0x0800541c   Section        0  lfs.o(i.lfs_rawunmount)
-    lfs_rawunmount                           0x0800541d   Thumb Code     8  lfs.o(i.lfs_rawunmount)
-    i.lfs_tag_dsize                          0x08005424   Section        0  lfs.o(i.lfs_tag_dsize)
-    lfs_tag_dsize                            0x08005425   Thumb Code    18  lfs.o(i.lfs_tag_dsize)
-    i.lfs_tag_isdelete                       0x08005436   Section        0  lfs.o(i.lfs_tag_isdelete)
-    lfs_tag_isdelete                         0x08005437   Thumb Code    16  lfs.o(i.lfs_tag_isdelete)
-    i.lfs_tag_type1                          0x08005446   Section        0  lfs.o(i.lfs_tag_type1)
-    lfs_tag_type1                            0x08005447   Thumb Code    10  lfs.o(i.lfs_tag_type1)
-    i.lfs_tole32                             0x08005450   Section        0  lfs.o(i.lfs_tole32)
-    lfs_tole32                               0x08005451   Thumb Code     8  lfs.o(i.lfs_tole32)
-    i.lfs_unmount                            0x08005458   Section        0  lfs.o(i.lfs_unmount)
-    i.main                                   0x080054f4   Section        0  main.o(i.main)
-    i.nvic_ini                               0x080055e4   Section        0  cortex_stm32f030.o(i.nvic_ini)
-    i.program_manager                        0x08005600   Section        0  pc_com.o(i.program_manager)
-    i.put_help                               0x08005680   Section        0  pc_com.o(i.put_help)
-    i.put_w25q                               0x0800576c   Section        0  pc_com.o(i.put_w25q)
-    i.read_adc                               0x08005878   Section        0  adc_stm32f030.o(i.read_adc)
-    i.soft_ini                               0x080058a4   Section        0  main.o(i.soft_ini)
-    i.soft_spi_ini                           0x080058b0   Section        0  spi_stm32f030.o(i.soft_spi_ini)
-    i.soft_spi_send                          0x08005918   Section        0  spi_stm32f030.o(i.soft_spi_send)
-    i.spi_ini                                0x08005954   Section        0  spi_stm32f030.o(i.spi_ini)
-    i.stdout_putchar                         0x08005990   Section        0  stdout_user.o(i.stdout_putchar)
-    i.tim14_ini                              0x080059a8   Section        0  timer_stm32f030.o(i.tim14_ini)
-    i.timer_basic_manager                    0x080059f8   Section        0  cpu_timer.o(i.timer_basic_manager)
-    i.uart_manager_interupt_rx               0x08005aa0   Section        0  pc_com.o(i.uart_manager_interupt_rx)
-    i.uart_manager_interupt_tx               0x08005af0   Section        0  pc_com.o(i.uart_manager_interupt_tx)
-    i.usart_comp_str                         0x08005b28   Section        0  pc_com.o(i.usart_comp_str)
-    i.usart_send_str_int                     0x08005b60   Section        0  pc_com.o(i.usart_send_str_int)
-    i.user_provided_block_device_erase       0x08005c20   Section        0  main.o(i.user_provided_block_device_erase)
-    user_provided_block_device_erase         0x08005c21   Thumb Code    12  main.o(i.user_provided_block_device_erase)
-    i.user_provided_block_device_prog        0x08005c2c   Section        0  main.o(i.user_provided_block_device_prog)
-    user_provided_block_device_prog          0x08005c2d   Thumb Code    26  main.o(i.user_provided_block_device_prog)
-    i.user_provided_block_device_read        0x08005c46   Section        0  main.o(i.user_provided_block_device_read)
-    user_provided_block_device_read          0x08005c47   Thumb Code    26  main.o(i.user_provided_block_device_read)
-    i.user_provided_block_device_sync        0x08005c60   Section        0  main.o(i.user_provided_block_device_sync)
-    user_provided_block_device_sync          0x08005c61   Thumb Code     4  main.o(i.user_provided_block_device_sync)
-    .constdata                               0x08005c64   Section       76  main.o(.constdata)
-    .constdata                               0x08005cb0   Section       20  pc_com.o(.constdata)
-    .constdata                               0x08005cc4   Section      416  lfs.o(.constdata)
-    <Data1>                                  0x08005cfc   Data          12  lfs.o(.constdata)
-    <Data2>                                  0x08005d20   Data          12  lfs.o(.constdata)
-    defaults                                 0x08005d44   Data          12  lfs.o(.constdata)
-    <Data3>                                  0x08005da4   Data          12  lfs.o(.constdata)
-    <Data4>                                  0x08005db0   Data          12  lfs.o(.constdata)
-    <Data5>                                  0x08005dbc   Data          12  lfs.o(.constdata)
-    .constdata                               0x08005e64   Section       64  lfs_util.o(.constdata)
-    rtable                                   0x08005e64   Data          64  lfs_util.o(.constdata)
-    .constdata                               0x08005ea4   Section       16  system_stm32f0xx.o(.constdata)
-    .conststring                             0x08005eb4   Section      621  lfs.o(.conststring)
+    .text                                    0x080002d4   Section        0  __dczerorl.o(.text)
+    i.DMA1_Channel2_3_IRQHandler             0x0800030e   Section        0  stm32f0xx_it.o(i.DMA1_Channel2_3_IRQHandler)
+    i.HAL_IncTick                            0x08000310   Section        0  stm32f0xx_hal.o(i.HAL_IncTick)
+    i.HAL_Init                               0x08000320   Section        0  stm32f0xx_hal.o(i.HAL_Init)
+    i.HAL_InitTick                           0x08000340   Section        0  stm32f0xx_hal.o(i.HAL_InitTick)
+    i.HAL_MspInit                            0x08000384   Section        0  stm32f0xx_hal.o(i.HAL_MspInit)
+    i.HAL_NVIC_SetPriority                   0x08000386   Section        0  stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    i.HAL_SYSTICK_Config                     0x08000390   Section        0  stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    i.HardFault_Handler                      0x080003c0   Section        0  stm32f0xx_it.o(i.HardFault_Handler)
+    i.LL_GPIO_Init                           0x080003c2   Section        0  stm32f0xx_ll_gpio_2.o(i.LL_GPIO_Init)
+    i.LL_Init1msTick                         0x08000470   Section        0  stm32f0xx_ll_utils_1.o(i.LL_Init1msTick)
+    i.LL_SetSystemCoreClock                  0x08000490   Section        0  stm32f0xx_ll_utils_1.o(i.LL_SetSystemCoreClock)
+    i.LL_mDelay                              0x0800049c   Section        0  stm32f0xx_ll_utils_1.o(i.LL_mDelay)
+    i.NMI_Handler                            0x080004bc   Section        0  stm32f0xx_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x080004be   Section        0  stm32f0xx_it.o(i.PendSV_Handler)
+    i.SPI_w25q                               0x080004c0   Section        0  spi_stm32f030.o(i.SPI_w25q)
+    i.SVC_Handler                            0x080004ec   Section        0  stm32f0xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x080004ee   Section        0  stm32f0xx_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x080004fa   Section        0  system_stm32f0xx.o(i.SystemInit)
+    i.TIM14_IRQHandler                       0x080004fc   Section        0  stm32f0xx_it.o(i.TIM14_IRQHandler)
+    i.USART1_IRQHandler                      0x08000514   Section        0  stm32f0xx_it.o(i.USART1_IRQHandler)
+    i.USART_ini                              0x08000548   Section        0  usart_stm32f030.o(i.USART_ini)
+    i.W25Q_Enable_Write                      0x080005ec   Section        0  w25q.o(i.W25Q_Enable_Write)
+    i.W25Q_EraseSector4KB                    0x08000600   Section        0  w25q.o(i.W25Q_EraseSector4KB)
+    i.W25Q_ReadPage_start                    0x08000644   Section        0  w25q.o(i.W25Q_ReadPage_start)
+    i.W25Q_Read_Manufact_Device_ID           0x08000670   Section        0  w25q.o(i.W25Q_Read_Manufact_Device_ID)
+    i.W25Q_Read_StatusReg                    0x080006b4   Section        0  w25q.o(i.W25Q_Read_StatusReg)
+    i.W25Q_WaitBusy                          0x080006e8   Section        0  w25q.o(i.W25Q_WaitBusy)
+    i.W25Q_WritePage_start                   0x08000704   Section        0  w25q.o(i.W25Q_WritePage_start)
+    i.W25Q_ini                               0x08000732   Section        0  w25q.o(i.W25Q_ini)
+    i.__0printf$8                            0x08000790   Section        0  printf8.o(i.__0printf$8)
+    i.__ARM_clz                              0x080007b0   Section        0  lfs.o(i.__ARM_clz)
+    i.__NVIC_SetPriority                     0x080007e0   Section        0  stm32f0xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x080007e1   Thumb Code    60  stm32f0xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x08000824   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000832   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000834   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._nlcdCmd1616                           0x08000842   Section        0  nokia1661_lcd_driver.o(i._nlcdCmd1616)
+    i._nlcdSenPixels                         0x08000876   Section        0  nokia1661_lcd_driver.o(i._nlcdSenPixels)
+    i._nlcdSend                              0x08000890   Section        0  nokia1661_lcd_driver.o(i._nlcdSend)
+    i._nlcdSendCmd                           0x08000940   Section        0  nokia1661_lcd_driver.o(i._nlcdSendCmd)
+    i._nlcdSendPixel                         0x08000948   Section        0  nokia1661_lcd_driver.o(i._nlcdSendPixel)
+    i._nlcdSetWindow                         0x08000962   Section        0  nokia1661_lcd_driver.o(i._nlcdSetWindow)
+    i._printf_core                           0x0800098c   Section        0  printf8.o(i._printf_core)
+    _printf_core                             0x0800098d   Thumb Code  1020  printf8.o(i._printf_core)
+    i._printf_post_padding                   0x08000db4   Section        0  printf8.o(i._printf_post_padding)
+    _printf_post_padding                     0x08000db5   Thumb Code    32  printf8.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x08000dd4   Section        0  printf8.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x08000dd5   Thumb Code    44  printf8.o(i._printf_pre_padding)
+    i.adc_calibre                            0x08000e00   Section        0  adc_stm32f030.o(i.adc_calibre)
+    i.adc_ini                                0x08000e18   Section        0  adc_stm32f030.o(i.adc_ini)
+    i.clock_ini                              0x08000e8c   Section        0  cortex_stm32f030.o(i.clock_ini)
+    i.clr_str_rx                             0x08000f30   Section        0  pc_com.o(i.clr_str_rx)
+    i.clr_str_tx                             0x08000f58   Section        0  pc_com.o(i.clr_str_tx)
+    i.dac                                    0x08000f80   Section        0  dac.o(i.dac)
+    i.dac_ini                                0x08000ff0   Section        0  dac.o(i.dac_ini)
+    i.dac_start                              0x08001064   Section        0  dac.o(i.dac_start)
+    i.debuge_uart                            0x08001094   Section        0  pc_com.o(i.debuge_uart)
+    i.dma_ini                                0x08001464   Section        0  cortex_stm32f030.o(i.dma_ini)
+    i.fputc                                  0x08001474   Section        0  retarget_io.o(i.fputc)
+    i.gpio_ini                               0x0800148c   Section        0  gpio_stm32f030.o(i.gpio_ini)
+    i.hard_ini                               0x0800153c   Section        0  main.o(i.hard_ini)
+    i.ini_cpu_timer                          0x08001574   Section        0  cpu_timer.o(i.ini_cpu_timer)
+    i.lfs_aligndown                          0x08001620   Section        0  lfs.o(i.lfs_aligndown)
+    lfs_aligndown                            0x08001621   Thumb Code    12  lfs.o(i.lfs_aligndown)
+    i.lfs_alignup                            0x0800162c   Section        0  lfs.o(i.lfs_alignup)
+    lfs_alignup                              0x0800162d   Thumb Code    16  lfs.o(i.lfs_alignup)
+    i.lfs_alloc                              0x0800163c   Section        0  lfs.o(i.lfs_alloc)
+    lfs_alloc                                0x0800163d   Thumb Code   208  lfs.o(i.lfs_alloc)
+    i.lfs_alloc_drop                         0x08001758   Section        0  lfs.o(i.lfs_alloc_drop)
+    lfs_alloc_drop                           0x08001759   Thumb Code    14  lfs.o(i.lfs_alloc_drop)
+    i.lfs_alloc_lookahead                    0x08001766   Section        0  lfs.o(i.lfs_alloc_lookahead)
+    lfs_alloc_lookahead                      0x08001767   Thumb Code    48  lfs.o(i.lfs_alloc_lookahead)
+    i.lfs_bd_cmp                             0x08001796   Section        0  lfs.o(i.lfs_bd_cmp)
+    lfs_bd_cmp                               0x08001797   Thumb Code    86  lfs.o(i.lfs_bd_cmp)
+    i.lfs_bd_erase                           0x080017ec   Section        0  lfs.o(i.lfs_bd_erase)
+    lfs_bd_erase                             0x080017ed   Thumb Code     6  lfs.o(i.lfs_bd_erase)
+    i.lfs_bd_flush                           0x080017f2   Section        0  lfs.o(i.lfs_bd_flush)
+    lfs_bd_flush                             0x080017f3   Thumb Code   114  lfs.o(i.lfs_bd_flush)
+    i.lfs_bd_prog                            0x08001864   Section        0  lfs.o(i.lfs_bd_prog)
+    lfs_bd_prog                              0x08001865   Thumb Code   152  lfs.o(i.lfs_bd_prog)
+    i.lfs_bd_read                            0x080018fc   Section        0  lfs.o(i.lfs_bd_read)
+    lfs_bd_read                              0x080018fd   Thumb Code   326  lfs.o(i.lfs_bd_read)
+    i.lfs_cache_zero                         0x08001a42   Section        0  lfs.o(i.lfs_cache_zero)
+    lfs_cache_zero                           0x08001a43   Thumb Code    24  lfs.o(i.lfs_cache_zero)
+    i.lfs_crc                                0x08001a5c   Section        0  lfs_util.o(i.lfs_crc)
+    i.lfs_ctz                                0x08001a8c   Section        0  lfs.o(i.lfs_ctz)
+    lfs_ctz                                  0x08001a8d   Thumb Code    16  lfs.o(i.lfs_ctz)
+    i.lfs_ctz_extend                         0x08001a9c   Section        0  lfs.o(i.lfs_ctz_extend)
+    lfs_ctz_extend                           0x08001a9d   Thumb Code   318  lfs.o(i.lfs_ctz_extend)
+    i.lfs_ctz_find                           0x08001c24   Section        0  lfs.o(i.lfs_ctz_find)
+    lfs_ctz_find                             0x08001c25   Thumb Code   142  lfs.o(i.lfs_ctz_find)
+    i.lfs_ctz_fromle32                       0x08001cb2   Section        0  lfs.o(i.lfs_ctz_fromle32)
+    lfs_ctz_fromle32                         0x08001cb3   Thumb Code    22  lfs.o(i.lfs_ctz_fromle32)
+    i.lfs_ctz_index                          0x08001cc8   Section        0  lfs.o(i.lfs_ctz_index)
+    lfs_ctz_index                            0x08001cc9   Thumb Code    62  lfs.o(i.lfs_ctz_index)
+    i.lfs_ctz_traverse                       0x08001d06   Section        0  lfs.o(i.lfs_ctz_traverse)
+    lfs_ctz_traverse                         0x08001d07   Thumb Code   152  lfs.o(i.lfs_ctz_traverse)
+    i.lfs_deinit                             0x08001d9e   Section        0  lfs.o(i.lfs_deinit)
+    lfs_deinit                               0x08001d9f   Thumb Code     4  lfs.o(i.lfs_deinit)
+    i.lfs_dir_alloc                          0x08001da2   Section        0  lfs.o(i.lfs_dir_alloc)
+    lfs_dir_alloc                            0x08001da3   Thumb Code   142  lfs.o(i.lfs_dir_alloc)
+    i.lfs_dir_commit                         0x08001e30   Section        0  lfs.o(i.lfs_dir_commit)
+    lfs_dir_commit                           0x08001e31   Thumb Code   800  lfs.o(i.lfs_dir_commit)
+    i.lfs_dir_commit_commit                  0x08002168   Section        0  lfs.o(i.lfs_dir_commit_commit)
+    lfs_dir_commit_commit                    0x08002169   Thumb Code    16  lfs.o(i.lfs_dir_commit_commit)
+    i.lfs_dir_commit_size                    0x08002178   Section        0  lfs.o(i.lfs_dir_commit_size)
+    lfs_dir_commit_size                      0x08002179   Thumb Code    20  lfs.o(i.lfs_dir_commit_size)
+    i.lfs_dir_commitattr                     0x0800218c   Section        0  lfs.o(i.lfs_dir_commitattr)
+    lfs_dir_commitattr                       0x0800218d   Thumb Code   166  lfs.o(i.lfs_dir_commitattr)
+    i.lfs_dir_commitcrc                      0x08002234   Section        0  lfs.o(i.lfs_dir_commitcrc)
+    lfs_dir_commitcrc                        0x08002235   Thumb Code   426  lfs.o(i.lfs_dir_commitcrc)
+    i.lfs_dir_commitprog                     0x080023e8   Section        0  lfs.o(i.lfs_dir_commitprog)
+    lfs_dir_commitprog                       0x080023e9   Thumb Code    60  lfs.o(i.lfs_dir_commitprog)
+    i.lfs_dir_compact                        0x08002424   Section        0  lfs.o(i.lfs_dir_compact)
+    lfs_dir_compact                          0x08002425   Thumb Code   852  lfs.o(i.lfs_dir_compact)
+    i.lfs_dir_drop                           0x08002878   Section        0  lfs.o(i.lfs_dir_drop)
+    lfs_dir_drop                             0x08002879   Thumb Code    68  lfs.o(i.lfs_dir_drop)
+    i.lfs_dir_fetch                          0x080028c0   Section        0  lfs.o(i.lfs_dir_fetch)
+    lfs_dir_fetch                            0x080028c1   Thumb Code    22  lfs.o(i.lfs_dir_fetch)
+    i.lfs_dir_fetchmatch                     0x080028d8   Section        0  lfs.o(i.lfs_dir_fetchmatch)
+    lfs_dir_fetchmatch                       0x080028d9   Thumb Code  1020  lfs.o(i.lfs_dir_fetchmatch)
+    i.lfs_dir_find                           0x08002d3c   Section        0  lfs.o(i.lfs_dir_find)
+    lfs_dir_find                             0x08002d3d   Thumb Code   314  lfs.o(i.lfs_dir_find)
+    i.lfs_dir_find_match                     0x08002e98   Section        0  lfs.o(i.lfs_dir_find_match)
+    lfs_dir_find_match                       0x08002e99   Thumb Code    74  lfs.o(i.lfs_dir_find_match)
+    i.lfs_dir_get                            0x08002ee2   Section        0  lfs.o(i.lfs_dir_get)
+    lfs_dir_get                              0x08002ee3   Thumb Code    20  lfs.o(i.lfs_dir_get)
+    i.lfs_dir_getgstate                      0x08002ef8   Section        0  lfs.o(i.lfs_dir_getgstate)
+    lfs_dir_getgstate                        0x08002ef9   Thumb Code    70  lfs.o(i.lfs_dir_getgstate)
+    i.lfs_dir_getread                        0x08002f44   Section        0  lfs.o(i.lfs_dir_getread)
+    lfs_dir_getread                          0x08002f45   Thumb Code   226  lfs.o(i.lfs_dir_getread)
+    i.lfs_dir_getslice                       0x08003028   Section        0  lfs.o(i.lfs_dir_getslice)
+    lfs_dir_getslice                         0x08003029   Thumb Code   290  lfs.o(i.lfs_dir_getslice)
+    i.lfs_dir_split                          0x08003158   Section        0  lfs.o(i.lfs_dir_split)
+    lfs_dir_split                            0x08003159   Thumb Code   108  lfs.o(i.lfs_dir_split)
+    i.lfs_dir_traverse                       0x080031c4   Section        0  lfs.o(i.lfs_dir_traverse)
+    lfs_dir_traverse                         0x080031c5   Thumb Code   388  lfs.o(i.lfs_dir_traverse)
+    i.lfs_dir_traverse_filter                0x08003354   Section        0  lfs.o(i.lfs_dir_traverse_filter)
+    lfs_dir_traverse_filter                  0x08003355   Thumb Code   104  lfs.o(i.lfs_dir_traverse_filter)
+    i.lfs_file_close                         0x080033cc   Section        0  lfs.o(i.lfs_file_close)
+    i.lfs_file_flush                         0x08003478   Section        0  lfs.o(i.lfs_file_flush)
+    lfs_file_flush                           0x08003479   Thumb Code   224  lfs.o(i.lfs_file_flush)
+    i.lfs_file_open                          0x080035a8   Section        0  lfs.o(i.lfs_file_open)
+    i.lfs_file_outline                       0x08003670   Section        0  lfs.o(i.lfs_file_outline)
+    lfs_file_outline                         0x08003671   Thumb Code    38  lfs.o(i.lfs_file_outline)
+    i.lfs_file_rawclose                      0x08003696   Section        0  lfs.o(i.lfs_file_rawclose)
+    lfs_file_rawclose                        0x08003697   Thumb Code    24  lfs.o(i.lfs_file_rawclose)
+    i.lfs_file_rawopencfg                    0x080036b0   Section        0  lfs.o(i.lfs_file_rawopencfg)
+    lfs_file_rawopencfg                      0x080036b1   Thumb Code   520  lfs.o(i.lfs_file_rawopencfg)
+    i.lfs_file_rawread                       0x080038d8   Section        0  lfs.o(i.lfs_file_rawread)
+    lfs_file_rawread                         0x080038d9   Thumb Code   240  lfs.o(i.lfs_file_rawread)
+    i.lfs_file_rawseek                       0x080039d0   Section        0  lfs.o(i.lfs_file_rawseek)
+    lfs_file_rawseek                         0x080039d1   Thumb Code    76  lfs.o(i.lfs_file_rawseek)
+    i.lfs_file_rawsize                       0x08003a1c   Section        0  lfs.o(i.lfs_file_rawsize)
+    lfs_file_rawsize                         0x08003a1d   Thumb Code    18  lfs.o(i.lfs_file_rawsize)
+    i.lfs_file_rawsync                       0x08003a30   Section        0  lfs.o(i.lfs_file_rawsync)
+    lfs_file_rawsync                         0x08003a31   Thumb Code   170  lfs.o(i.lfs_file_rawsync)
+    i.lfs_file_rawwrite                      0x08003ae0   Section        0  lfs.o(i.lfs_file_rawwrite)
+    lfs_file_rawwrite                        0x08003ae1   Thumb Code   426  lfs.o(i.lfs_file_rawwrite)
+    i.lfs_file_read                          0x08003c90   Section        0  lfs.o(i.lfs_file_read)
+    i.lfs_file_relocate                      0x08003d50   Section        0  lfs.o(i.lfs_file_relocate)
+    lfs_file_relocate                        0x08003d51   Thumb Code   238  lfs.o(i.lfs_file_relocate)
+    i.lfs_file_rewind                        0x08003e90   Section        0  lfs.o(i.lfs_file_rewind)
+    i.lfs_file_write                         0x08003f48   Section        0  lfs.o(i.lfs_file_write)
+    i.lfs_frombe32                           0x0800400c   Section        0  lfs.o(i.lfs_frombe32)
+    lfs_frombe32                             0x0800400d   Thumb Code    18  lfs.o(i.lfs_frombe32)
+    i.lfs_fromle32                           0x0800401e   Section        0  lfs.o(i.lfs_fromle32)
+    lfs_fromle32                             0x0800401f   Thumb Code    18  lfs.o(i.lfs_fromle32)
+    i.lfs_fs_demove                          0x08004030   Section        0  lfs.o(i.lfs_fs_demove)
+    lfs_fs_demove                            0x08004031   Thumb Code   104  lfs.o(i.lfs_fs_demove)
+    i.lfs_fs_deorphan                        0x080040f4   Section        0  lfs.o(i.lfs_fs_deorphan)
+    lfs_fs_deorphan                          0x080040f5   Thumb Code   270  lfs.o(i.lfs_fs_deorphan)
+    i.lfs_fs_forceconsistency                0x080042a0   Section        0  lfs.o(i.lfs_fs_forceconsistency)
+    lfs_fs_forceconsistency                  0x080042a1   Thumb Code    20  lfs.o(i.lfs_fs_forceconsistency)
+    i.lfs_fs_parent                          0x080042b4   Section        0  lfs.o(i.lfs_fs_parent)
+    lfs_fs_parent                            0x080042b5   Thumb Code   110  lfs.o(i.lfs_fs_parent)
+    i.lfs_fs_parent_match                    0x08004330   Section        0  lfs.o(i.lfs_fs_parent_match)
+    lfs_fs_parent_match                      0x08004331   Thumb Code    64  lfs.o(i.lfs_fs_parent_match)
+    i.lfs_fs_pred                            0x08004370   Section        0  lfs.o(i.lfs_fs_pred)
+    lfs_fs_pred                              0x08004371   Thumb Code    82  lfs.o(i.lfs_fs_pred)
+    i.lfs_fs_prepmove                        0x080043c4   Section        0  lfs.o(i.lfs_fs_prepmove)
+    lfs_fs_prepmove                          0x080043c5   Thumb Code    48  lfs.o(i.lfs_fs_prepmove)
+    i.lfs_fs_preporphans                     0x08004400   Section        0  lfs.o(i.lfs_fs_preporphans)
+    lfs_fs_preporphans                       0x08004401   Thumb Code    26  lfs.o(i.lfs_fs_preporphans)
+    i.lfs_fs_rawsize                         0x0800441c   Section        0  lfs.o(i.lfs_fs_rawsize)
+    lfs_fs_rawsize                           0x0800441d   Thumb Code    24  lfs.o(i.lfs_fs_rawsize)
+    i.lfs_fs_rawtraverse                     0x08004438   Section        0  lfs.o(i.lfs_fs_rawtraverse)
+    lfs_fs_rawtraverse                       0x08004439   Thumb Code   322  lfs.o(i.lfs_fs_rawtraverse)
+    i.lfs_fs_relocate                        0x0800458c   Section        0  lfs.o(i.lfs_fs_relocate)
+    lfs_fs_relocate                          0x0800458d   Thumb Code   436  lfs.o(i.lfs_fs_relocate)
+    i.lfs_fs_size_count                      0x080047b0   Section        0  lfs.o(i.lfs_fs_size_count)
+    lfs_fs_size_count                        0x080047b1   Thumb Code    10  lfs.o(i.lfs_fs_size_count)
+    i.lfs_gstate_hasmove                     0x080047ba   Section        0  lfs.o(i.lfs_gstate_hasmove)
+    lfs_gstate_hasmove                       0x080047bb   Thumb Code    12  lfs.o(i.lfs_gstate_hasmove)
+    i.lfs_gstate_hasmovehere                 0x080047c6   Section        0  lfs.o(i.lfs_gstate_hasmovehere)
+    lfs_gstate_hasmovehere                   0x080047c7   Thumb Code    36  lfs.o(i.lfs_gstate_hasmovehere)
+    i.lfs_gstate_iszero                      0x080047ea   Section        0  lfs.o(i.lfs_gstate_iszero)
+    lfs_gstate_iszero                        0x080047eb   Thumb Code    24  lfs.o(i.lfs_gstate_iszero)
+    i.lfs_gstate_tole32                      0x08004802   Section        0  lfs.o(i.lfs_gstate_tole32)
+    lfs_gstate_tole32                        0x08004803   Thumb Code    30  lfs.o(i.lfs_gstate_tole32)
+    i.lfs_gstate_xor                         0x08004820   Section        0  lfs.o(i.lfs_gstate_xor)
+    lfs_gstate_xor                           0x08004821   Thumb Code    22  lfs.o(i.lfs_gstate_xor)
+    i.lfs_min                                0x08004836   Section        0  lfs.o(i.lfs_min)
+    lfs_min                                  0x08004837   Thumb Code     8  lfs.o(i.lfs_min)
+    i.lfs_mlist_remove                       0x0800483e   Section        0  lfs.o(i.lfs_mlist_remove)
+    lfs_mlist_remove                         0x0800483f   Thumb Code    24  lfs.o(i.lfs_mlist_remove)
+    i.lfs_pair_cmp                           0x08004856   Section        0  lfs.o(i.lfs_pair_cmp)
+    lfs_pair_cmp                             0x08004857   Thumb Code    32  lfs.o(i.lfs_pair_cmp)
+    i.lfs_pair_fromle32                      0x08004876   Section        0  lfs.o(i.lfs_pair_fromle32)
+    lfs_pair_fromle32                        0x08004877   Thumb Code    22  lfs.o(i.lfs_pair_fromle32)
+    i.lfs_pair_isnull                        0x0800488c   Section        0  lfs.o(i.lfs_pair_isnull)
+    lfs_pair_isnull                          0x0800488d   Thumb Code    20  lfs.o(i.lfs_pair_isnull)
+    i.lfs_pair_tole32                        0x080048a0   Section        0  lfs.o(i.lfs_pair_tole32)
+    lfs_pair_tole32                          0x080048a1   Thumb Code    22  lfs.o(i.lfs_pair_tole32)
+    i.lfs_popc                               0x080048b8   Section        0  lfs.o(i.lfs_popc)
+    lfs_popc                                 0x080048b9   Thumb Code    42  lfs.o(i.lfs_popc)
+    i.lfs_rawunmount                         0x080048f0   Section        0  lfs.o(i.lfs_rawunmount)
+    lfs_rawunmount                           0x080048f1   Thumb Code     8  lfs.o(i.lfs_rawunmount)
+    i.lfs_tag_dsize                          0x080048f8   Section        0  lfs.o(i.lfs_tag_dsize)
+    lfs_tag_dsize                            0x080048f9   Thumb Code    18  lfs.o(i.lfs_tag_dsize)
+    i.lfs_tag_isdelete                       0x0800490a   Section        0  lfs.o(i.lfs_tag_isdelete)
+    lfs_tag_isdelete                         0x0800490b   Thumb Code    16  lfs.o(i.lfs_tag_isdelete)
+    i.lfs_tag_type1                          0x0800491a   Section        0  lfs.o(i.lfs_tag_type1)
+    lfs_tag_type1                            0x0800491b   Thumb Code    10  lfs.o(i.lfs_tag_type1)
+    i.lfs_tole32                             0x08004924   Section        0  lfs.o(i.lfs_tole32)
+    lfs_tole32                               0x08004925   Thumb Code     8  lfs.o(i.lfs_tole32)
+    i.lfs_unmount                            0x0800492c   Section        0  lfs.o(i.lfs_unmount)
+    i.main                                   0x080049c8   Section        0  main.o(i.main)
+    i.nlcdClear                              0x08004c04   Section        0  nokia1661_lcd_driver.o(i.nlcdClear)
+    i.nlcdGetHeight                          0x08004c40   Section        0  nokia1661_lcd_driver.o(i.nlcdGetHeight)
+    i.nlcdGetWidth                           0x08004c58   Section        0  nokia1661_lcd_driver.o(i.nlcdGetWidth)
+    i.nlcdInit                               0x08004c70   Section        0  nokia1661_lcd_driver.o(i.nlcdInit)
+    i.nlcdSetBackgroundColor                 0x08004d38   Section        0  nokia1661_lcd_driver.o(i.nlcdSetBackgroundColor)
+    i.nlcdSetFont                            0x08004d44   Section        0  nokia1661_lcd_driver.o(i.nlcdSetFont)
+    i.nlcdSetOrientation                     0x08004d74   Section        0  nokia1661_lcd_driver.o(i.nlcdSetOrientation)
+    i.nvic_ini                               0x08004da8   Section        0  cortex_stm32f030.o(i.nvic_ini)
+    i.program_manager                        0x08004dc4   Section        0  pc_com.o(i.program_manager)
+    i.put_help                               0x08004e40   Section        0  pc_com.o(i.put_help)
+    i.put_w25q                               0x08004f2c   Section        0  pc_com.o(i.put_w25q)
+    i.read_adc                               0x08005040   Section        0  adc_stm32f030.o(i.read_adc)
+    i.soft_ini                               0x0800506c   Section        0  main.o(i.soft_ini)
+    i.soft_spi_ini                           0x08005078   Section        0  spi_stm32f030.o(i.soft_spi_ini)
+    i.soft_spi_send                          0x080050e0   Section        0  spi_stm32f030.o(i.soft_spi_send)
+    i.spi_ini                                0x0800511c   Section        0  spi_stm32f030.o(i.spi_ini)
+    i.stdout_putchar                         0x08005158   Section        0  stdout_user.o(i.stdout_putchar)
+    i.tim14_ini                              0x08005170   Section        0  timer_stm32f030.o(i.tim14_ini)
+    i.timer_basic_manager                    0x080051c0   Section        0  cpu_timer.o(i.timer_basic_manager)
+    i.uart_manager_interupt_rx               0x08005268   Section        0  pc_com.o(i.uart_manager_interupt_rx)
+    i.uart_manager_interupt_tx               0x080052b8   Section        0  pc_com.o(i.uart_manager_interupt_tx)
+    i.usart_comp_str                         0x080052f0   Section        0  pc_com.o(i.usart_comp_str)
+    i.usart_send_str_int                     0x08005328   Section        0  pc_com.o(i.usart_send_str_int)
+    .constdata                               0x080053e8   Section      807  main.o(.constdata)
+    .constdata                               0x08005710   Section       20  pc_com.o(.constdata)
+    .constdata                               0x08005724   Section      416  lfs.o(.constdata)
+    <Data1>                                  0x0800575c   Data          12  lfs.o(.constdata)
+    <Data2>                                  0x08005780   Data          12  lfs.o(.constdata)
+    defaults                                 0x080057a4   Data          12  lfs.o(.constdata)
+    <Data3>                                  0x08005804   Data          12  lfs.o(.constdata)
+    <Data4>                                  0x08005810   Data          12  lfs.o(.constdata)
+    <Data5>                                  0x0800581c   Data          12  lfs.o(.constdata)
+    .constdata                               0x080058c4   Section       64  lfs_util.o(.constdata)
+    rtable                                   0x080058c4   Data          64  lfs_util.o(.constdata)
+    .constdata                               0x08005904   Section       12  nokia1661_lcd_driver.o(.constdata)
+    .conststring                             0x08005910   Section        9  lfs.o(.conststring)
     .data                                    0x20000000   Section     1000  main.o(.data)
     .data                                    0x200003e8   Section        8  main.o(.data)
     .data                                    0x200003f0   Section        8  main.o(.data)
-    .data                                    0x200003f8   Section        8  main.o(.data)
-    .data                                    0x20000400   Section        1  stm32f0xx_it.o(.data)
-    .data                                    0x20000404   Section       12  pc_com.o(.data)
-    .data                                    0x20000410   Section        9  w25q.o(.data)
-    Data1                                    0x20000410   Data           1  w25q.o(.data)
-    Data2                                    0x20000411   Data           1  w25q.o(.data)
-    Data3                                    0x20000412   Data           1  w25q.o(.data)
-    Data1                                    0x20000413   Data           1  w25q.o(.data)
-    Data2                                    0x20000414   Data           1  w25q.o(.data)
-    Data3                                    0x20000415   Data           1  w25q.o(.data)
-    Data1                                    0x20000416   Data           1  w25q.o(.data)
-    Data2                                    0x20000417   Data           1  w25q.o(.data)
-    Data3                                    0x20000418   Data           1  w25q.o(.data)
-    .data                                    0x2000041c   Section       12  stm32f0xx_hal.o(.data)
-    .data                                    0x20000428   Section        4  system_stm32f0xx.o(.data)
-    .data                                    0x2000042c   Section        4  stdout.o(.data)
-    .bss                                     0x20000430   Section     1272  main.o(.bss)
-    .bss                                     0x20000928   Section       20  main.o(.bss)
-    .bss                                     0x2000093c   Section      256  main.o(.bss)
-    lfs_read_cache_buf                       0x2000093c   Data         256  main.o(.bss)
-    .bss                                     0x20000a3c   Section      256  main.o(.bss)
-    lfs_prog_cache_buf                       0x20000a3c   Data         256  main.o(.bss)
-    .bss                                     0x20000b3c   Section       16  main.o(.bss)
-    lfs_lookahead_buf                        0x20000b3c   Data          16  main.o(.bss)
-    .bss                                     0x20000b4c   Section       42  pc_com.o(.bss)
-    .bss                                     0x20000b78   Section       64  lfs.o(.bss)
-    mem                                      0x20000b78   Data          64  lfs.o(.bss)
-    STACK                                    0x20000bb8   Section     1024  startup_stm32f030x6.o(STACK)
+    .data                                    0x200003f8   Section       16  main.o(.data)
+    .data                                    0x20000408   Section        1  stm32f0xx_it.o(.data)
+    .data                                    0x2000040c   Section       12  pc_com.o(.data)
+    .data                                    0x20000418   Section        9  w25q.o(.data)
+    Data1                                    0x20000418   Data           1  w25q.o(.data)
+    Data2                                    0x20000419   Data           1  w25q.o(.data)
+    Data3                                    0x2000041a   Data           1  w25q.o(.data)
+    Data1                                    0x2000041b   Data           1  w25q.o(.data)
+    Data2                                    0x2000041c   Data           1  w25q.o(.data)
+    Data3                                    0x2000041d   Data           1  w25q.o(.data)
+    Data1                                    0x2000041e   Data           1  w25q.o(.data)
+    Data2                                    0x2000041f   Data           1  w25q.o(.data)
+    Data3                                    0x20000420   Data           1  w25q.o(.data)
+    .data                                    0x20000422   Section       18  nokia1661_lcd_driver.o(.data)
+    ShiftBit                                 0x20000422   Data          18  nokia1661_lcd_driver.o(.data)
+    .data                                    0x20000434   Section       12  stm32f0xx_hal.o(.data)
+    .data                                    0x20000440   Section        4  system_stm32f0xx.o(.data)
+    .data                                    0x20000444   Section        4  stdout.o(.data)
+    .bss                                     0x20000448   Section       68  main.o(.bss)
+    .bss                                     0x2000048c   Section       20  main.o(.bss)
+    .bss                                     0x200004a0   Section      120  main.o(.bss)
+    .bss                                     0x20000518   Section       84  main.o(.bss)
+    .bss                                     0x2000056c   Section     1000  main.o(.bss)
+    .bss                                     0x20000954   Section       42  pc_com.o(.bss)
+    .bss                                     0x20000980   Section       64  lfs.o(.bss)
+    mem                                      0x20000980   Data          64  lfs.o(.bss)
+    .bss                                     0x200009c0   Section       20  nokia1661_lcd_driver.o(.bss)
+    STACK                                    0x200009d8   Section     1024  startup_stm32f030x6.o(STACK)
 
     Global Symbols
 
@@ -2304,120 +2386,129 @@ Image Symbol Table
     _ll_shift_l                              0x0800028f   Thumb Code     0  llshl.o(.text)
     __scatterload                            0x080002b1   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x080002b1   Thumb Code     0  init.o(.text)
-    __decompress                             0x080002d5   Thumb Code     0  __dczerorl2.o(.text)
-    __decompress1                            0x080002d5   Thumb Code    86  __dczerorl2.o(.text)
-    DMA1_Channel2_3_IRQHandler               0x0800032b   Thumb Code     2  stm32f0xx_it.o(i.DMA1_Channel2_3_IRQHandler)
-    Error_Handler                            0x0800032d   Thumb Code     4  main.o(i.Error_Handler)
-    HAL_GetTick                              0x08000331   Thumb Code     6  stm32f0xx_hal.o(i.HAL_GetTick)
-    HAL_IncTick                              0x0800033d   Thumb Code    12  stm32f0xx_hal.o(i.HAL_IncTick)
-    HAL_Init                                 0x0800034d   Thumb Code    26  stm32f0xx_hal.o(i.HAL_Init)
-    HAL_InitTick                             0x0800036d   Thumb Code    58  stm32f0xx_hal.o(i.HAL_InitTick)
-    HAL_MspInit                              0x080003b1   Thumb Code     2  stm32f0xx_hal.o(i.HAL_MspInit)
-    HAL_NVIC_SetPriority                     0x080003b3   Thumb Code     8  stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    HAL_RCCEx_PeriphCLKConfig                0x080003bd   Thumb Code   218  stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig)
-    HAL_RCC_ClockConfig                      0x080004a5   Thumb Code   242  stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    HAL_RCC_GetSysClockFreq                  0x080005ad   Thumb Code    84  stm32f0xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    HAL_RCC_OscConfig                        0x0800062d   Thumb Code   890  stm32f0xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    HAL_SYSTICK_Config                       0x080009b5   Thumb Code    38  stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    HardFault_Handler                        0x080009e5   Thumb Code     2  stm32f0xx_it.o(i.HardFault_Handler)
-    LL_GPIO_Init                             0x080009e7   Thumb Code   174  stm32f0xx_ll_gpio_2.o(i.LL_GPIO_Init)
-    LL_mDelay                                0x08000a95   Thumb Code    28  stm32f0xx_ll_utils_1.o(i.LL_mDelay)
-    NMI_Handler                              0x08000ab5   Thumb Code     2  stm32f0xx_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x08000ab7   Thumb Code     2  stm32f0xx_it.o(i.PendSV_Handler)
-    SPI_w25q                                 0x08000ab9   Thumb Code    38  spi_stm32f030.o(i.SPI_w25q)
-    SVC_Handler                              0x08000ae5   Thumb Code     2  stm32f0xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x08000ae7   Thumb Code    12  stm32f0xx_it.o(i.SysTick_Handler)
-    SystemInit                               0x08000af3   Thumb Code     2  system_stm32f0xx.o(i.SystemInit)
-    TIM14_IRQHandler                         0x08000af5   Thumb Code    18  stm32f0xx_it.o(i.TIM14_IRQHandler)
-    USART1_IRQHandler                        0x08000b0d   Thumb Code    44  stm32f0xx_it.o(i.USART1_IRQHandler)
-    USART_ini                                0x08000b41   Thumb Code   150  usart_stm32f030.o(i.USART_ini)
-    W25Q_Enable_Write                        0x08000be1   Thumb Code    20  w25q.o(i.W25Q_Enable_Write)
-    W25Q_EraseSector4KB                      0x08000bf5   Thumb Code    64  w25q.o(i.W25Q_EraseSector4KB)
-    W25Q_ReadPage                            0x08000c39   Thumb Code    68  w25q.o(i.W25Q_ReadPage)
-    W25Q_ReadPage_start                      0x08000c7d   Thumb Code    42  w25q.o(i.W25Q_ReadPage_start)
-    W25Q_Read_Manufact_Device_ID             0x08000ca9   Thumb Code    62  w25q.o(i.W25Q_Read_Manufact_Device_ID)
-    W25Q_Read_StatusReg                      0x08000ced   Thumb Code    48  w25q.o(i.W25Q_Read_StatusReg)
-    W25Q_WaitBusy                            0x08000d21   Thumb Code    22  w25q.o(i.W25Q_WaitBusy)
-    W25Q_WritePage                           0x08000d3d   Thumb Code    74  w25q.o(i.W25Q_WritePage)
-    W25Q_WritePage_start                     0x08000d87   Thumb Code    46  w25q.o(i.W25Q_WritePage_start)
-    W25Q_ini                                 0x08000db5   Thumb Code    90  w25q.o(i.W25Q_ini)
-    __0printf$8                              0x08000e11   Thumb Code    24  printf8.o(i.__0printf$8)
-    __1printf$8                              0x08000e11   Thumb Code     0  printf8.o(i.__0printf$8)
-    __2printf                                0x08000e11   Thumb Code     0  printf8.o(i.__0printf$8)
-    __ARM_clz                                0x08000e31   Thumb Code    46  lfs.o(i.__ARM_clz)
-    __ARM_common_ll_muluu                    0x08000e5f   Thumb Code    48  stm32f0xx_hal_rcc.o(i.__ARM_common_ll_muluu)
-    __scatterload_copy                       0x08000ed5   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08000ee3   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08000ee5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    adc_calibre                              0x08001369   Thumb Code    18  adc_stm32f030.o(i.adc_calibre)
-    adc_ini                                  0x08001381   Thumb Code   100  adc_stm32f030.o(i.adc_ini)
-    clock_ini                                0x080013f5   Thumb Code   106  cortex_stm32f030.o(i.clock_ini)
-    clr_str_rx                               0x08001461   Thumb Code    30  pc_com.o(i.clr_str_rx)
-    clr_str_tx                               0x08001489   Thumb Code    30  pc_com.o(i.clr_str_tx)
-    dac                                      0x080014b1   Thumb Code    94  dac.o(i.dac)
-    dac_ini                                  0x08001521   Thumb Code   102  dac.o(i.dac_ini)
-    dac_start                                0x08001595   Thumb Code    38  dac.o(i.dac_start)
-    debuge_uart                              0x080015c5   Thumb Code   676  pc_com.o(i.debuge_uart)
-    dma_ini                                  0x0800197d   Thumb Code    12  cortex_stm32f030.o(i.dma_ini)
-    fputc                                    0x0800198d   Thumb Code    20  retarget_io.o(i.fputc)
-    gpio_ini                                 0x080019a5   Thumb Code   170  gpio_stm32f030.o(i.gpio_ini)
-    hard_ini                                 0x08001a55   Thumb Code    54  main.o(i.hard_ini)
-    ini_cpu_timer                            0x08001a8d   Thumb Code   142  cpu_timer.o(i.ini_cpu_timer)
-    lfs_crc                                  0x08001f75   Thumb Code    44  lfs_util.o(i.lfs_crc)
-    lfs_file_close                           0x080038e5   Thumb Code    56  lfs.o(i.lfs_file_close)
-    lfs_file_open                            0x08003ac1   Thumb Code    76  lfs.o(i.lfs_file_open)
-    lfs_file_read                            0x080041a9   Thumb Code    72  lfs.o(i.lfs_file_read)
-    lfs_file_rewind                          0x080043a9   Thumb Code    66  lfs.o(i.lfs_file_rewind)
-    lfs_file_write                           0x08004461   Thumb Code    72  lfs.o(i.lfs_file_write)
-    lfs_format                               0x08004525   Thumb Code   116  lfs.o(i.lfs_format)
-    lfs_mount                                0x08004ee1   Thumb Code   116  lfs.o(i.lfs_mount)
-    lfs_unmount                              0x08005459   Thumb Code    50  lfs.o(i.lfs_unmount)
-    main                                     0x080054f5   Thumb Code   212  main.o(i.main)
-    nvic_ini                                 0x080055e5   Thumb Code    20  cortex_stm32f030.o(i.nvic_ini)
-    program_manager                          0x08005601   Thumb Code   110  pc_com.o(i.program_manager)
-    put_help                                 0x08005681   Thumb Code    96  pc_com.o(i.put_help)
-    put_w25q                                 0x0800576d   Thumb Code   200  pc_com.o(i.put_w25q)
-    read_adc                                 0x08005879   Thumb Code    40  adc_stm32f030.o(i.read_adc)
-    soft_ini                                 0x080058a5   Thumb Code    12  main.o(i.soft_ini)
-    soft_spi_ini                             0x080058b1   Thumb Code   100  spi_stm32f030.o(i.soft_spi_ini)
-    soft_spi_send                            0x08005919   Thumb Code    56  spi_stm32f030.o(i.soft_spi_send)
-    spi_ini                                  0x08005955   Thumb Code    56  spi_stm32f030.o(i.spi_ini)
-    stdout_putchar                           0x08005991   Thumb Code    20  stdout_user.o(i.stdout_putchar)
-    tim14_ini                                0x080059a9   Thumb Code    64  timer_stm32f030.o(i.tim14_ini)
-    timer_basic_manager                      0x080059f9   Thumb Code   152  cpu_timer.o(i.timer_basic_manager)
-    uart_manager_interupt_rx                 0x08005aa1   Thumb Code    62  pc_com.o(i.uart_manager_interupt_rx)
-    uart_manager_interupt_tx                 0x08005af1   Thumb Code    48  pc_com.o(i.uart_manager_interupt_tx)
-    usart_comp_str                           0x08005b29   Thumb Code    46  pc_com.o(i.usart_comp_str)
-    usart_send_str_int                       0x08005b61   Thumb Code   174  pc_com.o(i.usart_send_str_int)
-    cfg                                      0x08005c64   Data          76  main.o(.constdata)
-    AHBPrescTable                            0x08005ea4   Data          16  system_stm32f0xx.o(.constdata)
-    Region$$Table$$Base                      0x08006124   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08006144   Number         0  anon$$obj.o(Region$$Table)
+    __decompress                             0x080002d5   Thumb Code     0  __dczerorl.o(.text)
+    __decompress0                            0x080002d5   Thumb Code    58  __dczerorl.o(.text)
+    DMA1_Channel2_3_IRQHandler               0x0800030f   Thumb Code     2  stm32f0xx_it.o(i.DMA1_Channel2_3_IRQHandler)
+    HAL_IncTick                              0x08000311   Thumb Code    12  stm32f0xx_hal.o(i.HAL_IncTick)
+    HAL_Init                                 0x08000321   Thumb Code    26  stm32f0xx_hal.o(i.HAL_Init)
+    HAL_InitTick                             0x08000341   Thumb Code    58  stm32f0xx_hal.o(i.HAL_InitTick)
+    HAL_MspInit                              0x08000385   Thumb Code     2  stm32f0xx_hal.o(i.HAL_MspInit)
+    HAL_NVIC_SetPriority                     0x08000387   Thumb Code     8  stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    HAL_SYSTICK_Config                       0x08000391   Thumb Code    38  stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    HardFault_Handler                        0x080003c1   Thumb Code     2  stm32f0xx_it.o(i.HardFault_Handler)
+    LL_GPIO_Init                             0x080003c3   Thumb Code   174  stm32f0xx_ll_gpio_2.o(i.LL_GPIO_Init)
+    LL_Init1msTick                           0x08000471   Thumb Code    26  stm32f0xx_ll_utils_1.o(i.LL_Init1msTick)
+    LL_SetSystemCoreClock                    0x08000491   Thumb Code     6  stm32f0xx_ll_utils_1.o(i.LL_SetSystemCoreClock)
+    LL_mDelay                                0x0800049d   Thumb Code    28  stm32f0xx_ll_utils_1.o(i.LL_mDelay)
+    NMI_Handler                              0x080004bd   Thumb Code     2  stm32f0xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x080004bf   Thumb Code     2  stm32f0xx_it.o(i.PendSV_Handler)
+    SPI_w25q                                 0x080004c1   Thumb Code    38  spi_stm32f030.o(i.SPI_w25q)
+    SVC_Handler                              0x080004ed   Thumb Code     2  stm32f0xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x080004ef   Thumb Code    12  stm32f0xx_it.o(i.SysTick_Handler)
+    SystemInit                               0x080004fb   Thumb Code     2  system_stm32f0xx.o(i.SystemInit)
+    TIM14_IRQHandler                         0x080004fd   Thumb Code    18  stm32f0xx_it.o(i.TIM14_IRQHandler)
+    USART1_IRQHandler                        0x08000515   Thumb Code    44  stm32f0xx_it.o(i.USART1_IRQHandler)
+    USART_ini                                0x08000549   Thumb Code   150  usart_stm32f030.o(i.USART_ini)
+    W25Q_Enable_Write                        0x080005ed   Thumb Code    20  w25q.o(i.W25Q_Enable_Write)
+    W25Q_EraseSector4KB                      0x08000601   Thumb Code    64  w25q.o(i.W25Q_EraseSector4KB)
+    W25Q_ReadPage_start                      0x08000645   Thumb Code    42  w25q.o(i.W25Q_ReadPage_start)
+    W25Q_Read_Manufact_Device_ID             0x08000671   Thumb Code    62  w25q.o(i.W25Q_Read_Manufact_Device_ID)
+    W25Q_Read_StatusReg                      0x080006b5   Thumb Code    48  w25q.o(i.W25Q_Read_StatusReg)
+    W25Q_WaitBusy                            0x080006e9   Thumb Code    22  w25q.o(i.W25Q_WaitBusy)
+    W25Q_WritePage_start                     0x08000705   Thumb Code    46  w25q.o(i.W25Q_WritePage_start)
+    W25Q_ini                                 0x08000733   Thumb Code    92  w25q.o(i.W25Q_ini)
+    __0printf$8                              0x08000791   Thumb Code    24  printf8.o(i.__0printf$8)
+    __1printf$8                              0x08000791   Thumb Code     0  printf8.o(i.__0printf$8)
+    __2printf                                0x08000791   Thumb Code     0  printf8.o(i.__0printf$8)
+    __ARM_clz                                0x080007b1   Thumb Code    46  lfs.o(i.__ARM_clz)
+    __scatterload_copy                       0x08000825   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000833   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000835   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    _nlcdCmd1616                             0x08000843   Thumb Code    52  nokia1661_lcd_driver.o(i._nlcdCmd1616)
+    _nlcdSenPixels                           0x08000877   Thumb Code    26  nokia1661_lcd_driver.o(i._nlcdSenPixels)
+    _nlcdSend                                0x08000891   Thumb Code   168  nokia1661_lcd_driver.o(i._nlcdSend)
+    _nlcdSendCmd                             0x08000941   Thumb Code     8  nokia1661_lcd_driver.o(i._nlcdSendCmd)
+    _nlcdSendPixel                           0x08000949   Thumb Code    26  nokia1661_lcd_driver.o(i._nlcdSendPixel)
+    _nlcdSetWindow                           0x08000963   Thumb Code    42  nokia1661_lcd_driver.o(i._nlcdSetWindow)
+    adc_calibre                              0x08000e01   Thumb Code    18  adc_stm32f030.o(i.adc_calibre)
+    adc_ini                                  0x08000e19   Thumb Code   100  adc_stm32f030.o(i.adc_ini)
+    clock_ini                                0x08000e8d   Thumb Code   150  cortex_stm32f030.o(i.clock_ini)
+    clr_str_rx                               0x08000f31   Thumb Code    30  pc_com.o(i.clr_str_rx)
+    clr_str_tx                               0x08000f59   Thumb Code    30  pc_com.o(i.clr_str_tx)
+    dac                                      0x08000f81   Thumb Code    96  dac.o(i.dac)
+    dac_ini                                  0x08000ff1   Thumb Code   102  dac.o(i.dac_ini)
+    dac_start                                0x08001065   Thumb Code    38  dac.o(i.dac_start)
+    debuge_uart                              0x08001095   Thumb Code   690  pc_com.o(i.debuge_uart)
+    dma_ini                                  0x08001465   Thumb Code    12  cortex_stm32f030.o(i.dma_ini)
+    fputc                                    0x08001475   Thumb Code    20  retarget_io.o(i.fputc)
+    gpio_ini                                 0x0800148d   Thumb Code   170  gpio_stm32f030.o(i.gpio_ini)
+    hard_ini                                 0x0800153d   Thumb Code    54  main.o(i.hard_ini)
+    ini_cpu_timer                            0x08001575   Thumb Code   142  cpu_timer.o(i.ini_cpu_timer)
+    lfs_crc                                  0x08001a5d   Thumb Code    44  lfs_util.o(i.lfs_crc)
+    lfs_file_close                           0x080033cd   Thumb Code    56  lfs.o(i.lfs_file_close)
+    lfs_file_open                            0x080035a9   Thumb Code    76  lfs.o(i.lfs_file_open)
+    lfs_file_read                            0x08003c91   Thumb Code    72  lfs.o(i.lfs_file_read)
+    lfs_file_rewind                          0x08003e91   Thumb Code    66  lfs.o(i.lfs_file_rewind)
+    lfs_file_write                           0x08003f49   Thumb Code    72  lfs.o(i.lfs_file_write)
+    lfs_unmount                              0x0800492d   Thumb Code    50  lfs.o(i.lfs_unmount)
+    main                                     0x080049c9   Thumb Code   532  main.o(i.main)
+    nlcdClear                                0x08004c05   Thumb Code    56  nokia1661_lcd_driver.o(i.nlcdClear)
+    nlcdGetHeight                            0x08004c41   Thumb Code    20  nokia1661_lcd_driver.o(i.nlcdGetHeight)
+    nlcdGetWidth                             0x08004c59   Thumb Code    20  nokia1661_lcd_driver.o(i.nlcdGetWidth)
+    nlcdInit                                 0x08004c71   Thumb Code   190  nokia1661_lcd_driver.o(i.nlcdInit)
+    nlcdSetBackgroundColor                   0x08004d39   Thumb Code     6  nokia1661_lcd_driver.o(i.nlcdSetBackgroundColor)
+    nlcdSetFont                              0x08004d45   Thumb Code    42  nokia1661_lcd_driver.o(i.nlcdSetFont)
+    nlcdSetOrientation                       0x08004d75   Thumb Code    48  nokia1661_lcd_driver.o(i.nlcdSetOrientation)
+    nvic_ini                                 0x08004da9   Thumb Code    20  cortex_stm32f030.o(i.nvic_ini)
+    program_manager                          0x08004dc5   Thumb Code   108  pc_com.o(i.program_manager)
+    put_help                                 0x08004e41   Thumb Code    96  pc_com.o(i.put_help)
+    put_w25q                                 0x08004f2d   Thumb Code   204  pc_com.o(i.put_w25q)
+    read_adc                                 0x08005041   Thumb Code    40  adc_stm32f030.o(i.read_adc)
+    soft_ini                                 0x0800506d   Thumb Code    12  main.o(i.soft_ini)
+    soft_spi_ini                             0x08005079   Thumb Code   100  spi_stm32f030.o(i.soft_spi_ini)
+    soft_spi_send                            0x080050e1   Thumb Code    56  spi_stm32f030.o(i.soft_spi_send)
+    spi_ini                                  0x0800511d   Thumb Code    56  spi_stm32f030.o(i.spi_ini)
+    stdout_putchar                           0x08005159   Thumb Code    20  stdout_user.o(i.stdout_putchar)
+    tim14_ini                                0x08005171   Thumb Code    64  timer_stm32f030.o(i.tim14_ini)
+    timer_basic_manager                      0x080051c1   Thumb Code   152  cpu_timer.o(i.timer_basic_manager)
+    uart_manager_interupt_rx                 0x08005269   Thumb Code    62  pc_com.o(i.uart_manager_interupt_rx)
+    uart_manager_interupt_tx                 0x080052b9   Thumb Code    48  pc_com.o(i.uart_manager_interupt_tx)
+    usart_comp_str                           0x080052f1   Thumb Code    46  pc_com.o(i.usart_comp_str)
+    usart_send_str_int                       0x08005329   Thumb Code   174  pc_com.o(i.usart_send_str_int)
+    font5x7latcyr                            0x080053e8   Data         807  main.o(.constdata)
+    _lcd_init_list                           0x08005904   Data          12  nokia1661_lcd_driver.o(.constdata)
+    Region$$Table$$Base                      0x0800591c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800593c   Number         0  anon$$obj.o(Region$$Table)
     WriteBuf                                 0x20000000   Data        1000  main.o(.data)
     tb_g2                                    0x200003e8   Data           8  main.o(.data)
     tbrc_s1                                  0x200003f0   Data           8  main.o(.data)
-    programer                                0x200003f8   Data           8  main.o(.data)
-    data_rx                                  0x20000400   Data           1  stm32f0xx_it.o(.data)
-    lfs_write                                0x20000404   Data           1  pc_com.o(.data)
-    debuge_out_EN                            0x20000405   Data           1  pc_com.o(.data)
-    debuge_var                               0x20000406   Data           1  pc_com.o(.data)
-    WriteBuf_i                               0x20000408   Data           4  pc_com.o(.data)
-    ram_i                                    0x2000040c   Data           4  pc_com.o(.data)
-    uwTickFreq                               0x2000041c   Data           1  stm32f0xx_hal.o(.data)
-    uwTickPrio                               0x20000420   Data           4  stm32f0xx_hal.o(.data)
-    uwTick                                   0x20000424   Data           4  stm32f0xx_hal.o(.data)
-    SystemCoreClock                          0x20000428   Data           4  system_stm32f0xx.o(.data)
-    __stdout                                 0x2000042c   Data           4  stdout.o(.data)
-    tbr_g1                                   0x20000430   Data          12  main.o(.bss)
-    c                                        0x2000043c   Data          16  main.o(.bss)
-    adc                                      0x2000044c   Data          40  main.o(.bss)
-    lfs                                      0x20000474   Data         120  main.o(.bss)
-    file                                     0x200004ec   Data          84  main.o(.bss)
-    ReadBuf                                  0x20000540   Data        1000  main.o(.bss)
-    W25Q                                     0x20000928   Data          20  main.o(.bss)
-    usart_RX                                 0x20000b4c   Data          21  pc_com.o(.bss)
-    usart_TX                                 0x20000b61   Data          21  pc_com.o(.bss)
-    __initial_sp                             0x20000fb8   Data           0  startup_stm32f030x6.o(STACK)
+    r                                        0x200003f8   Data           1  main.o(.data)
+    g                                        0x200003f9   Data           1  main.o(.data)
+    b                                        0x200003fa   Data           1  main.o(.data)
+    kave                                     0x200003fb   Data           5  main.o(.data)
+    programer                                0x20000400   Data           8  main.o(.data)
+    data_rx                                  0x20000408   Data           1  stm32f0xx_it.o(.data)
+    lfs_write                                0x2000040c   Data           1  pc_com.o(.data)
+    debuge_out_EN                            0x2000040d   Data           1  pc_com.o(.data)
+    debuge_var                               0x2000040e   Data           1  pc_com.o(.data)
+    WriteBuf_i                               0x20000410   Data           4  pc_com.o(.data)
+    ram_i                                    0x20000414   Data           4  pc_com.o(.data)
+    uwTickFreq                               0x20000434   Data           1  stm32f0xx_hal.o(.data)
+    uwTickPrio                               0x20000438   Data           4  stm32f0xx_hal.o(.data)
+    uwTick                                   0x2000043c   Data           4  stm32f0xx_hal.o(.data)
+    SystemCoreClock                          0x20000440   Data           4  system_stm32f0xx.o(.data)
+    __stdout                                 0x20000444   Data           4  stdout.o(.data)
+    tbr_g1                                   0x20000448   Data          12  main.o(.bss)
+    c                                        0x20000454   Data          16  main.o(.bss)
+    adc                                      0x20000464   Data          40  main.o(.bss)
+    W25Q                                     0x2000048c   Data          20  main.o(.bss)
+    lfs                                      0x200004a0   Data         120  main.o(.bss)
+    file                                     0x20000518   Data          84  main.o(.bss)
+    ReadBuf                                  0x2000056c   Data        1000  main.o(.bss)
+    usart_RX                                 0x20000954   Data          21  pc_com.o(.bss)
+    usart_TX                                 0x20000969   Data          21  pc_com.o(.bss)
+    _lcd_data                                0x200009c0   Data          20  nokia1661_lcd_driver.o(.bss)
+    __initial_sp                             0x20000dd8   Data           0  startup_stm32f030x6.o(STACK)
 
 
 
@@ -2427,262 +2518,261 @@ Memory Map of the image
 
   Image Entry point : 0x080000b1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00006574, Max: 0x00008000, ABSOLUTE, COMPRESSED[0x0000619c])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00005d84, Max: 0x00008000, ABSOLUTE, COMPRESSED[0x000059a8])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00006144, Max: 0x00008000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000593c, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000000b0   Data   RO            3    RESET               startup_stm32f030x6.o
-    0x080000b0   0x080000b0   0x00000000   Code   RO         3582  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
-    0x080000b0   0x080000b0   0x00000004   Code   RO         3878    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
-    0x080000b4   0x080000b4   0x00000004   Code   RO         3881    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
-    0x080000b8   0x080000b8   0x00000000   Code   RO         3883    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
-    0x080000b8   0x080000b8   0x00000000   Code   RO         3885    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
-    0x080000b8   0x080000b8   0x00000008   Code   RO         3886    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
-    0x080000c0   0x080000c0   0x00000000   Code   RO         3888    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
-    0x080000c0   0x080000c0   0x00000000   Code   RO         3890    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
-    0x080000c0   0x080000c0   0x00000004   Code   RO         3879    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x080000b0   0x080000b0   0x00000000   Code   RO         3783  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x080000b0   0x080000b0   0x00000004   Code   RO         4079    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x080000b4   0x080000b4   0x00000004   Code   RO         4082    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x080000b8   0x080000b8   0x00000000   Code   RO         4084    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x080000b8   0x080000b8   0x00000000   Code   RO         4086    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x080000b8   0x080000b8   0x00000008   Code   RO         4087    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x080000c0   0x080000c0   0x00000000   Code   RO         4089    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x080000c0   0x080000c0   0x00000000   Code   RO         4091    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x080000c0   0x080000c0   0x00000004   Code   RO         4080    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
     0x080000c4   0x080000c4   0x0000001c   Code   RO            4    .text               startup_stm32f030x6.o
-    0x080000e0   0x080000e0   0x0000002c   Code   RO         3591    .text               mc_p.l(uidiv.o)
-    0x0800010c   0x0800010c   0x00000028   Code   RO         3593    .text               mc_p.l(idiv.o)
-    0x08000134   0x08000134   0x00000060   Code   RO         3595    .text               mc_p.l(uldiv.o)
-    0x08000194   0x08000194   0x00000022   Code   RO         3597    .text               mc_p.l(llushr.o)
-    0x080001b6   0x080001b6   0x00000024   Code   RO         3599    .text               mc_p.l(memcpya.o)
-    0x080001da   0x080001da   0x00000024   Code   RO         3601    .text               mc_p.l(memseta.o)
-    0x080001fe   0x080001fe   0x00000014   Code   RO         3603    .text               mc_p.l(strchr.o)
-    0x08000212   0x08000212   0x0000000e   Code   RO         3605    .text               mc_p.l(strlen.o)
-    0x08000220   0x08000220   0x0000001a   Code   RO         3607    .text               mc_p.l(memcmp.o)
-    0x0800023a   0x0800023a   0x00000012   Code   RO         3609    .text               mc_p.l(strcpy.o)
-    0x0800024c   0x0800024c   0x00000020   Code   RO         3611    .text               mc_p.l(strspn.o)
-    0x0800026c   0x0800026c   0x00000022   Code   RO         3613    .text               mc_p.l(strcspn.o)
-    0x0800028e   0x0800028e   0x00000020   Code   RO         3892    .text               mc_p.l(llshl.o)
+    0x080000e0   0x080000e0   0x0000002c   Code   RO         3792    .text               mc_p.l(uidiv.o)
+    0x0800010c   0x0800010c   0x00000028   Code   RO         3794    .text               mc_p.l(idiv.o)
+    0x08000134   0x08000134   0x00000060   Code   RO         3796    .text               mc_p.l(uldiv.o)
+    0x08000194   0x08000194   0x00000022   Code   RO         3798    .text               mc_p.l(llushr.o)
+    0x080001b6   0x080001b6   0x00000024   Code   RO         3800    .text               mc_p.l(memcpya.o)
+    0x080001da   0x080001da   0x00000024   Code   RO         3802    .text               mc_p.l(memseta.o)
+    0x080001fe   0x080001fe   0x00000014   Code   RO         3804    .text               mc_p.l(strchr.o)
+    0x08000212   0x08000212   0x0000000e   Code   RO         3806    .text               mc_p.l(strlen.o)
+    0x08000220   0x08000220   0x0000001a   Code   RO         3808    .text               mc_p.l(memcmp.o)
+    0x0800023a   0x0800023a   0x00000012   Code   RO         3810    .text               mc_p.l(strcpy.o)
+    0x0800024c   0x0800024c   0x00000020   Code   RO         3812    .text               mc_p.l(strspn.o)
+    0x0800026c   0x0800026c   0x00000022   Code   RO         3814    .text               mc_p.l(strcspn.o)
+    0x0800028e   0x0800028e   0x00000020   Code   RO         4093    .text               mc_p.l(llshl.o)
     0x080002ae   0x080002ae   0x00000002   PAD
-    0x080002b0   0x080002b0   0x00000024   Code   RO         3905    .text               mc_p.l(init.o)
-    0x080002d4   0x080002d4   0x00000056   Code   RO         3919    .text               mc_p.l(__dczerorl2.o)
-    0x0800032a   0x0800032a   0x00000002   Code   RO          274    i.DMA1_Channel2_3_IRQHandler  stm32f0xx_it.o
-    0x0800032c   0x0800032c   0x00000004   Code   RO           12    i.Error_Handler     main.o
-    0x08000330   0x08000330   0x0000000c   Code   RO         2112    i.HAL_GetTick       stm32f0xx_hal.o
-    0x0800033c   0x0800033c   0x00000010   Code   RO         2118    i.HAL_IncTick       stm32f0xx_hal.o
-    0x0800034c   0x0800034c   0x00000020   Code   RO         2119    i.HAL_Init          stm32f0xx_hal.o
-    0x0800036c   0x0800036c   0x00000044   Code   RO         2120    i.HAL_InitTick      stm32f0xx_hal.o
-    0x080003b0   0x080003b0   0x00000002   Code   RO         2122    i.HAL_MspInit       stm32f0xx_hal.o
-    0x080003b2   0x080003b2   0x00000008   Code   RO         2923    i.HAL_NVIC_SetPriority  stm32f0xx_hal_cortex.o
-    0x080003ba   0x080003ba   0x00000002   PAD
-    0x080003bc   0x080003bc   0x000000e8   Code   RO         2073    i.HAL_RCCEx_PeriphCLKConfig  stm32f0xx_hal_rcc_ex.o
-    0x080004a4   0x080004a4   0x00000108   Code   RO         1978    i.HAL_RCC_ClockConfig  stm32f0xx_hal_rcc.o
-    0x080005ac   0x080005ac   0x00000080   Code   RO         1986    i.HAL_RCC_GetSysClockFreq  stm32f0xx_hal_rcc.o
-    0x0800062c   0x0800062c   0x00000388   Code   RO         1989    i.HAL_RCC_OscConfig  stm32f0xx_hal_rcc.o
-    0x080009b4   0x080009b4   0x00000030   Code   RO         2927    i.HAL_SYSTICK_Config  stm32f0xx_hal_cortex.o
-    0x080009e4   0x080009e4   0x00000002   Code   RO          275    i.HardFault_Handler  stm32f0xx_it.o
-    0x080009e6   0x080009e6   0x000000ae   Code   RO         3392    i.LL_GPIO_Init      stm32f0xx_ll_gpio_2.o
-    0x08000a94   0x08000a94   0x00000020   Code   RO         3455    i.LL_mDelay         stm32f0xx_ll_utils_1.o
-    0x08000ab4   0x08000ab4   0x00000002   Code   RO          276    i.NMI_Handler       stm32f0xx_it.o
-    0x08000ab6   0x08000ab6   0x00000002   Code   RO          277    i.PendSV_Handler    stm32f0xx_it.o
-    0x08000ab8   0x08000ab8   0x0000002c   Code   RO          617    i.SPI_w25q          spi_stm32f030.o
-    0x08000ae4   0x08000ae4   0x00000002   Code   RO          278    i.SVC_Handler       stm32f0xx_it.o
-    0x08000ae6   0x08000ae6   0x0000000c   Code   RO          279    i.SysTick_Handler   stm32f0xx_it.o
-    0x08000af2   0x08000af2   0x00000002   Code   RO         3350    i.SystemInit        system_stm32f0xx.o
-    0x08000af4   0x08000af4   0x00000018   Code   RO          280    i.TIM14_IRQHandler  stm32f0xx_it.o
-    0x08000b0c   0x08000b0c   0x00000034   Code   RO          281    i.USART1_IRQHandler  stm32f0xx_it.o
-    0x08000b40   0x08000b40   0x000000a0   Code   RO          346    i.USART_ini         usart_stm32f030.o
-    0x08000be0   0x08000be0   0x00000014   Code   RO          671    i.W25Q_Enable_Write  w25q.o
-    0x08000bf4   0x08000bf4   0x00000044   Code   RO          675    i.W25Q_EraseSector4KB  w25q.o
-    0x08000c38   0x08000c38   0x00000044   Code   RO          676    i.W25Q_ReadPage     w25q.o
-    0x08000c7c   0x08000c7c   0x0000002a   Code   RO          677    i.W25Q_ReadPage_start  w25q.o
-    0x08000ca6   0x08000ca6   0x00000002   PAD
-    0x08000ca8   0x08000ca8   0x00000044   Code   RO          678    i.W25Q_Read_Manufact_Device_ID  w25q.o
-    0x08000cec   0x08000cec   0x00000034   Code   RO          679    i.W25Q_Read_StatusReg  w25q.o
-    0x08000d20   0x08000d20   0x0000001c   Code   RO          680    i.W25Q_WaitBusy     w25q.o
-    0x08000d3c   0x08000d3c   0x0000004a   Code   RO          681    i.W25Q_WritePage    w25q.o
-    0x08000d86   0x08000d86   0x0000002e   Code   RO          682    i.W25Q_WritePage_start  w25q.o
-    0x08000db4   0x08000db4   0x0000005a   Code   RO          683    i.W25Q_ini          w25q.o
-    0x08000e0e   0x08000e0e   0x00000002   PAD
-    0x08000e10   0x08000e10   0x00000020   Code   RO         3824    i.__0printf$8       mc_p.l(printf8.o)
-    0x08000e30   0x08000e30   0x0000002e   Code   RO         1419    i.__ARM_clz         lfs.o
-    0x08000e5e   0x08000e5e   0x00000030   Code   RO         2063    i.__ARM_common_ll_muluu  stm32f0xx_hal_rcc.o
-    0x08000e8e   0x08000e8e   0x00000002   PAD
-    0x08000e90   0x08000e90   0x00000044   Code   RO         2929    i.__NVIC_SetPriority  stm32f0xx_hal_cortex.o
-    0x08000ed4   0x08000ed4   0x0000000e   Code   RO         3913    i.__scatterload_copy  mc_p.l(handlers.o)
-    0x08000ee2   0x08000ee2   0x00000002   Code   RO         3914    i.__scatterload_null  mc_p.l(handlers.o)
-    0x08000ee4   0x08000ee4   0x0000000e   Code   RO         3915    i.__scatterload_zeroinit  mc_p.l(handlers.o)
-    0x08000ef2   0x08000ef2   0x00000002   PAD
-    0x08000ef4   0x08000ef4   0x00000428   Code   RO         3831    i._printf_core      mc_p.l(printf8.o)
-    0x0800131c   0x0800131c   0x00000020   Code   RO         3832    i._printf_post_padding  mc_p.l(printf8.o)
-    0x0800133c   0x0800133c   0x0000002c   Code   RO         3833    i._printf_pre_padding  mc_p.l(printf8.o)
-    0x08001368   0x08001368   0x00000018   Code   RO          372    i.adc_calibre       adc_stm32f030.o
-    0x08001380   0x08001380   0x00000074   Code   RO          373    i.adc_ini           adc_stm32f030.o
-    0x080013f4   0x080013f4   0x0000006a   Code   RO          407    i.clock_ini         cortex_stm32f030.o
-    0x0800145e   0x0800145e   0x00000002   PAD
-    0x08001460   0x08001460   0x00000028   Code   RO          516    i.clr_str_rx        pc_com.o
-    0x08001488   0x08001488   0x00000028   Code   RO          517    i.clr_str_tx        pc_com.o
-    0x080014b0   0x080014b0   0x00000070   Code   RO         1473    i.dac               dac.o
-    0x08001520   0x08001520   0x00000074   Code   RO         1474    i.dac_ini           dac.o
-    0x08001594   0x08001594   0x00000030   Code   RO         1475    i.dac_start         dac.o
-    0x080015c4   0x080015c4   0x000003b8   Code   RO          518    i.debuge_uart       pc_com.o
-    0x0800197c   0x0800197c   0x00000010   Code   RO          408    i.dma_ini           cortex_stm32f030.o
-    0x0800198c   0x0800198c   0x00000018   Code   RO         3530    i.fputc             retarget_io.o
-    0x080019a4   0x080019a4   0x000000b0   Code   RO          462    i.gpio_ini          gpio_stm32f030.o
-    0x08001a54   0x08001a54   0x00000036   Code   RO           13    i.hard_ini          main.o
-    0x08001a8a   0x08001a8a   0x00000002   PAD
-    0x08001a8c   0x08001a8c   0x000000ac   Code   RO          480    i.ini_cpu_timer     cpu_timer.o
-    0x08001b38   0x08001b38   0x0000000c   Code   RO          768    i.lfs_aligndown     lfs.o
-    0x08001b44   0x08001b44   0x00000010   Code   RO          769    i.lfs_alignup       lfs.o
-    0x08001b54   0x08001b54   0x0000011c   Code   RO          770    i.lfs_alloc         lfs.o
-    0x08001c70   0x08001c70   0x0000000e   Code   RO          771    i.lfs_alloc_drop    lfs.o
-    0x08001c7e   0x08001c7e   0x00000030   Code   RO          772    i.lfs_alloc_lookahead  lfs.o
-    0x08001cae   0x08001cae   0x00000056   Code   RO          773    i.lfs_bd_cmp        lfs.o
-    0x08001d04   0x08001d04   0x00000006   Code   RO          774    i.lfs_bd_erase      lfs.o
-    0x08001d0a   0x08001d0a   0x00000072   Code   RO          775    i.lfs_bd_flush      lfs.o
-    0x08001d7c   0x08001d7c   0x00000098   Code   RO          776    i.lfs_bd_prog       lfs.o
-    0x08001e14   0x08001e14   0x00000146   Code   RO          777    i.lfs_bd_read       lfs.o
-    0x08001f5a   0x08001f5a   0x00000018   Code   RO          778    i.lfs_cache_zero    lfs.o
-    0x08001f72   0x08001f72   0x00000002   PAD
-    0x08001f74   0x08001f74   0x00000030   Code   RO         1452    i.lfs_crc           lfs_util.o
-    0x08001fa4   0x08001fa4   0x00000010   Code   RO          780    i.lfs_ctz           lfs.o
-    0x08001fb4   0x08001fb4   0x00000188   Code   RO          781    i.lfs_ctz_extend    lfs.o
-    0x0800213c   0x0800213c   0x0000008e   Code   RO          782    i.lfs_ctz_find      lfs.o
-    0x080021ca   0x080021ca   0x00000016   Code   RO          783    i.lfs_ctz_fromle32  lfs.o
-    0x080021e0   0x080021e0   0x0000003e   Code   RO          784    i.lfs_ctz_index     lfs.o
-    0x0800221e   0x0800221e   0x00000098   Code   RO          785    i.lfs_ctz_traverse  lfs.o
-    0x080022b6   0x080022b6   0x00000004   Code   RO          786    i.lfs_deinit        lfs.o
-    0x080022ba   0x080022ba   0x0000008e   Code   RO          787    i.lfs_dir_alloc     lfs.o
-    0x08002348   0x08002348   0x00000338   Code   RO          789    i.lfs_dir_commit    lfs.o
-    0x08002680   0x08002680   0x00000010   Code   RO          790    i.lfs_dir_commit_commit  lfs.o
-    0x08002690   0x08002690   0x00000014   Code   RO          791    i.lfs_dir_commit_size  lfs.o
-    0x080026a4   0x080026a4   0x000000a6   Code   RO          792    i.lfs_dir_commitattr  lfs.o
-    0x0800274a   0x0800274a   0x00000002   PAD
-    0x0800274c   0x0800274c   0x000001b4   Code   RO          793    i.lfs_dir_commitcrc  lfs.o
-    0x08002900   0x08002900   0x0000003c   Code   RO          794    i.lfs_dir_commitprog  lfs.o
-    0x0800293c   0x0800293c   0x00000454   Code   RO          795    i.lfs_dir_compact   lfs.o
-    0x08002d90   0x08002d90   0x00000048   Code   RO          796    i.lfs_dir_drop      lfs.o
-    0x08002dd8   0x08002dd8   0x00000016   Code   RO          797    i.lfs_dir_fetch     lfs.o
-    0x08002dee   0x08002dee   0x00000002   PAD
-    0x08002df0   0x08002df0   0x00000464   Code   RO          798    i.lfs_dir_fetchmatch  lfs.o
-    0x08003254   0x08003254   0x0000015c   Code   RO          799    i.lfs_dir_find      lfs.o
-    0x080033b0   0x080033b0   0x0000004a   Code   RO          800    i.lfs_dir_find_match  lfs.o
-    0x080033fa   0x080033fa   0x00000014   Code   RO          801    i.lfs_dir_get       lfs.o
-    0x0800340e   0x0800340e   0x00000002   PAD
-    0x08003410   0x08003410   0x0000004c   Code   RO          802    i.lfs_dir_getgstate  lfs.o
-    0x0800345c   0x0800345c   0x000000e2   Code   RO          804    i.lfs_dir_getread   lfs.o
-    0x0800353e   0x0800353e   0x00000002   PAD
-    0x08003540   0x08003540   0x00000130   Code   RO          805    i.lfs_dir_getslice  lfs.o
-    0x08003670   0x08003670   0x0000006c   Code   RO          814    i.lfs_dir_split     lfs.o
-    0x080036dc   0x080036dc   0x00000190   Code   RO          816    i.lfs_dir_traverse  lfs.o
-    0x0800386c   0x0800386c   0x00000078   Code   RO          817    i.lfs_dir_traverse_filter  lfs.o
-    0x080038e4   0x080038e4   0x000000ac   Code   RO          818    i.lfs_file_close    lfs.o
-    0x08003990   0x08003990   0x00000130   Code   RO          819    i.lfs_file_flush    lfs.o
-    0x08003ac0   0x08003ac0   0x000000c8   Code   RO          820    i.lfs_file_open     lfs.o
-    0x08003b88   0x08003b88   0x00000026   Code   RO          822    i.lfs_file_outline  lfs.o
-    0x08003bae   0x08003bae   0x00000018   Code   RO          823    i.lfs_file_rawclose  lfs.o
-    0x08003bc6   0x08003bc6   0x00000002   PAD
-    0x08003bc8   0x08003bc8   0x00000228   Code   RO          824    i.lfs_file_rawopencfg  lfs.o
-    0x08003df0   0x08003df0   0x000000f8   Code   RO          825    i.lfs_file_rawread  lfs.o
-    0x08003ee8   0x08003ee8   0x0000004c   Code   RO          826    i.lfs_file_rawseek  lfs.o
-    0x08003f34   0x08003f34   0x00000012   Code   RO          827    i.lfs_file_rawsize  lfs.o
-    0x08003f46   0x08003f46   0x00000002   PAD
-    0x08003f48   0x08003f48   0x000000b0   Code   RO          828    i.lfs_file_rawsync  lfs.o
-    0x08003ff8   0x08003ff8   0x000001b0   Code   RO          830    i.lfs_file_rawwrite  lfs.o
-    0x080041a8   0x080041a8   0x000000c0   Code   RO          831    i.lfs_file_read     lfs.o
-    0x08004268   0x08004268   0x00000140   Code   RO          832    i.lfs_file_relocate  lfs.o
-    0x080043a8   0x080043a8   0x000000b8   Code   RO          833    i.lfs_file_rewind   lfs.o
-    0x08004460   0x08004460   0x000000c4   Code   RO          839    i.lfs_file_write    lfs.o
-    0x08004524   0x08004524   0x000000c0   Code   RO          840    i.lfs_format        lfs.o
-    0x080045e4   0x080045e4   0x00000012   Code   RO          841    i.lfs_frombe32      lfs.o
-    0x080045f6   0x080045f6   0x00000012   Code   RO          842    i.lfs_fromle32      lfs.o
-    0x08004608   0x08004608   0x000000c4   Code   RO          843    i.lfs_fs_demove     lfs.o
-    0x080046cc   0x080046cc   0x000001ac   Code   RO          844    i.lfs_fs_deorphan   lfs.o
-    0x08004878   0x08004878   0x00000014   Code   RO          845    i.lfs_fs_forceconsistency  lfs.o
-    0x0800488c   0x0800488c   0x0000007c   Code   RO          846    i.lfs_fs_parent     lfs.o
-    0x08004908   0x08004908   0x00000040   Code   RO          847    i.lfs_fs_parent_match  lfs.o
-    0x08004948   0x08004948   0x00000052   Code   RO          848    i.lfs_fs_pred       lfs.o
-    0x0800499a   0x0800499a   0x00000002   PAD
-    0x0800499c   0x0800499c   0x0000003c   Code   RO          849    i.lfs_fs_prepmove   lfs.o
-    0x080049d8   0x080049d8   0x0000001a   Code   RO          850    i.lfs_fs_preporphans  lfs.o
-    0x080049f2   0x080049f2   0x00000002   PAD
-    0x080049f4   0x080049f4   0x0000001c   Code   RO          851    i.lfs_fs_rawsize    lfs.o
-    0x08004a10   0x08004a10   0x00000154   Code   RO          852    i.lfs_fs_rawtraverse  lfs.o
-    0x08004b64   0x08004b64   0x00000224   Code   RO          853    i.lfs_fs_relocate   lfs.o
-    0x08004d88   0x08004d88   0x0000000a   Code   RO          855    i.lfs_fs_size_count  lfs.o
-    0x08004d92   0x08004d92   0x0000000c   Code   RO          858    i.lfs_gstate_hasmove  lfs.o
-    0x08004d9e   0x08004d9e   0x00000024   Code   RO          859    i.lfs_gstate_hasmovehere  lfs.o
-    0x08004dc2   0x08004dc2   0x00000018   Code   RO          860    i.lfs_gstate_iszero  lfs.o
-    0x08004dda   0x08004dda   0x0000001e   Code   RO          861    i.lfs_gstate_tole32  lfs.o
-    0x08004df8   0x08004df8   0x00000016   Code   RO          862    i.lfs_gstate_xor    lfs.o
-    0x08004e0e   0x08004e0e   0x00000002   PAD
-    0x08004e10   0x08004e10   0x000000b0   Code   RO          863    i.lfs_init          lfs.o
-    0x08004ec0   0x08004ec0   0x00000008   Code   RO          864    i.lfs_min           lfs.o
-    0x08004ec8   0x08004ec8   0x00000018   Code   RO          866    i.lfs_mlist_remove  lfs.o
-    0x08004ee0   0x08004ee0   0x000000bc   Code   RO          867    i.lfs_mount         lfs.o
-    0x08004f9c   0x08004f9c   0x00000020   Code   RO          868    i.lfs_pair_cmp      lfs.o
-    0x08004fbc   0x08004fbc   0x00000016   Code   RO          869    i.lfs_pair_fromle32  lfs.o
-    0x08004fd2   0x08004fd2   0x00000014   Code   RO          870    i.lfs_pair_isnull   lfs.o
-    0x08004fe6   0x08004fe6   0x00000016   Code   RO          871    i.lfs_pair_tole32   lfs.o
-    0x08004ffc   0x08004ffc   0x00000038   Code   RO          872    i.lfs_popc          lfs.o
-    0x08005034   0x08005034   0x000000f0   Code   RO          873    i.lfs_rawformat     lfs.o
-    0x08005124   0x08005124   0x000002f8   Code   RO          876    i.lfs_rawmount      lfs.o
-    0x0800541c   0x0800541c   0x00000008   Code   RO          879    i.lfs_rawunmount    lfs.o
-    0x08005424   0x08005424   0x00000012   Code   RO          885    i.lfs_tag_dsize     lfs.o
-    0x08005436   0x08005436   0x00000010   Code   RO          886    i.lfs_tag_isdelete  lfs.o
-    0x08005446   0x08005446   0x0000000a   Code   RO          887    i.lfs_tag_type1     lfs.o
-    0x08005450   0x08005450   0x00000008   Code   RO          888    i.lfs_tole32        lfs.o
-    0x08005458   0x08005458   0x0000009c   Code   RO          889    i.lfs_unmount       lfs.o
-    0x080054f4   0x080054f4   0x000000f0   Code   RO           14    i.main              main.o
-    0x080055e4   0x080055e4   0x0000001c   Code   RO          409    i.nvic_ini          cortex_stm32f030.o
-    0x08005600   0x08005600   0x00000080   Code   RO          520    i.program_manager   pc_com.o
-    0x08005680   0x08005680   0x000000ec   Code   RO          521    i.put_help          pc_com.o
-    0x0800576c   0x0800576c   0x0000010c   Code   RO          522    i.put_w25q          pc_com.o
-    0x08005878   0x08005878   0x0000002c   Code   RO          374    i.read_adc          adc_stm32f030.o
-    0x080058a4   0x080058a4   0x0000000c   Code   RO           15    i.soft_ini          main.o
-    0x080058b0   0x080058b0   0x00000068   Code   RO          618    i.soft_spi_ini      spi_stm32f030.o
-    0x08005918   0x08005918   0x0000003c   Code   RO          619    i.soft_spi_send     spi_stm32f030.o
-    0x08005954   0x08005954   0x0000003c   Code   RO          620    i.spi_ini           spi_stm32f030.o
-    0x08005990   0x08005990   0x00000018   Code   RO         1506    i.stdout_putchar    stdout_user.o
-    0x080059a8   0x080059a8   0x00000050   Code   RO          442    i.tim14_ini         timer_stm32f030.o
-    0x080059f8   0x080059f8   0x000000a8   Code   RO          481    i.timer_basic_manager  cpu_timer.o
-    0x08005aa0   0x08005aa0   0x00000050   Code   RO          523    i.uart_manager_interupt_rx  pc_com.o
-    0x08005af0   0x08005af0   0x00000038   Code   RO          524    i.uart_manager_interupt_tx  pc_com.o
-    0x08005b28   0x08005b28   0x00000038   Code   RO          525    i.usart_comp_str    pc_com.o
-    0x08005b60   0x08005b60   0x000000c0   Code   RO          526    i.usart_send_str_int  pc_com.o
-    0x08005c20   0x08005c20   0x0000000c   Code   RO           16    i.user_provided_block_device_erase  main.o
-    0x08005c2c   0x08005c2c   0x0000001a   Code   RO           17    i.user_provided_block_device_prog  main.o
-    0x08005c46   0x08005c46   0x0000001a   Code   RO           18    i.user_provided_block_device_read  main.o
-    0x08005c60   0x08005c60   0x00000004   Code   RO           19    i.user_provided_block_device_sync  main.o
-    0x08005c64   0x08005c64   0x0000004c   Data   RO           29    .constdata          main.o
-    0x08005cb0   0x08005cb0   0x00000014   Data   RO          528    .constdata          pc_com.o
-    0x08005cc4   0x08005cc4   0x000001a0   Data   RO          891    .constdata          lfs.o
-    0x08005e64   0x08005e64   0x00000040   Data   RO         1453    .constdata          lfs_util.o
-    0x08005ea4   0x08005ea4   0x00000010   Data   RO         3351    .constdata          system_stm32f0xx.o
-    0x08005eb4   0x08005eb4   0x0000026d   Data   RO          892    .conststring        lfs.o
-    0x08006121   0x08006121   0x00000003   PAD
-    0x08006124   0x08006124   0x00000020   Data   RO         3911    Region$$Table       anon$$obj.o
+    0x080002b0   0x080002b0   0x00000024   Code   RO         4106    .text               mc_p.l(init.o)
+    0x080002d4   0x080002d4   0x0000003a   Code   RO         4120    .text               mc_p.l(__dczerorl.o)
+    0x0800030e   0x0800030e   0x00000002   Code   RO          292    i.DMA1_Channel2_3_IRQHandler  stm32f0xx_it.o
+    0x08000310   0x08000310   0x00000010   Code   RO         2322    i.HAL_IncTick       stm32f0xx_hal.o
+    0x08000320   0x08000320   0x00000020   Code   RO         2323    i.HAL_Init          stm32f0xx_hal.o
+    0x08000340   0x08000340   0x00000044   Code   RO         2324    i.HAL_InitTick      stm32f0xx_hal.o
+    0x08000384   0x08000384   0x00000002   Code   RO         2326    i.HAL_MspInit       stm32f0xx_hal.o
+    0x08000386   0x08000386   0x00000008   Code   RO         3127    i.HAL_NVIC_SetPriority  stm32f0xx_hal_cortex.o
+    0x0800038e   0x0800038e   0x00000002   PAD
+    0x08000390   0x08000390   0x00000030   Code   RO         3131    i.HAL_SYSTICK_Config  stm32f0xx_hal_cortex.o
+    0x080003c0   0x080003c0   0x00000002   Code   RO          293    i.HardFault_Handler  stm32f0xx_it.o
+    0x080003c2   0x080003c2   0x000000ae   Code   RO         3596    i.LL_GPIO_Init      stm32f0xx_ll_gpio_2.o
+    0x08000470   0x08000470   0x00000020   Code   RO         3653    i.LL_Init1msTick    stm32f0xx_ll_utils_1.o
+    0x08000490   0x08000490   0x0000000c   Code   RO         3658    i.LL_SetSystemCoreClock  stm32f0xx_ll_utils_1.o
+    0x0800049c   0x0800049c   0x00000020   Code   RO         3659    i.LL_mDelay         stm32f0xx_ll_utils_1.o
+    0x080004bc   0x080004bc   0x00000002   Code   RO          294    i.NMI_Handler       stm32f0xx_it.o
+    0x080004be   0x080004be   0x00000002   Code   RO          295    i.PendSV_Handler    stm32f0xx_it.o
+    0x080004c0   0x080004c0   0x0000002c   Code   RO          644    i.SPI_w25q          spi_stm32f030.o
+    0x080004ec   0x080004ec   0x00000002   Code   RO          296    i.SVC_Handler       stm32f0xx_it.o
+    0x080004ee   0x080004ee   0x0000000c   Code   RO          297    i.SysTick_Handler   stm32f0xx_it.o
+    0x080004fa   0x080004fa   0x00000002   Code   RO         3554    i.SystemInit        system_stm32f0xx.o
+    0x080004fc   0x080004fc   0x00000018   Code   RO          298    i.TIM14_IRQHandler  stm32f0xx_it.o
+    0x08000514   0x08000514   0x00000034   Code   RO          299    i.USART1_IRQHandler  stm32f0xx_it.o
+    0x08000548   0x08000548   0x000000a4   Code   RO          364    i.USART_ini         usart_stm32f030.o
+    0x080005ec   0x080005ec   0x00000014   Code   RO          698    i.W25Q_Enable_Write  w25q.o
+    0x08000600   0x08000600   0x00000044   Code   RO          702    i.W25Q_EraseSector4KB  w25q.o
+    0x08000644   0x08000644   0x0000002a   Code   RO          704    i.W25Q_ReadPage_start  w25q.o
+    0x0800066e   0x0800066e   0x00000002   PAD
+    0x08000670   0x08000670   0x00000044   Code   RO          705    i.W25Q_Read_Manufact_Device_ID  w25q.o
+    0x080006b4   0x080006b4   0x00000034   Code   RO          706    i.W25Q_Read_StatusReg  w25q.o
+    0x080006e8   0x080006e8   0x0000001c   Code   RO          707    i.W25Q_WaitBusy     w25q.o
+    0x08000704   0x08000704   0x0000002e   Code   RO          709    i.W25Q_WritePage_start  w25q.o
+    0x08000732   0x08000732   0x0000005c   Code   RO          710    i.W25Q_ini          w25q.o
+    0x0800078e   0x0800078e   0x00000002   PAD
+    0x08000790   0x08000790   0x00000020   Code   RO         4025    i.__0printf$8       mc_p.l(printf8.o)
+    0x080007b0   0x080007b0   0x0000002e   Code   RO         1446    i.__ARM_clz         lfs.o
+    0x080007de   0x080007de   0x00000002   PAD
+    0x080007e0   0x080007e0   0x00000044   Code   RO         3133    i.__NVIC_SetPriority  stm32f0xx_hal_cortex.o
+    0x08000824   0x08000824   0x0000000e   Code   RO         4114    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x08000832   0x08000832   0x00000002   Code   RO         4115    i.__scatterload_null  mc_p.l(handlers.o)
+    0x08000834   0x08000834   0x0000000e   Code   RO         4116    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x08000842   0x08000842   0x00000034   Code   RO         1554    i._nlcdCmd1616      nokia1661_lcd_driver.o
+    0x08000876   0x08000876   0x0000001a   Code   RO         1556    i._nlcdSenPixels    nokia1661_lcd_driver.o
+    0x08000890   0x08000890   0x000000b0   Code   RO         1557    i._nlcdSend         nokia1661_lcd_driver.o
+    0x08000940   0x08000940   0x00000008   Code   RO         1558    i._nlcdSendCmd      nokia1661_lcd_driver.o
+    0x08000948   0x08000948   0x0000001a   Code   RO         1560    i._nlcdSendPixel    nokia1661_lcd_driver.o
+    0x08000962   0x08000962   0x0000002a   Code   RO         1561    i._nlcdSetWindow    nokia1661_lcd_driver.o
+    0x0800098c   0x0800098c   0x00000428   Code   RO         4032    i._printf_core      mc_p.l(printf8.o)
+    0x08000db4   0x08000db4   0x00000020   Code   RO         4033    i._printf_post_padding  mc_p.l(printf8.o)
+    0x08000dd4   0x08000dd4   0x0000002c   Code   RO         4034    i._printf_pre_padding  mc_p.l(printf8.o)
+    0x08000e00   0x08000e00   0x00000018   Code   RO          390    i.adc_calibre       adc_stm32f030.o
+    0x08000e18   0x08000e18   0x00000074   Code   RO          391    i.adc_ini           adc_stm32f030.o
+    0x08000e8c   0x08000e8c   0x000000a4   Code   RO          425    i.clock_ini         cortex_stm32f030.o
+    0x08000f30   0x08000f30   0x00000028   Code   RO          540    i.clr_str_rx        pc_com.o
+    0x08000f58   0x08000f58   0x00000028   Code   RO          541    i.clr_str_tx        pc_com.o
+    0x08000f80   0x08000f80   0x00000070   Code   RO         1500    i.dac               dac.o
+    0x08000ff0   0x08000ff0   0x00000074   Code   RO         1501    i.dac_ini           dac.o
+    0x08001064   0x08001064   0x00000030   Code   RO         1502    i.dac_start         dac.o
+    0x08001094   0x08001094   0x000003d0   Code   RO          542    i.debuge_uart       pc_com.o
+    0x08001464   0x08001464   0x00000010   Code   RO          426    i.dma_ini           cortex_stm32f030.o
+    0x08001474   0x08001474   0x00000018   Code   RO         3731    i.fputc             retarget_io.o
+    0x0800148c   0x0800148c   0x000000b0   Code   RO          486    i.gpio_ini          gpio_stm32f030.o
+    0x0800153c   0x0800153c   0x00000036   Code   RO           13    i.hard_ini          main.o
+    0x08001572   0x08001572   0x00000002   PAD
+    0x08001574   0x08001574   0x000000ac   Code   RO          504    i.ini_cpu_timer     cpu_timer.o
+    0x08001620   0x08001620   0x0000000c   Code   RO          795    i.lfs_aligndown     lfs.o
+    0x0800162c   0x0800162c   0x00000010   Code   RO          796    i.lfs_alignup       lfs.o
+    0x0800163c   0x0800163c   0x0000011c   Code   RO          797    i.lfs_alloc         lfs.o
+    0x08001758   0x08001758   0x0000000e   Code   RO          798    i.lfs_alloc_drop    lfs.o
+    0x08001766   0x08001766   0x00000030   Code   RO          799    i.lfs_alloc_lookahead  lfs.o
+    0x08001796   0x08001796   0x00000056   Code   RO          800    i.lfs_bd_cmp        lfs.o
+    0x080017ec   0x080017ec   0x00000006   Code   RO          801    i.lfs_bd_erase      lfs.o
+    0x080017f2   0x080017f2   0x00000072   Code   RO          802    i.lfs_bd_flush      lfs.o
+    0x08001864   0x08001864   0x00000098   Code   RO          803    i.lfs_bd_prog       lfs.o
+    0x080018fc   0x080018fc   0x00000146   Code   RO          804    i.lfs_bd_read       lfs.o
+    0x08001a42   0x08001a42   0x00000018   Code   RO          805    i.lfs_cache_zero    lfs.o
+    0x08001a5a   0x08001a5a   0x00000002   PAD
+    0x08001a5c   0x08001a5c   0x00000030   Code   RO         1479    i.lfs_crc           lfs_util.o
+    0x08001a8c   0x08001a8c   0x00000010   Code   RO          807    i.lfs_ctz           lfs.o
+    0x08001a9c   0x08001a9c   0x00000188   Code   RO          808    i.lfs_ctz_extend    lfs.o
+    0x08001c24   0x08001c24   0x0000008e   Code   RO          809    i.lfs_ctz_find      lfs.o
+    0x08001cb2   0x08001cb2   0x00000016   Code   RO          810    i.lfs_ctz_fromle32  lfs.o
+    0x08001cc8   0x08001cc8   0x0000003e   Code   RO          811    i.lfs_ctz_index     lfs.o
+    0x08001d06   0x08001d06   0x00000098   Code   RO          812    i.lfs_ctz_traverse  lfs.o
+    0x08001d9e   0x08001d9e   0x00000004   Code   RO          813    i.lfs_deinit        lfs.o
+    0x08001da2   0x08001da2   0x0000008e   Code   RO          814    i.lfs_dir_alloc     lfs.o
+    0x08001e30   0x08001e30   0x00000338   Code   RO          816    i.lfs_dir_commit    lfs.o
+    0x08002168   0x08002168   0x00000010   Code   RO          817    i.lfs_dir_commit_commit  lfs.o
+    0x08002178   0x08002178   0x00000014   Code   RO          818    i.lfs_dir_commit_size  lfs.o
+    0x0800218c   0x0800218c   0x000000a6   Code   RO          819    i.lfs_dir_commitattr  lfs.o
+    0x08002232   0x08002232   0x00000002   PAD
+    0x08002234   0x08002234   0x000001b4   Code   RO          820    i.lfs_dir_commitcrc  lfs.o
+    0x080023e8   0x080023e8   0x0000003c   Code   RO          821    i.lfs_dir_commitprog  lfs.o
+    0x08002424   0x08002424   0x00000454   Code   RO          822    i.lfs_dir_compact   lfs.o
+    0x08002878   0x08002878   0x00000048   Code   RO          823    i.lfs_dir_drop      lfs.o
+    0x080028c0   0x080028c0   0x00000016   Code   RO          824    i.lfs_dir_fetch     lfs.o
+    0x080028d6   0x080028d6   0x00000002   PAD
+    0x080028d8   0x080028d8   0x00000464   Code   RO          825    i.lfs_dir_fetchmatch  lfs.o
+    0x08002d3c   0x08002d3c   0x0000015c   Code   RO          826    i.lfs_dir_find      lfs.o
+    0x08002e98   0x08002e98   0x0000004a   Code   RO          827    i.lfs_dir_find_match  lfs.o
+    0x08002ee2   0x08002ee2   0x00000014   Code   RO          828    i.lfs_dir_get       lfs.o
+    0x08002ef6   0x08002ef6   0x00000002   PAD
+    0x08002ef8   0x08002ef8   0x0000004c   Code   RO          829    i.lfs_dir_getgstate  lfs.o
+    0x08002f44   0x08002f44   0x000000e2   Code   RO          831    i.lfs_dir_getread   lfs.o
+    0x08003026   0x08003026   0x00000002   PAD
+    0x08003028   0x08003028   0x00000130   Code   RO          832    i.lfs_dir_getslice  lfs.o
+    0x08003158   0x08003158   0x0000006c   Code   RO          841    i.lfs_dir_split     lfs.o
+    0x080031c4   0x080031c4   0x00000190   Code   RO          843    i.lfs_dir_traverse  lfs.o
+    0x08003354   0x08003354   0x00000078   Code   RO          844    i.lfs_dir_traverse_filter  lfs.o
+    0x080033cc   0x080033cc   0x000000ac   Code   RO          845    i.lfs_file_close    lfs.o
+    0x08003478   0x08003478   0x00000130   Code   RO          846    i.lfs_file_flush    lfs.o
+    0x080035a8   0x080035a8   0x000000c8   Code   RO          847    i.lfs_file_open     lfs.o
+    0x08003670   0x08003670   0x00000026   Code   RO          849    i.lfs_file_outline  lfs.o
+    0x08003696   0x08003696   0x00000018   Code   RO          850    i.lfs_file_rawclose  lfs.o
+    0x080036ae   0x080036ae   0x00000002   PAD
+    0x080036b0   0x080036b0   0x00000228   Code   RO          851    i.lfs_file_rawopencfg  lfs.o
+    0x080038d8   0x080038d8   0x000000f8   Code   RO          852    i.lfs_file_rawread  lfs.o
+    0x080039d0   0x080039d0   0x0000004c   Code   RO          853    i.lfs_file_rawseek  lfs.o
+    0x08003a1c   0x08003a1c   0x00000012   Code   RO          854    i.lfs_file_rawsize  lfs.o
+    0x08003a2e   0x08003a2e   0x00000002   PAD
+    0x08003a30   0x08003a30   0x000000b0   Code   RO          855    i.lfs_file_rawsync  lfs.o
+    0x08003ae0   0x08003ae0   0x000001b0   Code   RO          857    i.lfs_file_rawwrite  lfs.o
+    0x08003c90   0x08003c90   0x000000c0   Code   RO          858    i.lfs_file_read     lfs.o
+    0x08003d50   0x08003d50   0x00000140   Code   RO          859    i.lfs_file_relocate  lfs.o
+    0x08003e90   0x08003e90   0x000000b8   Code   RO          860    i.lfs_file_rewind   lfs.o
+    0x08003f48   0x08003f48   0x000000c4   Code   RO          866    i.lfs_file_write    lfs.o
+    0x0800400c   0x0800400c   0x00000012   Code   RO          868    i.lfs_frombe32      lfs.o
+    0x0800401e   0x0800401e   0x00000012   Code   RO          869    i.lfs_fromle32      lfs.o
+    0x08004030   0x08004030   0x000000c4   Code   RO          870    i.lfs_fs_demove     lfs.o
+    0x080040f4   0x080040f4   0x000001ac   Code   RO          871    i.lfs_fs_deorphan   lfs.o
+    0x080042a0   0x080042a0   0x00000014   Code   RO          872    i.lfs_fs_forceconsistency  lfs.o
+    0x080042b4   0x080042b4   0x0000007c   Code   RO          873    i.lfs_fs_parent     lfs.o
+    0x08004330   0x08004330   0x00000040   Code   RO          874    i.lfs_fs_parent_match  lfs.o
+    0x08004370   0x08004370   0x00000052   Code   RO          875    i.lfs_fs_pred       lfs.o
+    0x080043c2   0x080043c2   0x00000002   PAD
+    0x080043c4   0x080043c4   0x0000003c   Code   RO          876    i.lfs_fs_prepmove   lfs.o
+    0x08004400   0x08004400   0x0000001a   Code   RO          877    i.lfs_fs_preporphans  lfs.o
+    0x0800441a   0x0800441a   0x00000002   PAD
+    0x0800441c   0x0800441c   0x0000001c   Code   RO          878    i.lfs_fs_rawsize    lfs.o
+    0x08004438   0x08004438   0x00000154   Code   RO          879    i.lfs_fs_rawtraverse  lfs.o
+    0x0800458c   0x0800458c   0x00000224   Code   RO          880    i.lfs_fs_relocate   lfs.o
+    0x080047b0   0x080047b0   0x0000000a   Code   RO          882    i.lfs_fs_size_count  lfs.o
+    0x080047ba   0x080047ba   0x0000000c   Code   RO          885    i.lfs_gstate_hasmove  lfs.o
+    0x080047c6   0x080047c6   0x00000024   Code   RO          886    i.lfs_gstate_hasmovehere  lfs.o
+    0x080047ea   0x080047ea   0x00000018   Code   RO          887    i.lfs_gstate_iszero  lfs.o
+    0x08004802   0x08004802   0x0000001e   Code   RO          888    i.lfs_gstate_tole32  lfs.o
+    0x08004820   0x08004820   0x00000016   Code   RO          889    i.lfs_gstate_xor    lfs.o
+    0x08004836   0x08004836   0x00000008   Code   RO          891    i.lfs_min           lfs.o
+    0x0800483e   0x0800483e   0x00000018   Code   RO          893    i.lfs_mlist_remove  lfs.o
+    0x08004856   0x08004856   0x00000020   Code   RO          895    i.lfs_pair_cmp      lfs.o
+    0x08004876   0x08004876   0x00000016   Code   RO          896    i.lfs_pair_fromle32  lfs.o
+    0x0800488c   0x0800488c   0x00000014   Code   RO          897    i.lfs_pair_isnull   lfs.o
+    0x080048a0   0x080048a0   0x00000016   Code   RO          898    i.lfs_pair_tole32   lfs.o
+    0x080048b6   0x080048b6   0x00000002   PAD
+    0x080048b8   0x080048b8   0x00000038   Code   RO          899    i.lfs_popc          lfs.o
+    0x080048f0   0x080048f0   0x00000008   Code   RO          906    i.lfs_rawunmount    lfs.o
+    0x080048f8   0x080048f8   0x00000012   Code   RO          912    i.lfs_tag_dsize     lfs.o
+    0x0800490a   0x0800490a   0x00000010   Code   RO          913    i.lfs_tag_isdelete  lfs.o
+    0x0800491a   0x0800491a   0x0000000a   Code   RO          914    i.lfs_tag_type1     lfs.o
+    0x08004924   0x08004924   0x00000008   Code   RO          915    i.lfs_tole32        lfs.o
+    0x0800492c   0x0800492c   0x0000009c   Code   RO          916    i.lfs_unmount       lfs.o
+    0x080049c8   0x080049c8   0x0000023c   Code   RO           14    i.main              main.o
+    0x08004c04   0x08004c04   0x0000003c   Code   RO         1564    i.nlcdClear         nokia1661_lcd_driver.o
+    0x08004c40   0x08004c40   0x00000018   Code   RO         1567    i.nlcdGetHeight     nokia1661_lcd_driver.o
+    0x08004c58   0x08004c58   0x00000018   Code   RO         1568    i.nlcdGetWidth      nokia1661_lcd_driver.o
+    0x08004c70   0x08004c70   0x000000c8   Code   RO         1570    i.nlcdInit          nokia1661_lcd_driver.o
+    0x08004d38   0x08004d38   0x0000000c   Code   RO         1572    i.nlcdSetBackgroundColor  nokia1661_lcd_driver.o
+    0x08004d44   0x08004d44   0x00000030   Code   RO         1573    i.nlcdSetFont       nokia1661_lcd_driver.o
+    0x08004d74   0x08004d74   0x00000034   Code   RO         1574    i.nlcdSetOrientation  nokia1661_lcd_driver.o
+    0x08004da8   0x08004da8   0x0000001c   Code   RO          427    i.nvic_ini          cortex_stm32f030.o
+    0x08004dc4   0x08004dc4   0x0000007c   Code   RO          544    i.program_manager   pc_com.o
+    0x08004e40   0x08004e40   0x000000ec   Code   RO          545    i.put_help          pc_com.o
+    0x08004f2c   0x08004f2c   0x00000114   Code   RO          546    i.put_w25q          pc_com.o
+    0x08005040   0x08005040   0x0000002c   Code   RO          392    i.read_adc          adc_stm32f030.o
+    0x0800506c   0x0800506c   0x0000000c   Code   RO           15    i.soft_ini          main.o
+    0x08005078   0x08005078   0x00000068   Code   RO          645    i.soft_spi_ini      spi_stm32f030.o
+    0x080050e0   0x080050e0   0x0000003c   Code   RO          646    i.soft_spi_send     spi_stm32f030.o
+    0x0800511c   0x0800511c   0x0000003c   Code   RO          647    i.spi_ini           spi_stm32f030.o
+    0x08005158   0x08005158   0x00000018   Code   RO         1533    i.stdout_putchar    stdout_user.o
+    0x08005170   0x08005170   0x00000050   Code   RO          466    i.tim14_ini         timer_stm32f030.o
+    0x080051c0   0x080051c0   0x000000a8   Code   RO          505    i.timer_basic_manager  cpu_timer.o
+    0x08005268   0x08005268   0x00000050   Code   RO          547    i.uart_manager_interupt_rx  pc_com.o
+    0x080052b8   0x080052b8   0x00000038   Code   RO          548    i.uart_manager_interupt_tx  pc_com.o
+    0x080052f0   0x080052f0   0x00000038   Code   RO          549    i.usart_comp_str    pc_com.o
+    0x08005328   0x08005328   0x000000c0   Code   RO          550    i.usart_send_str_int  pc_com.o
+    0x080053e8   0x080053e8   0x00000327   Data   RO           32    .constdata          main.o
+    0x0800570f   0x0800570f   0x00000001   PAD
+    0x08005710   0x08005710   0x00000014   Data   RO          552    .constdata          pc_com.o
+    0x08005724   0x08005724   0x000001a0   Data   RO          918    .constdata          lfs.o
+    0x080058c4   0x080058c4   0x00000040   Data   RO         1480    .constdata          lfs_util.o
+    0x08005904   0x08005904   0x0000000c   Data   RO         1580    .constdata          nokia1661_lcd_driver.o
+    0x08005910   0x08005910   0x00000009   Data   RO          919    .conststring        lfs.o
+    0x08005919   0x08005919   0x00000003   PAD
+    0x0800591c   0x0800591c   0x00000020   Data   RO         4112    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08006144, Size: 0x00000fb8, Max: 0x00001000, ABSOLUTE, COMPRESSED[0x00000058])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800593c, Size: 0x00000dd8, Max: 0x00001000, ABSOLUTE, COMPRESSED[0x0000006c])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   COMPRESSED   0x000003e8   Data   RW           34    .data               main.o
-    0x200003e8   COMPRESSED   0x00000008   Data   RW           35    .data               main.o
-    0x200003f0   COMPRESSED   0x00000008   Data   RW           36    .data               main.o
-    0x200003f8   COMPRESSED   0x00000008   Data   RW           37    .data               main.o
-    0x20000400   COMPRESSED   0x00000001   Data   RW          283    .data               stm32f0xx_it.o
-    0x20000401   COMPRESSED   0x00000003   PAD
-    0x20000404   COMPRESSED   0x0000000c   Data   RW          529    .data               pc_com.o
-    0x20000410   COMPRESSED   0x00000009   Data   RW          684    .data               w25q.o
-    0x20000419   COMPRESSED   0x00000003   PAD
-    0x2000041c   COMPRESSED   0x0000000c   Data   RW         2126    .data               stm32f0xx_hal.o
-    0x20000428   COMPRESSED   0x00000004   Data   RW         3353    .data               system_stm32f0xx.o
-    0x2000042c   COMPRESSED   0x00000004   Data   RW         3589    .data               mc_p.l(stdout.o)
-    0x20000430        -       0x000004f8   Zero   RW           20    .bss                main.o
-    0x20000928        -       0x00000014   Zero   RW           21    .bss                main.o
-    0x2000093c        -       0x00000100   Zero   RW           26    .bss                main.o
-    0x20000a3c        -       0x00000100   Zero   RW           27    .bss                main.o
-    0x20000b3c        -       0x00000010   Zero   RW           28    .bss                main.o
-    0x20000b4c        -       0x0000002a   Zero   RW          527    .bss                pc_com.o
-    0x20000b76   COMPRESSED   0x00000002   PAD
-    0x20000b78        -       0x00000040   Zero   RW          890    .bss                lfs.o
-    0x20000bb8        -       0x00000400   Zero   RW            1    STACK               startup_stm32f030x6.o
+    0x20000000   COMPRESSED   0x000003e8   Data   RW           40    .data               main.o
+    0x200003e8   COMPRESSED   0x00000008   Data   RW           41    .data               main.o
+    0x200003f0   COMPRESSED   0x00000008   Data   RW           42    .data               main.o
+    0x200003f8   COMPRESSED   0x00000010   Data   RW           43    .data               main.o
+    0x20000408   COMPRESSED   0x00000001   Data   RW          301    .data               stm32f0xx_it.o
+    0x20000409   COMPRESSED   0x00000003   PAD
+    0x2000040c   COMPRESSED   0x0000000c   Data   RW          553    .data               pc_com.o
+    0x20000418   COMPRESSED   0x00000009   Data   RW          711    .data               w25q.o
+    0x20000421   COMPRESSED   0x00000001   PAD
+    0x20000422   COMPRESSED   0x00000012   Data   RW         1581    .data               nokia1661_lcd_driver.o
+    0x20000434   COMPRESSED   0x0000000c   Data   RW         2330    .data               stm32f0xx_hal.o
+    0x20000440   COMPRESSED   0x00000004   Data   RW         3557    .data               system_stm32f0xx.o
+    0x20000444   COMPRESSED   0x00000004   Data   RW         3790    .data               mc_p.l(stdout.o)
+    0x20000448        -       0x00000044   Zero   RW           20    .bss                main.o
+    0x2000048c        -       0x00000014   Zero   RW           21    .bss                main.o
+    0x200004a0        -       0x00000078   Zero   RW           26    .bss                main.o
+    0x20000518        -       0x00000054   Zero   RW           27    .bss                main.o
+    0x2000056c        -       0x000003e8   Zero   RW           31    .bss                main.o
+    0x20000954        -       0x0000002a   Zero   RW          551    .bss                pc_com.o
+    0x2000097e   COMPRESSED   0x00000002   PAD
+    0x20000980        -       0x00000040   Zero   RW          917    .bss                lfs.o
+    0x200009c0        -       0x00000014   Zero   RW         1579    .bss                nokia1661_lcd_driver.o
+    0x200009d4   COMPRESSED   0x00000004   PAD
+    0x200009d8        -       0x00000400   Zero   RW            1    STACK               startup_stm32f030x6.o
 
 
 ==============================================================================
@@ -2692,41 +2782,40 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       184         26          0          0          0       4079   adc_stm32f030.o
-       150         12          0          0          0       9369   cortex_stm32f030.o
-       340         46          0          0          0       1162   cpu_timer.o
-       276         42          0          0          0       1464   dac.o
-       176          6          0          0          0        727   gpio_stm32f030.o
-     14758       2444       1037          0         64      87031   lfs.o
-        48          4         64          0          0        990   lfs_util.o
-       378         28         76       1024       1820     224488   main.o
-      2048        576         20         12         42       6352   pc_com.o
+       184         26          0          0          0       4239   adc_stm32f030.o
+       208         26          0          0          0      27461   cortex_stm32f030.o
+       340         46          0          0          0       1242   cpu_timer.o
+       276         40          0          0          0       1588   dac.o
+       176          6          0          0          0        767   gpio_stm32f030.o
+     13202       1976        425          0         64      86494   lfs.o
+        48          4         64          0          0       1070   lfs_util.o
+       638         40        807       1032       1292     193883   main.o
+       750         46         12         18         20      11143   nokia1661_lcd_driver.o
+      2076        588         20         12         42       6824   pc_com.o
         24          4          0          0          0       1880   retarget_io.o
-       268         18          0          0          0       2172   spi_stm32f030.o
-        28          8        176          0       1024        612   startup_stm32f030x6.o
-        24          4          0          0          0        485   stdout_user.o
-       130         26          0         12          0       7539   stm32f0xx_hal.o
-       124         18          0          0          0       9588   stm32f0xx_hal_cortex.o
-      1344         80          0          0          0       4010   stm32f0xx_hal_rcc.o
-       232         14          0          0          0       1324   stm32f0xx_hal_rcc_ex.o
-        98         14          0          1          0       3651   stm32f0xx_it.o
-       174          0          0          0          0       6691   stm32f0xx_ll_gpio_2.o
-        32          4          0          0          0       4712   stm32f0xx_ll_utils_1.o
-         2          0         16          4          0       1063   system_stm32f0xx.o
-        80         16          0          0          0        560   timer_stm32f030.o
-       160         10          0          0          0        604   usart_stm32f030.o
-       556         20          0          9          0       6631   w25q.o
+       268         18          0          0          0       2332   spi_stm32f030.o
+        28          8        176          0       1024        652   startup_stm32f030x6.o
+        24          4          0          0          0        525   stdout_user.o
+       118         20          0         12          0       7341   stm32f0xx_hal.o
+       124         18          0          0          0       9748   stm32f0xx_hal_cortex.o
+        98         14          0          1          0       4011   stm32f0xx_it.o
+       174          0          0          0          0       6811   stm32f0xx_ll_gpio_2.o
+        76         16          0          0          0       6033   stm32f0xx_ll_utils_1.o
+         2          0          0          4          0       1183   system_stm32f0xx.o
+        80         16          0          0          0        600   timer_stm32f030.o
+       164         14          0          0          0        644   usart_stm32f030.o
+       416         20          0          9          0       5770   w25q.o
 
     ----------------------------------------------------------------------
-     21666       3420       1424       1068       2952     387184   Object Totals
+     19524       2950       1540       1092       2448     382241   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        32          0          3          6          2          0   (incl. Padding)
+        30          0          4          4          6          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
 
-        86          0          0          0          0          0   __dczerorl2.o
+        58          0          0          0          0          0   __dczerorl.o
          0          0          0          0          0          0   entry.o
          0          0          0          0          0          0   entry10a.o
          0          0          0          0          0          0   entry11a.o
@@ -2754,17 +2843,17 @@ Image component sizes
         96          0          0          0          0         84   uldiv.o
 
     ----------------------------------------------------------------------
-      1810         68          0          4          0       1312   Library Totals
-         4          0          0          0          0          0   (incl. Padding)
+      1780         68          0          4          0       1312   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-      1806         68          0          4          0       1312   mc_p.l
+      1778         68          0          4          0       1312   mc_p.l
 
     ----------------------------------------------------------------------
-      1810         68          0          4          0       1312   Library Totals
+      1780         68          0          4          0       1312   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2773,15 +2862,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     23476       3488       1424       1072       2952     380976   Grand Totals
-     23476       3488       1424         88       2952     380976   ELF Image Totals (compressed)
-     23476       3488       1424         88          0          0   ROM Totals
+     21304       3018       1540       1096       2448     376209   Grand Totals
+     21304       3018       1540        108       2448     376209   ELF Image Totals (compressed)
+     21304       3018       1540        108          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                24900 (  24.32kB)
-    Total RW  Size (RW Data + ZI Data)              4024 (   3.93kB)
-    Total ROM Size (Code + RO Data + RW Data)      24988 (  24.40kB)
+    Total RO  Size (Code + RO Data)                22844 (  22.31kB)
+    Total RW  Size (RW Data + ZI Data)              3544 (   3.46kB)
+    Total ROM Size (Code + RO Data + RW Data)      22952 (  22.41kB)
 
 ==============================================================================
 

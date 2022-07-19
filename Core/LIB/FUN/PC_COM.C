@@ -61,6 +61,8 @@ char put_help(){
 int ram_i=0;
 char put_w25q(){
 
+	char temp;
+	
 	if( debuge_var.i_next == 1 ) { usart_send_str_int("   ------",0);
 				W25Q_Read_Manufact_Device_ID();
 				W25Q_Read_StatusReg();	
@@ -73,7 +75,7 @@ char put_w25q(){
 	W25Q_ReadPage_start(programer.P*256);	} 
 	else if( debuge_var.i_next == 7 ) { debuge_var.i_next=6;  	
 		
-	 	if( programer.I >= 256 ){ usart_send_str_int("   ------",0);	
+	 	if( programer.I > 255 ){ usart_send_str_int("   ------",0);	
 			
 			set_CS_W25Q; 
 			
@@ -83,12 +85,19 @@ char put_w25q(){
 				if( programer.P >= 250 ){
 					debuge_var.i_next=7;	
 				}	
+				
 	 	}
 	 	else{
 			
 			clr_str_tx();
 			
-			USART1->TDR = SPI_w25q(0);
+			temp = SPI_w25q(0);
+			
+			printf ("/%x/",temp);
+			
+			//USART1->TDR = SPI_w25q(0);
+			
+			
 	 		programer.I++;	
 			
 	 	}
@@ -100,6 +109,8 @@ char put_w25q(){
 	}
 	return 1;	
 }
+
+
 
 void debuge_uart(){
 	
@@ -114,10 +125,18 @@ void debuge_uart(){
 					lfs_unmount(&lfs);	
 			
 		}
-		else if( debuge_out_EN.programer == 1 ){ usart_send_str_int("--*END*--;",code_version);	
+		else if( debuge_out_EN.programer == 1 ){ 
 			
+			//usart_send_str_int("--*END*--;",code_version);
+				
 			debuge_out_EN.programer=0; 				
 			set_CS_W25Q;
+
+			debuge_var.i_next=0;			
+			clr_str_rx();
+			clr_str_tx();
+			
+			printf("--*END*--I=%d,P=%d,",programer.I,programer.P);	
 			
 		}
 		else if( usart_comp_str("help;") ){ 
@@ -161,7 +180,7 @@ void debuge_uart(){
 		else if( usart_comp_str("program_on;") ){ 
 			
 			int l_c=0;
-			for( l_c=0; l_c<10; l_c++ ){
+			for( l_c=0; l_c<20; l_c++ ){
 				W25Q_EraseSector4KB(l_c);
 			}											
 			
@@ -232,10 +251,6 @@ void debuge_uart(){
 	}
 	
 
-
-	
-	
-	
 		
 }
 
@@ -292,9 +307,8 @@ void program_manager(){
 		}
 		else if( debuge_out_EN.programer ){
 				if(usart_RX.I > 0 ){ usart_RX.I=0;																				
-						programer.I++;	
-
-						if(  programer.I > 256 )  { 
+							
+						if(  programer.I > 255 )  { 
 							
 								set_CS_W25Q;
 							  W25Q_WaitBusy();
@@ -305,7 +319,8 @@ void program_manager(){
 						}	
 						
 					  SPI_w25q(usart_RX.str[0]);  						
-							
+						programer.I++;
+						
 				}
 		}
 }
