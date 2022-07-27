@@ -1,6 +1,10 @@
-#ifndef _LCD_FONT_H
-#define _LCD_FONT_H
-#include "nokia1661_Hw.h"
+
+
+#ifndef LCD_FONT5x7_H
+#define LCD_FONT5x7_H
+
+#include "../LIB/NokiaTFTLib/nokia1661_Hw.h"
+
 
 
 /*

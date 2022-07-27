@@ -22,7 +22,7 @@ Dialog DLL:      TARMCM1.DLL V1.14.2.0
  
 <h2>Project:</h2>
 C:\Users\barby\Desktop\Company_work\behbood_chehelsotoon\BMS-CODE-TERMOSTAT\MDK-ARM\test_dma-hal.uvprojx
-Project File Date:  07/18/2022
+Project File Date:  07/27/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
@@ -35,7 +35,124 @@ Note: source file '..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_pwr.c' - obj
 Note: source file '..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_rcc.c' - object file renamed from 'test_dma-hal\stm32f0xx_ll_rcc.o' to 'test_dma-hal\stm32f0xx_ll_rcc_1.o'.
 Note: source file '..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_spi.c' - object file renamed from 'test_dma-hal\stm32f0xx_ll_spi.o' to 'test_dma-hal\stm32f0xx_ll_spi_1.o'.
 Note: source file '..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_utils.c' - object file renamed from 'test_dma-hal\stm32f0xx_ll_utils.o' to 'test_dma-hal\stm32f0xx_ll_utils_1.o'.
-"test_dma-hal\test_dma-hal.axf" - 0 Error(s), 0 Warning(s).
+compiling main_ESP.C...
+../Core/Inc/../LIB/my_struct.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h(7): warning:  #1295-D: Deprecated declaration USART_ini - give arg types
+  void USART_ini();
+../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h(10): warning:  #1295-D: Deprecated declaration soft_uart_ini - give arg types
+  void soft_uart_ini();
+../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h(12): warning:  #1295-D: Deprecated declaration soft_uart_rx_check - give arg types
+  unsigned char  soft_uart_rx_check();
+../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h(13): warning:  #1295-D: Deprecated declaration soft_uart_get_byte - give arg types
+  unsigned char  soft_uart_get_byte();
+../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h(14): warning:  #1295-D: Deprecated declaration soft_uart_rx_str_clear - give arg types
+  void soft_uart_rx_str_clear();
+../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h(15): warning:  #1295-D: Deprecated declaration maneager_get_soft_uart_STR - give arg types
+  unsigned char  maneager_get_soft_uart_STR();
+../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h(4): warning:  #1295-D: Deprecated declaration adc_calibre - give arg types
+  void adc_calibre();
+../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h(5): warning:  #1295-D: Deprecated declaration adc_ini - give arg types
+  void adc_ini();
+../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h(4): warning:  #1295-D: Deprecated declaration dma_ini - give arg types
+  void dma_ini();
+../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h(5): warning:  #1295-D: Deprecated declaration nvic_ini - give arg types
+  void nvic_ini();
+../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h(6): warning:  #1295-D: Deprecated declaration clock_ini - give arg types
+  void clock_ini();
+../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/SYSTEM/TIMER_STM32F030.h(4): warning:  #1295-D: Deprecated declaration tim14_ini - give arg types
+  void tim14_ini();
+../Core/Inc/../LIB/SYSTEM/TIMER_STM32F030.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/SYSTEM/GPIO_STM32F030.h(4): warning:  #1295-D: Deprecated declaration gpio_ini - give arg types
+  void gpio_ini();
+../Core/Inc/../LIB/SYSTEM/GPIO_STM32F030.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h(9): warning:  #1295-D: Deprecated declaration soft_spi_ini - give arg types
+  void soft_spi_ini();
+../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/FUN/CPU_TIMER.h(4): warning:  #1295-D: Deprecated declaration ini_cpu_timer - give arg types
+  void ini_cpu_timer();
+../Core/Inc/../LIB/FUN/CPU_TIMER.h(5): warning:  #1295-D: Deprecated declaration timer_second_manager - give arg types
+  void timer_second_manager();
+../Core/Inc/../LIB/FUN/CPU_TIMER.h(6): warning:  #1295-D: Deprecated declaration timer_basic_manager - give arg types
+  void timer_basic_manager();
+../Core/Inc/../LIB/FUN/PC_COM.h(8): warning:  #1295-D: Deprecated declaration uart_manager_interupt_rx - give arg types
+  void uart_manager_interupt_rx();
+../Core/Inc/../LIB/FUN/PC_COM.h(9): warning:  #1295-D: Deprecated declaration uart_manager_interupt_tx - give arg types
+  void uart_manager_interupt_tx();
+../Core/Inc/../LIB/FUN/PC_COM.h(10): warning:  #1295-D: Deprecated declaration debuge_uart - give arg types
+  void debuge_uart();
+../Core/Inc/../LIB/FUN/PC_COM.h(11): warning:  #1295-D: Deprecated declaration clr_str_tx - give arg types
+  void clr_str_tx();
+../Core/Inc/../LIB/FUN/PC_COM.h(12): warning:  #1295-D: Deprecated declaration clr_str_rx - give arg types
+  void clr_str_rx();
+../Core/Inc/../LIB/FUN/PC_COM.h(13): warning:  #1295-D: Deprecated declaration ini_debuge - give arg types
+  void ini_debuge();
+../Core/Inc/../LIB/FUN/PC_COM.h(14): warning:  #1295-D: Deprecated declaration program_manager - give arg types
+  void program_manager();
+../Core/Inc/../LIB/FUN/W25Q.h(56): warning:  #1295-D: Deprecated declaration W25Q_ini - give arg types
+  void W25Q_ini();
+../Core/Inc/../LIB/FUN/W25Q.h(63): warning:  #1295-D: Deprecated declaration W25Q_Read_Manufact_Device_ID - give arg types
+  void W25Q_Read_Manufact_Device_ID();
+../Core/Inc/../LIB/FUN/W25Q.h(64): warning:  #1295-D: Deprecated declaration W25Q_Read_StatusReg - give arg types
+  void W25Q_Read_StatusReg();
+../Core/Inc/../LIB/FUN/W25Q.h(70): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/FUN/TOUCH_BS813.H(35): warning:  #1295-D: Deprecated declaration init_touch_led - give arg types
+  	void init_touch_led();
+../Core/Inc/../LIB/FUN/TOUCH_BS813.H(36): warning:  #1295-D: Deprecated declaration read_touch - give arg types
+  	void read_touch();
+../Core/Inc/../LIB/FUN/TOUCH_BS813.H(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H(9): warning:  #1295-D: Deprecated declaration startup_lcd_picture - give arg types
+  void startup_lcd_picture();
+../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H(8): warning:  #1295-D: Deprecated declaration seting_set_point - give arg types
+  void seting_set_point();
+../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H(9): warning:  #1295-D: Deprecated declaration dark_mode_manage - give arg types
+  void dark_mode_manage();
+../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H(10): warning:  #1295-D: Deprecated declaration startup_lcd_picture - give arg types
+  void startup_lcd_picture();
+../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H(11): warning:  #1295-D: Deprecated declaration BMS_TERMOSTAT_INI - give arg types
+  void BMS_TERMOSTAT_INI();
+../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h(90): warning:  #1295-D: Deprecated declaration nlcdInit - give arg types
+  void nlcdInit();
+../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h(97): warning:  #1295-D: Deprecated declaration nlcdClear - give arg types
+  void nlcdClear();
+../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h(127): warning:  #1295-D: Deprecated declaration nlcdFontLastChar - give arg types
+  char nlcdFontLastChar();
+../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h(129): warning:  #1295-D: Deprecated declaration nlcdFontFirstChar - give arg types
+  char nlcdFontFirstChar();
+../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h(133): warning:  #1295-D: Deprecated declaration nlcdGetWidth - give arg types
+  uint8_t nlcdGetWidth();
+../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h(134): warning:  #1295-D: Deprecated declaration nlcdGetHeight - give arg types
+  uint8_t nlcdGetHeight();
+../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h(34): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/../LIB/ESP/main_ESP.H(5): warning:  #1295-D: Deprecated declaration interupt_soft_uart - give arg types
+  void interupt_soft_uart();
+../Core/Inc/../LIB/ESP/main_ESP.H(6): warning:  #1295-D: Deprecated declaration ESP_main - give arg types
+  void ESP_main();
+../Core/Inc/../LIB/ESP/main_ESP.H(7): warning:  #1295-D: Deprecated declaration ESP_timer - give arg types
+  void ESP_timer();
+../Core/Inc/../LIB/ESP/main_ESP.H(8): warning:  #1295-D: Deprecated declaration ESP_ini - give arg types
+  void ESP_ini();
+../Core/Inc/../LIB/ESP/main_ESP.H(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Core\LIB\ESP\main_ESP.C(24): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+  					printf(soft_usart_RX.STR);
+..\Core\LIB\ESP\main_ESP.C: 56 warnings, 0 errors
+linking...
+Program Size: Code=12372 RO-data=1304 RW-data=76 ZI-data=2300  
+FromELF: creating hex file...
+"test_dma-hal\test_dma-hal.axf" - 0 Error(s), 56 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -66,11 +183,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil.ARM Compiler::Compiler:I/O:STDOUT:User:1.2.0
+      Source file:   Source\retarget_io.c
+      Source file:   Template\stdout_USART.c
       Source file:   Template\stdout_display.c
       Source file:   Template\stdout_user.c
-      Source file:   Template\stdout_USART.c
-      Source file:   Source\retarget_io.c
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

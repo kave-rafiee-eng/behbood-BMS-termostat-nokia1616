@@ -14,10 +14,10 @@ void tim14_ini(){
 0: TIMx_ARR register is not buffered
 1: TIMx_ARR register is buffered*/
 	
-	TIM14->PSC = 4;
+	TIM14->PSC = 32000;
 	//TIM14 prescale
  
-	TIM14->ARR= 165;
+	TIM14->ARR= 1500;
 	
  	SET_BIT(TIM14->CR1, TIM_CR1_CEN);
 /*CEN: Counter enable

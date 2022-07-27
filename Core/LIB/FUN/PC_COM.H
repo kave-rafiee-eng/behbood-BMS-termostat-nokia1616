@@ -1,5 +1,5 @@
-#ifndef _DEBUGE_UART_H_
-#define _DEBUGE_UART_H_
+#ifndef _PC_COM_LCD_
+#define _PC_COM_LCD_
 
 #include "../define_Const.h"
 

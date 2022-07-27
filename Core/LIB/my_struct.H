@@ -2,6 +2,38 @@
 #ifndef _MY_STRUCT_H_
 #define _MY_STRUCT_H_
 	
+	
+		
+	struct st_touch
+	{
+		unsigned char pluse : 1;
+		unsigned char less : 1;
+		unsigned char seting : 3;	
+		unsigned char edge : 1;
+
+		unsigned int less_timer ;	
+		unsigned int pluse_timer ;
+		
+		unsigned char less_fast : 1;
+		unsigned char pluse_fast : 1;	
+		
+	};
+	
+	struct st_bms 
+	{
+		
+		int TEMP_set : 10;
+		int Humidity_set : 10;
+		
+		int TEMP_now : 10;
+		int Humidity_now : 10;	
+		
+		unsigned char dark_mode : 1;
+
+		unsigned char seting_RUN : 1;
+				
+	};
+	
 	struct st_programer 
 	{
 		unsigned int I : 9;
@@ -33,11 +65,25 @@
 		unsigned char i_next : 8;
 	};
 
+	
 
+	struct st_soft_usart_RX	 
+	{
+		unsigned char F_data_get :1;
+		volatile unsigned char STR_count : 7;
+		unsigned char STR[def_num_rx_get] ;
+		unsigned char DATA ;
+	};
+	
+	struct st_soft_usart_TX	 
+	{
+		unsigned char EN_STDOUT_OUT :1;
+	};	
+	
 	
 	struct st_usart_RX	 
 	{
-		unsigned char I : 7;
+		volatile unsigned char I : 7;
 		unsigned char str[def_num_rx_get] ;	
 	};
 

@@ -15,10 +15,15 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
 
-  while (1)
+ /* while (1)
   {
+		
+		
 
-  }
+  }*/
+	
+	printf("HardFault_Handler\n");
+	
 }
 
 
@@ -50,9 +55,8 @@ void TIM14_IRQHandler(void){
 	
 	//tim14++;	
 	CLEAR_BIT(TIM14->SR,TIM_SR_UIF );
-	
-	//LL_GPIO_TogglePin(GPIOA,LL_GPIO_PIN_8);
-	dac();
+	timer_second_manager();
+
 }
 
 
@@ -72,7 +76,7 @@ void USART1_IRQHandler(void)
 	
 	if( READ_BIT(USART1->ISR,USART_ISR_TC ) ){
 	
-			uart_manager_interupt_tx();
+			//uart_manager_interupt_tx();
 			SET_BIT(USART1->ICR,USART_ICR_TCCF );
 			/*TCCF: Transmission complete clear flag
 			Writing 1 to this bit clears the TC flag in the USARTx_ISR register		*/

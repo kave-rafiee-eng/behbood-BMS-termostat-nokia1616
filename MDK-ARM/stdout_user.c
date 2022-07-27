@@ -1,6 +1,7 @@
 #include "main.h"
 #include "string.h"
 
+extern struct st_soft_usart_TX	soft_usart_TX;
 
 /*-----------------------------------------------------------------------------
  * Name:    stdout_user.c
@@ -44,9 +45,11 @@
 */
 int stdout_putchar (int ch) {
   
-	USART1->TDR = (uint8_t)ch;
-	LL_mDelay(1);
-	//strcpy( str , ch );
-	//uart_tx_dma( 20 , (uint32_t)&USART1->TDR , (uint32_t)&str );
-  return (ch);
+	if( soft_usart_TX.EN_STDOUT_OUT )soft_uart_send_byte(ch);
+	else{
+		USART1->TDR = (uint8_t)ch;
+		while( !READ_BIT(USART1->ISR,USART_ISR_TC) ){}
+		SET_BIT(USART1->ICR,USART_ICR_TCCF );
+		return (ch);
+	}
 }

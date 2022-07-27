@@ -434,11 +434,6 @@
               <FilePath>..\Core\LIB\FUN\CPU_TIMER.C</FilePath>
             </File>
             <File>
-              <FileName>PC_COM.C</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\LIB\FUN\PC_COM.C</FilePath>
-            </File>
-            <File>
               <FileName>SPI_STM32F030.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\LIB\SYSTEM\SPI_STM32F030.c</FilePath>
@@ -464,11 +459,6 @@
               <FilePath>..\Core\LIB\littlefs\lfs_util.c</FilePath>
             </File>
             <File>
-              <FileName>DAC.C</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\LIB\CODE\DAC.C</FilePath>
-            </File>
-            <File>
               <FileName>stdout_user.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\stdout_user.c</FilePath>
@@ -477,6 +467,31 @@
               <FileName>nokia1661_lcd_driver.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\LIB\NokiaTFTLib\nokia1661_lcd_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>PC_COM_LCD.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\LIB\FUN\PC_COM_LCD.C</FilePath>
+            </File>
+            <File>
+              <FileName>TOUCH_BS813.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\LIB\FUN\TOUCH_BS813.C</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_NOKIA1616_MY_FUN.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\LIB\FUN\LCD_NOKIA1616_MY_FUN.C</FilePath>
+            </File>
+            <File>
+              <FileName>BMS_TERMOSTAT.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\LIB\FUN\BMS_TERMOSTAT.C</FilePath>
+            </File>
+            <File>
+              <FileName>main_ESP.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\LIB\ESP\main_ESP.C</FilePath>
             </File>
           </Files>
         </Group>
@@ -619,6 +634,9 @@
               <FilePath>..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_utils.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>system</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

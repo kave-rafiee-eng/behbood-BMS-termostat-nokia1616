@@ -1,6 +1,20 @@
 #include "main.h"
 #include "USART_STM32F030.H"
 
+extern struct st_soft_usart_RX	 soft_usart_RX;
+
+#define pin_soft_uasrt_RX 0
+#define port_soft_uasrt_RX GPIOF
+
+#define pin_soft_uasrt_TX 1
+#define port_soft_uasrt_TX GPIOF
+//--------
+
+#define set_soft_uasrt_TX  SBI(port_soft_uasrt_TX,pin_soft_uasrt_TX)
+#define clear_soft_uasrt_TX  CBI(port_soft_uasrt_TX,pin_soft_uasrt_TX)
+
+
+
 void USART_ini(){
 
 	CLEAR_BIT(USART1->CR1,USART_CR1_UE );	
@@ -57,7 +71,7 @@ software.
 1: USART enabled*/
 
 
-	SET_BIT(USART1->CR1,USART_CR1_TCIE );	
+	//SET_BIT(USART1->CR1,USART_CR1_TCIE );	
 /*TCIE: Transmission complete interrupt enable
 This bit is set and cleared by software.
 0: Interrupt is inhibited
@@ -136,4 +150,97 @@ void uart_tx_dma(char n_s , uint32_t ad_p , uint32_t ad_m ){
 	1: Channel enabled*/
 		
 }
+
+
+void soft_uart_ini(){
+
+	SET_BIT(RCC->AHBENR,RCC_AHBENR_GPIOFEN );
+	
+	//----------------TX	
+	port_soft_uasrt_TX->MODER &=~(0x3<<(2*pin_soft_uasrt_TX));
+	port_soft_uasrt_TX->MODER |= (0x1<<(2*pin_soft_uasrt_TX));
+	
+	port_soft_uasrt_TX->OSPEEDR &=~(0x3<<(2*pin_soft_uasrt_TX));
+	port_soft_uasrt_TX->OSPEEDR |= (0x3<<(2*pin_soft_uasrt_TX));						
+					
+	//----------------RX
+	
+	port_soft_uasrt_RX->MODER &=~(0x3<<(2*pin_soft_uasrt_RX));
+	port_soft_uasrt_RX->MODER |= (0x0<<(2*pin_soft_uasrt_RX));
+	
+}
+
+#define delay_soft_uart_9600 800
+
+
+void uart_delay(int n ){
+int t=0;
+while(t<n)t++;	
+}
+
+int n;
+void soft_uart_send_byte( unsigned char data){
+		
+	/*while(1){
+		set_soft_uasrt_TX;
+		uart_delay(delay_soft_uart_9600);	
+		clear_soft_uasrt_TX;
+		uart_delay(delay_soft_uart_9600);	
+	}*/
+	
+		int cont;
+		clear_soft_uasrt_TX;uart_delay(delay_soft_uart_9600);
+		for(cont=1; cont<256; cont*=2 ){
+				if( data & cont  )set_soft_uasrt_TX;
+				else clear_soft_uasrt_TX;
+			uart_delay(delay_soft_uart_9600);	
+		}		
+		set_soft_uasrt_TX;uart_delay(delay_soft_uart_9600);	
+}
+//------------------------------------rx
+unsigned char  soft_uart_rx_check(){
+	
+	if( !read_gpio(port_soft_uasrt_RX , pin_soft_uasrt_RX) ){
+			
+			int time_out=0;
+			while(time_out<2000){time_out++;
+				
+					if( !read_gpio(port_soft_uasrt_RX , pin_soft_uasrt_RX) ){time_out=0;
+						soft_usart_RX.DATA = soft_uart_get_byte();
+						soft_usart_RX.STR[soft_usart_RX.STR_count]=soft_usart_RX.DATA;
+						soft_usart_RX.STR_count++;
+					}
+				
+			}
+			return 1;
+	}
+	return 0;
+}
+
+unsigned char soft_uart_get_byte(){
+
+	unsigned char data=0;
+	int cont;
+	
+	uart_delay(delay_soft_uart_9600+delay_soft_uart_9600/2);
+	for(cont=1; cont<256; cont*=2 ){
+			data |= (cont * read_gpio(port_soft_uasrt_RX , pin_soft_uasrt_RX));
+			uart_delay(delay_soft_uart_9600);	
+	}		
+	uart_delay(delay_soft_uart_9600/2);
+	return data;
+}
+
+
+
+void soft_uart_rx_str_clear(){
+	
+	int i;
+	for( i=0; i<def_num_rx_get; i++ ) soft_usart_RX.STR[i]='\0';
+	soft_usart_RX.STR_count=0;
+
+}
+
+
+
 

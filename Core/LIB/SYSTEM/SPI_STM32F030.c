@@ -2,6 +2,32 @@
 #include "../LIB/SYSTEM/SPI_STM32F030.h"
 
 
+#define pin_sh_do GPIO_BSRR_BS_15
+#define port_sh_do GPIOA
+
+#define pin_sh_put GPIO_BSRR_BS_3
+#define port_sh_put GPIOB
+
+#define pin_sh_clk GPIO_BSRR_BS_4
+#define port_sh_clk GPIOB
+
+#define pin_sh_mr GPIO_BSRR_BS_5
+#define port_sh_mr GPIOB
+
+
+#define set_sh_do  port_sh_do->BSRR = pin_sh_do
+#define clear_sh_do  port_sh_do->BRR = pin_sh_do
+
+#define set_sh_put  port_sh_put->BSRR = pin_sh_put
+#define clear_sh_put  port_sh_put->BRR = pin_sh_put
+
+#define set_sh_clk  port_sh_clk->BSRR = pin_sh_clk
+#define clear_sh_clk  port_sh_clk->BRR = pin_sh_clk
+
+#define set_sh_mr  port_sh_mr->BSRR = pin_sh_mr
+#define clear_sh_mr  port_sh_mr->BRR = pin_sh_mr
+
+
 uint32_t SPI_w25q( uint8_t d ){
 	
 		uint8_t a,b;

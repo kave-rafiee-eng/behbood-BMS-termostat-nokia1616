@@ -1,14 +1,17 @@
 #include "main.h"
-#include "../LIB/littlefs/lfs.h"
+#include "../LIB/ESP/main_ESP.H"
 
-#include "../LIB/NokiaTFTLib/nokia1661_Hw.h"
-#include "../LIB/NokiaTFTLib/nokia1661_lcd_driver.h"
-#include "../LIB/NokiaTFTLib/spfd54124b.h"
-#include "../LIB/NokiaTFTLib/lcd_font5x7.h"
+char read_gpio(GPIO_TypeDef *GPIOx , unsigned int pin){
+	
+	if( GPIOx ->IDR & (0x1<<(pin)) )return 1;
+	else return 0;
+	
+}
 
-#include "stdio.h"
+struct st_soft_usart_RX	soft_usart_RX;
+struct st_soft_usart_TX	soft_usart_TX;
 
-
+int gpio[3];
 struct cpu_timer_basic_10bit_auto_reset tbr_g1[def_num_tbr_g1];
 struct cpu_timer_basic_10bit tb_g2[def_num_tb_g2];
 struct cpu_timer_8bit_reset_contorol_Seconds tbrc_s1[def_num_tbrc_s1];
@@ -17,25 +20,20 @@ struct counter c;
 struct st_W25Q W25Q;
 struct st_programer programer;
 
-char str[100]={"kave1380,rafiee"};
-uint32_t i=0;
+struct st_bms bms;
+struct st_touch touch; 
+
 int adc[10];
 
 //-----------------------------------------
 void hard_ini();
 void soft_ini();
 
-long int test[5];
-
-long int spi_out[5];
-
-unsigned char ram_read[256];
-unsigned char ram_write[256];
+unsigned char ram_read[512];
+unsigned char ram_write[512];
 
 
 //------------------------------------------------------------------------------------------------------------
-uint16_t DviceID = 0;
-int error_code = 0;
 
 lfs_t lfs;
 lfs_file_t file;
@@ -99,52 +97,115 @@ const struct lfs_config cfg = {
 };
 
 //------------------------------------------------------------------------------------------------------------
-
-#define LL_GPIO_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG(__INSTANCE__->__REG__, (__VALUE__))
-
-
-#define PIN_led_test 12
-#define PORT_led_test GPIOA	 
-
-#define SBI(port,bit) 		port->BSRR = (1<<bit)
-#define CBI(port,bit) 		port->BRR  = (1<<bit)
-
-#define led_test_set()	SBI(PORT_led_test,PIN_led_test)
-#define led_test_clr()	CBI(PORT_led_test,PIN_led_test)
-
-
-#define led_test_OUT()	PORT_led_test->MODER &=~(0x3<<(2*PIN_led_test));\
-					PORT_led_test->MODER |= (0x1<<(2*PIN_led_test));
-
-#define led_test_IN()	PORT_led_test->MODER &=~(0x3<<(2*PIN_led_test));\
-					PORT_led_test->MODER |= (0x0<<(2*PIN_led_test));
-					
-#define led_test_HS()	PORT_led_test->OSPEEDR &=~(0x3<<(2*PIN_led_test));\
-					PORT_led_test->OSPEEDR |= (0x3<<(2*PIN_led_test));
-					
 					
 
-unsigned char r,g,b;
-char kave[5];
+char rx_pin;
 
 int main(void)
 {
-	
 
-	
+
 	hard_ini();
 	soft_ini();
 	
+	startup_lcd_picture();
+	BMS_TERMOSTAT_INI();
 	
 	tbr_g1[def_tbr_g1_led_blank].EN=1;
-	tbr_g1[def_tbr_g1_led_blank].C_set_time=300;
-	
-	
-	led_test_OUT();
-	led_test_HS();
-	
-	c.j=1;
+	tbr_g1[def_tbr_g1_led_blank].C_set_time=1000;
 
+	
+
+  while (1)
+  {
+
+
+		if( tbr_g1[def_tbr_g1_led_blank].F_end ){ tbr_g1[def_tbr_g1_led_blank].F_end=0;
+
+		}
+	
+		soft_usart_RX.F_data_get = soft_uart_rx_check();
+
+		seting_set_point();
+		dark_mode_manage();
+		
+		debuge_uart();
+		
+		interupt_soft_uart();
+		ESP_main();
+		ESP_timer();
+		ESP_ini();
+		
+	}
+}
+
+
+
+
+
+
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+
+void soft_ini(){
+	
+	ini_cpu_timer();
+	//soft_spi_ini();	
+	nlcdInit();
+	
+}
+
+void hard_ini(){
+	
+	clock_ini();
+	dma_ini();
+	nvic_ini();
+	
+  HAL_Init();
+
+	gpio_ini();
+	
+	USART_ini();
+	adc_calibre();
+	adc_ini();
+	tim14_ini();
+	
+	spi_ini(4);
+	
+	W25Q_ini();
+	
+	init_touch_led();
+	
+	soft_uart_ini();
+}
+
+
+
+	/*nlcdSetBackgroundColor(LCD_VGA_RED);
+	nlcdClear();
+
+	nlcdSetBackgroundColor(LCD_VGA_BLUE);
+	nlcdClear();
+	
+	nlcdSetBackgroundColor(LCD_VGA_WHITE);
+	nlcdSetFont(font5x7lat);
+	nlcdClear();
+	
+	nlcdSetOrientation(LCD_ORIENTATION_180);
+	//nlcdGotoCharXY(50,50);
+	//nlcdStringP(LCD_VGA_BLUE, PSTR("Sisoog.Com"));
+
+
+	nlcdSetOrientation(LCD_ORIENTATION_90);
+	
+	
+	for(int i=0;i<32;i++)nlcdPixel(64+i,64,LCD_VGA_RED);
+		
+	put_char(10,10,'2',1);
+	put_char(30,30,'2',2);
+	put_char(80,80,48,3);
+	
+	Square(80,80,50,50);*/
 
 	/*
 	int err = lfs_mount(&lfs, &cfg);
@@ -163,201 +224,6 @@ int main(void)
 	ReadBuf[0]='*';
 	printf("%s",ReadBuf);
 	*/
-	
-		nlcdInit();
-
-	nlcdSetBackgroundColor(LCD_VGA_RED);
-	nlcdClear();
-
-	nlcdSetBackgroundColor(LCD_VGA_BLUE);
-	nlcdClear();
-	
-	nlcdSetBackgroundColor(LCD_VGA_WHITE);
-	nlcdSetFont(font5x7latcyr);
-	nlcdClear();
-	/*
-	nlcdSetOrientation(LCD_ORIENTATION_180);
-	nlcdGotoCharXY(1,1);
-	nlcdStringP(LCD_VGA_BLUE, PSTR("Sisoog.Com"));
-
-
-	nlcdSetOrientation(LCD_ORIENTATION_270);
-	nlcdGotoCharXY(1,1);
-	nlcdStringP(LCD_VGA_PURPLE, PSTR("Sisoog.Com"));
-*/
-
-nlcdSetOrientation(LCD_ORIENTATION_90);
-	
-	programer.I=0;
-	programer.P=0;
-	
-	W25Q_ReadPage_start(programer.P*256);	
-	
-	_nlcdSetWindow(0, 0, nlcdGetWidth(), nlcdGetHeight());
-	
-	printf("/%d,%d,",nlcdGetWidth(),nlcdGetHeight());	
-	
-	#define all_pixel_for_full_image 20930
-	#define num_data_for_one_1pixel 3
-
-	while( programer.P < 245 ){ 
-			
-				 	if( programer.I > 255 ){ 	printf("%d/n",programer.P);
-			
-							set_CS_W25Q; 
-							
-								programer.I=0; 	
-								programer.P++;
-								W25Q_ReadPage_start(programer.P*256);
-								
-						}
-
-						r = SPI_w25q(0);programer.I++;	
-						
-						if( programer.I > 255 ){ 	printf("%d/n",programer.P);
-			
-							set_CS_W25Q; 
-							
-								programer.I=0; 	
-								programer.P++;
-								W25Q_ReadPage_start(programer.P*256);
-								
-						}
-											
-						g = SPI_w25q(0);programer.I++;
-						
-						if( programer.I > 255 ){ 	printf("%d/n",programer.P);
-			
-							set_CS_W25Q; 
-							
-								programer.I=0; 	
-								programer.P++;
-								W25Q_ReadPage_start(programer.P*256);
-								
-						}
-											
-						b = SPI_w25q(0);programer.I++;
-					
-						r = r /8;
-						g = g /4;
-						b = b /8;	
-	
-						_nlcdSendPixel( rgb_color_pack(r, g, b) );
-							
-
-			
-			//_nlcdSendPixel( LCD_VGA_BLUE );
-			//printf("/%d,%d,%d,",r,g,b);		
-				
-	 }
-
-	 _nlcdSendCmd(SPFD54124B_CMD_NOP);
-
-		
-			
-
-	
-  while (1)
-  {
-
-		
-		if( tbr_g1[def_tbr_g1_led_blank].F_end ){ tbr_g1[def_tbr_g1_led_blank].F_end=0;
-			
-				
-				/*W25Q_Read_Manufact_Device_ID();
-				W25Q_Read_StatusReg();
-			  
-				W25Q_EraseSector4KB(0); 
-			
-				for(c.i=0;c.i<50;c.i++) ram_write[c.i]=c.i; 
-			
-				W25Q_WritePage(ram_write,0,50);
-				//-----------------------------------				 
-				W25Q_ReadPage(ram_read,0,50); */
-				
-							
-				if( c.j==128 ) c.j=1;
-				else c.j *= 2;
-			
-				
-			
-				soft_spi_send(c.j);
-			
-				//LL_GPIO_TogglePin(PORT_led_test,PIN_led_test);
-		
-				adc[9] = read_adc(9);
-				adc[8] = read_adc(8);
-				
-				
-				if( kave[1] < 20 ){
-					
-					kave[0] = 1- kave[0];
-					
-					if( kave[0] )led_test_set();
-					else led_test_clr();
-					
-					kave[1]++;
-					
-					if( kave[1] == 10 ) led_test_IN();
-				}
-				else{
-					
-					
-					kave[2] = PORT_led_test->IDR & (1<<PIN_led_test);
-					kave[3] = PORT_led_test->IDR;
-					
-				}
-				
-			
-				
-		}
-		
-		debuge_uart();
-		
-		program_manager();
-		
-	}
-}
-
-
-
-
-
-
-//----------------------------------------------------------------------
-//----------------------------------------------------------------------
-
-void soft_ini(){
-	
-	ini_cpu_timer();
-	soft_spi_ini();	
-	
-}
-
-void hard_ini(){
-	
-	clock_ini();
-	dma_ini();
-	nvic_ini();
-	
-  HAL_Init();
-
-	gpio_ini();
-
-	USART_ini();
-	adc_calibre();
-	adc_ini();
-	tim14_ini();
-	
-	spi_ini(4);
-	
-	W25Q_ini();
-	
-	dac_ini();
-	
-}
-
-
 
 
 
