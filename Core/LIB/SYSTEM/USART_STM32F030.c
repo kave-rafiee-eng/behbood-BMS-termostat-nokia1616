@@ -167,10 +167,15 @@ void soft_uart_ini(){
 	
 	port_soft_uasrt_RX->MODER &=~(0x3<<(2*pin_soft_uasrt_RX));
 	port_soft_uasrt_RX->MODER |= (0x0<<(2*pin_soft_uasrt_RX));
+
+	port_soft_uasrt_RX->PUPDR &=~(0x3<<(2*pin_soft_uasrt_RX));
+	port_soft_uasrt_RX->PUPDR |= (0x1<<(2*pin_soft_uasrt_RX));
+	
+	set_soft_uasrt_TX;
 	
 }
 
-#define delay_soft_uart_9600 800
+#define delay_soft_uart_9600 800//800
 
 
 void uart_delay(int n ){
@@ -195,7 +200,7 @@ void soft_uart_send_byte( unsigned char data){
 				else clear_soft_uasrt_TX;
 			uart_delay(delay_soft_uart_9600);	
 		}		
-		set_soft_uasrt_TX;uart_delay(delay_soft_uart_9600);	
+		set_soft_uasrt_TX;uart_delay(delay_soft_uart_9600*2);	
 }
 //------------------------------------rx
 unsigned char  soft_uart_rx_check(){

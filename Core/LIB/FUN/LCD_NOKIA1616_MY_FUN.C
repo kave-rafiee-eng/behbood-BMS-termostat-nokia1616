@@ -20,8 +20,8 @@ void lcd_put_number(char x,char y, int number, char size , unsigned int back_col
 	
 		Square(x,y-3,((size*5)+(size*2))*2,(size*8)+3,back_color);
 	
-		if( number > 9 )put_char(x,y,((number/10)%10)+48,3,num_color);
-		if( number >= 0 )put_char(x+(size*5)+(size*2),y,((number/1)%10)+48,3,num_color);
+		if( number > 9 )put_char(x,y,((number/10)%10)+48,size,num_color);
+		if( number >= 0 )put_char(x+(size*5)+(size*2),y,((number/1)%10)+48,size,num_color);
 	
 }
 
@@ -37,14 +37,14 @@ void put_picture_from_spi_flash(char num_pic ){
 			programer.P = (addr_start_block_pic *256 )+ ( num_pic * size_pic_sector4k * 16 ) ;
 		
 			int cont;
-			for(cont=0; cont<all_pixel/128 ; cont++ ){
+			for(cont=0; cont<=all_pixel/128 ; cont++ ){
 								
 				//W25Q_ReadPage((uint8_t *)&ram_read[0],programer.P*256, 256);
 				//printf("\n PAGE_READ = %d", programer.P );	
 				
 				W25Q_ReadPage_start(programer.P*256);	
 				
-				for(c.v25=0; c.v25<255; c.v25+=2){
+				for(c.v25=0; c.v25<256; c.v25+=2){
 					
 					_nlcdSend( SPI_w25q(0) | SPFD54124B_SEND_DATA  );
 					_nlcdSend( SPI_w25q(0) | SPFD54124B_SEND_DATA  );					

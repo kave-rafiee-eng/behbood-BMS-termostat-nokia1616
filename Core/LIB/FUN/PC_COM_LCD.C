@@ -37,6 +37,8 @@ extern struct st_W25Q W25Q;
 extern unsigned char ram_read[];
 extern unsigned char ram_write[512];
 
+extern struct st_bms bms;
+
 void uart_manager_interupt();
 void debuge_uart();
 
@@ -204,6 +206,7 @@ char w25q(){
 						if(  programer.I == 191 )  { 
 							
 							  SPI_w25q(usart_RX.str[0]);  	
+								//SPI_w25q(50);  
 								set_CS_W25Q;
 							  W25Q_WaitBusy();
 
@@ -213,6 +216,7 @@ char w25q(){
 						}
 						else{
 							SPI_w25q(usart_RX.str[0]);  
+							//SPI_w25q(50);
 							programer.I++;
 						}
 				 }	
@@ -337,6 +341,7 @@ char help(){
 
 
 
+
 void debuge_uart(){
 	
 	if( tb_g2[def_tb_g2_rx_CLR].F_end == 1 ){ tb_g2[def_tb_g2_rx_CLR].F_end=0;
@@ -347,7 +352,7 @@ void debuge_uart(){
 		else printf("---command not found---\n");
 			
 		debuge_var.i_next=0;			
-		clr_str_rx();			
+		clr_str_rx();	
 		
 	}
 	

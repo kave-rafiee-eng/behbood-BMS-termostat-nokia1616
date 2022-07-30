@@ -1,7 +1,7 @@
 Dependencies for Project 'test_dma-hal', Target 'test_dma-hal': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
 F (startup_stm32f030x6.s)(0x61F0614E)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include--pd "__UVISION_VERSION SETA 531" --pd "_RTE_ SETA 1" --pd "STM32F030x6 SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f030x6.lst --xref -o test_dma-hal\startup_stm32f030x6.o --depend test_dma-hal\startup_stm32f030x6.d)
-F (../Core/Src/main.c)(0x62E1A016)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\main.o --omf_browse test_dma-hal\main.crf --depend test_dma-hal\main.d)
+F (../Core/Src/main.c)(0x62E5A587)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\main.o --omf_browse test_dma-hal\main.crf --depend test_dma-hal\main.d)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -45,7 +45,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -55,9 +55,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -113,7 +113,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -123,9 +123,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -137,7 +137,7 @@ I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h)(0x62D53968)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
 I (../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h)(0x5D79DC16)
 I (../Core/Inc/stm32f0xx_it.h)(0x61F0613A)
-F (..\Core\LIB\SYSTEM\USART_STM32F030.c)(0x62E1A0B8)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\usart_stm32f030.o --omf_browse test_dma-hal\usart_stm32f030.crf --depend test_dma-hal\usart_stm32f030.d)
+F (..\Core\LIB\SYSTEM\USART_STM32F030.c)(0x62E549F4)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\usart_stm32f030.o --omf_browse test_dma-hal\usart_stm32f030.crf --depend test_dma-hal\usart_stm32f030.d)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -181,7 +181,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -191,9 +191,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -248,7 +248,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -258,9 +258,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -315,7 +315,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -325,9 +325,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -382,7 +382,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -392,9 +392,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -449,7 +449,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -459,9 +459,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -472,9 +472,9 @@ I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h)(0x62D53968)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
 I (../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h)(0x5D79DC16)
-F (..\Core\LIB\FUN\CPU_TIMER.C)(0x61F69816)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\cpu_timer.o --omf_browse test_dma-hal\cpu_timer.crf --depend test_dma-hal\cpu_timer.d)
+F (..\Core\LIB\FUN\CPU_TIMER.C)(0x62E543E0)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\cpu_timer.o --omf_browse test_dma-hal\cpu_timer.crf --depend test_dma-hal\cpu_timer.d)
 I (..\Core\LIB\FUN\../define_Const.h)(0x62E19FA0)
-I (..\Core\LIB\FUN\../my_struct.h)(0x62E1A1D3)
+I (..\Core\LIB\FUN\../my_struct.h)(0x62E5447A)
 I (..\Core\LIB\FUN\cpu_timer.h)(0x61E4EB80)
 F (..\Core\LIB\SYSTEM\SPI_STM32F030.c)(0x62E117B1)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\spi_stm32f030.o --omf_browse test_dma-hal\spi_stm32f030.crf --depend test_dma-hal\spi_stm32f030.d)
 I (../Core/Inc/main.h)(0x62E18E52)
@@ -520,7 +520,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -530,9 +530,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -543,7 +543,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h)(0x62D53968)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
 I (../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h)(0x5D79DC16)
-F (..\Core\LIB\FUN\W25Q.C)(0x6220D094)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\w25q.o --omf_browse test_dma-hal\w25q.crf --depend test_dma-hal\w25q.d)
+F (..\Core\LIB\FUN\W25Q.C)(0x62E22D35)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\w25q.o --omf_browse test_dma-hal\w25q.crf --depend test_dma-hal\w25q.d)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -587,7 +587,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -597,9 +597,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -657,7 +657,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -667,9 +667,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -725,7 +725,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -735,9 +735,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -791,7 +791,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -801,9 +801,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -858,7 +858,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -868,9 +868,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -927,7 +927,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -937,9 +937,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -949,7 +949,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC848F4)
 I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h)(0x62D53968)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
-F (..\Core\LIB\FUN\PC_COM_LCD.C)(0x62E11A67)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\pc_com_lcd.o --omf_browse test_dma-hal\pc_com_lcd.crf --depend test_dma-hal\pc_com_lcd.d)
+F (..\Core\LIB\FUN\PC_COM_LCD.C)(0x62E56197)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\pc_com_lcd.o --omf_browse test_dma-hal\pc_com_lcd.crf --depend test_dma-hal\pc_com_lcd.d)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -993,7 +993,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -1003,9 +1003,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -1018,9 +1018,9 @@ I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
 I (../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h)(0x5D79DC16)
 I (..\Core\LIB\FUN\W25Q.h)(0x62D53A46)
 I (..\Core\LIB\FUN\PC_COM_LCD.h)(0x62DEE11A)
-I (..\Core\LIB\FUN\../my_struct.h)(0x62E1A1D3)
-F (..\Core\LIB\FUN\TOUCH_BS813.C)(0x62E17C38)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\touch_bs813.o --omf_browse test_dma-hal\touch_bs813.crf --depend test_dma-hal\touch_bs813.d)
-I (..\Core\LIB\FUN\TOUCH_BS813.H)(0x62E135AE)
+I (..\Core\LIB\FUN\../my_struct.h)(0x62E5447A)
+F (..\Core\LIB\FUN\TOUCH_BS813.C)(0x62E558C9)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\touch_bs813.o --omf_browse test_dma-hal\touch_bs813.crf --depend test_dma-hal\touch_bs813.d)
+I (..\Core\LIB\FUN\TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -1064,7 +1064,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -1075,7 +1075,7 @@ I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -1086,7 +1086,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h)(0x62D53968)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
 I (../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h)(0x5D79DC16)
-F (..\Core\LIB\FUN\LCD_NOKIA1616_MY_FUN.C)(0x62E17D09)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\lcd_nokia1616_my_fun.o --omf_browse test_dma-hal\lcd_nokia1616_my_fun.crf --depend test_dma-hal\lcd_nokia1616_my_fun.d)
+F (..\Core\LIB\FUN\LCD_NOKIA1616_MY_FUN.C)(0x62E5A5BC)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\lcd_nokia1616_my_fun.o --omf_browse test_dma-hal\lcd_nokia1616_my_fun.crf --depend test_dma-hal\lcd_nokia1616_my_fun.d)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -1130,7 +1130,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -1140,9 +1140,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -1154,7 +1154,7 @@ I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h)(0x62D53968)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
 I (../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h)(0x5D79DC16)
 I (../Core/Inc/../LIB/NokiaTFTLib/lcd_font5x7.h)(0x62E115D9)
-F (..\Core\LIB\FUN\BMS_TERMOSTAT.C)(0x62E1A2D7)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\bms_termostat.o --omf_browse test_dma-hal\bms_termostat.crf --depend test_dma-hal\bms_termostat.d)
+F (..\Core\LIB\FUN\BMS_TERMOSTAT.C)(0x62E5A55E)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\bms_termostat.o --omf_browse test_dma-hal\bms_termostat.crf --depend test_dma-hal\bms_termostat.d)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -1198,7 +1198,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -1208,9 +1208,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)
@@ -1221,7 +1221,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_lcd_driver.h)(0x62D53968)
 I (../Core/Inc/../LIB/NokiaTFTLib/nokia1661_Hw.h)(0x62D56B9A)
 I (../Core/Inc/../LIB/NokiaTFTLib/spfd54124b.h)(0x5D79DC16)
-F (..\Core\LIB\ESP\main_ESP.C)(0x62E1A323)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\main_esp.o --omf_browse test_dma-hal\main_esp.crf --depend test_dma-hal\main_esp.d)
+F (..\Core\LIB\ESP\main_ESP.C)(0x62E55C32)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_test_dma-hal-IC:\Users\barby\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\barby\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o test_dma-hal\main_esp.o --omf_browse test_dma-hal\main_esp.crf --depend test_dma-hal\main_esp.d)
 I (../Core/Inc/main.h)(0x62E18E52)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_i2c.h)(0x61EEF5A0)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x61EEF59E)
@@ -1265,7 +1265,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_dma.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_spi.h)(0x61EEF5A0)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h)(0x61EEF5A0)
 I (../Core/Inc/../LIB/define_Const.h)(0x62E19FA0)
-I (../Core/Inc/../LIB/my_struct.h)(0x62E1A1D3)
+I (../Core/Inc/../LIB/my_struct.h)(0x62E5447A)
 I (../Core/Inc/../LIB/SYSTEM/USART_STM32F030.h)(0x62E1901A)
 I (../Core/Inc/../LIB/SYSTEM/ADC_STM32F030.h)(0x61F68E40)
 I (../Core/Inc/../LIB/SYSTEM/CORTEX_STM32F030.h)(0x61F693AA)
@@ -1275,9 +1275,9 @@ I (../Core/Inc/../LIB/SYSTEM/SPI_STM32F030.h)(0x6220B4EF)
 I (../Core/Inc/../LIB/FUN/CPU_TIMER.h)(0x61E4EB80)
 I (../Core/Inc/../LIB/FUN/PC_COM.h)(0x62DEDBB1)
 I (../Core/Inc/../LIB/FUN/W25Q.h)(0x62D53A46)
-I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E135AE)
+I (../Core/Inc/../LIB/FUN/TOUCH_BS813.H)(0x62E5978B)
 I (../Core/Inc/../LIB/FUN/LCD_NOKIA1616_MY_FUN.H)(0x62E177D4)
-I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E17E1C)
+I (../Core/Inc/../LIB/FUN/BMS_TERMOSTAT.H)(0x62E53670)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC848EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC848EC)
 I (../Core/Inc/../LIB/littlefs/lfs.h)(0x61E7ABE4)

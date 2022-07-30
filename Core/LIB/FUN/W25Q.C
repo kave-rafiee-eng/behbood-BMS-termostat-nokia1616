@@ -172,59 +172,6 @@ void W25Q_WritePage(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrit
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void W25Q_EraseChip(void)     
 {
 	

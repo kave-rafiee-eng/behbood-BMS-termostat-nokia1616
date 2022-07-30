@@ -58,30 +58,31 @@ void timer_second_manager(){
 
 void timer_basic_manager(){
 	
-	for(c.i=0; c.i<def_num_tbr_g1; c.i++ ){
+	volatile int count_timer;
+	for(count_timer=0; count_timer<def_num_tbr_g1; count_timer++ ){
 		
-		if( tbr_g1[c.i].EN == 1 ){  
-			tbr_g1[c.i].I_time++; 
-			if( tbr_g1[c.i].I_time > tbr_g1[c.i].C_set_time ){ 
-				 tbr_g1[c.i].I_time=0;
-				 tbr_g1[c.i].F_end=1; 		
+		if( tbr_g1[count_timer].EN == 1 ){  
+			tbr_g1[count_timer].I_time++; 
+			if( tbr_g1[count_timer].I_time > tbr_g1[count_timer].C_set_time ){ 
+				 tbr_g1[count_timer].I_time=0;
+				 tbr_g1[count_timer].F_end=1; 		
 			}	
 		}
-		else tbr_g1[c.i].I_time=0; 
+		else tbr_g1[count_timer].I_time=0; 
 	}
 	
 	
-	for(c.i=0; c.i<def_num_tb_g2; c.i++ ){
+	for(count_timer=0; count_timer<def_num_tb_g2; count_timer++ ){
 		
-		if( tb_g2[c.i].EN == 1 ){ 
+		if( tb_g2[count_timer].EN == 1 ){ 
 			
-			if( tb_g2[c.i].I_time > 0 ){ tb_g2[c.i].I_time--; }
+			if( tb_g2[count_timer].I_time > 0 ){ tb_g2[count_timer].I_time--; }
 			else{
-				tb_g2[c.i].EN=0;
-				tb_g2[c.i].F_end=1; 	
+				tb_g2[count_timer].EN=0;
+				tb_g2[count_timer].F_end=1; 	
 			}	
 		}
-		else tb_g2[c.i].I_time=0; 
+		else tb_g2[count_timer].I_time=0; 
 	}	
 		
 }

@@ -108,8 +108,11 @@ int main(void)
 	hard_ini();
 	soft_ini();
 	
-	startup_lcd_picture();
 	BMS_TERMOSTAT_INI();
+	ESP_ini();
+
+	startup_lcd_picture();
+	refresh_home();
 	
 	tbr_g1[def_tbr_g1_led_blank].EN=1;
 	tbr_g1[def_tbr_g1_led_blank].C_set_time=1000;
@@ -129,12 +132,13 @@ int main(void)
 		seting_set_point();
 		dark_mode_manage();
 		
-		debuge_uart();
-		
 		interupt_soft_uart();
+		
 		ESP_main();
 		ESP_timer();
-		ESP_ini();
+		
+		
+		debuge_uart();
 		
 	}
 }

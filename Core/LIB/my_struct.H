@@ -17,6 +17,8 @@
 		unsigned char less_fast : 1;
 		unsigned char pluse_fast : 1;	
 		
+		int REST_TIMER : 14;
+		
 	};
 	
 	struct st_bms 
@@ -28,8 +30,12 @@
 		int TEMP_now : 10;
 		int Humidity_now : 10;	
 		
-		unsigned char dark_mode : 1;
-
+		unsigned char dark_mode : 1;	
+		
+		unsigned char config : 1;
+		unsigned char Sensor : 1;
+		unsigned char Actuator : 1;
+		
 		unsigned char seting_RUN : 1;
 				
 	};
@@ -95,8 +101,8 @@
 	
 	struct counter
 	{
-		unsigned int i : 8;	
-		unsigned int j : 8;
+		volatile unsigned int i : 8;	
+		volatile unsigned int j : 8;
 		unsigned long int v32 : 32;
 		unsigned long int v25 : 25;
 		unsigned int da : 8;	
@@ -108,26 +114,26 @@
 	
 	struct cpu_timer_basic_10bit_auto_reset	 
 	{
-		unsigned char F_end : 1;
-		unsigned char EN : 1;
-		unsigned int I_time : 10;
-		unsigned int C_set_time : 10;		
+		volatile unsigned char F_end : 1;
+		volatile unsigned char EN : 1;
+		volatile unsigned int I_time : 10;
+		volatile unsigned int C_set_time : 10;		
 	};
 	
 	struct  cpu_timer_basic_10bit
 	{
-		unsigned char F_end :1;
-		unsigned char EN :1;
-		unsigned int I_time :10;		
+		volatile unsigned char F_end :1;
+		volatile unsigned char EN :1;
+		volatile unsigned int I_time :10;		
 	};
 	
 	struct  cpu_timer_8bit_reset_contorol_Seconds
 	{
-		unsigned char AUTO : 1;
-		unsigned char F_end : 1;
-		unsigned char EN : 1;
-		unsigned int I_time : 10;
-		unsigned int C_set_time : 10;		
+		volatile unsigned char AUTO : 1;
+		volatile unsigned char F_end : 1;
+		volatile unsigned char EN : 1;
+		volatile unsigned int I_time : 10;
+		volatile unsigned int C_set_time : 10;		
 	};
 
 
